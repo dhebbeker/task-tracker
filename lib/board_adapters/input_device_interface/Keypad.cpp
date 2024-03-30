@@ -29,6 +29,11 @@ class DebouncedPinIsr
         return interruptSubroutine;
     }
 
+    static UBaseType_t getTaskStackHighWaterMark()
+    {
+        return uxTaskGetStackHighWaterMark(debounceTaskHandle);
+    }
+
   private:
     static TaskHandle_t debounceTaskHandle;
     static constexpr TickType_t startupDelay = pdMS_TO_TICKS((200ms).count());
