@@ -15,15 +15,12 @@ using namespace std::chrono_literals;
 
 static HmiHandler callBack;
 
-template <board::PinType PIN>
+template <KeyId KEY>
 class DebouncedPinIsr
 {
   public:
-    DebouncedPinIsr(std::function<void(void)> handler, const std::chrono::milliseconds startupDelay = 200ms, const UBaseType_t priority = configMAX_PRIORITIES / 2)
+    DebouncedPinIsr(const UBaseType_t priority = configMAX_PRIORITIES / 2)
     {
-        DebouncedPinIsr::handler = handler;
-        DebouncedPinIsr::debounceTaskHandle = nullptr;
-        DebouncedPinIsr::startupDelay = pdMS_TO_TICKS(startupDelay.count());
         xTaskCreate(debounceTask, "pin debounce task", configMINIMAL_STACK_SIZE + (1 << 12), nullptr, priority, &debounceTaskHandle);
     }
 
@@ -33,9 +30,8 @@ class DebouncedPinIsr
     }
 
   private:
-    static std::function<void(void)> handler;
     static TaskHandle_t debounceTaskHandle;
-    static TickType_t startupDelay;
+    static constexpr TickType_t startupDelay = pdMS_TO_TICKS((200ms).count());
 
     static void IRAM_ATTR interruptSubroutine()
     {
@@ -60,17 +56,13 @@ class DebouncedPinIsr
                 continue; // has been interrupted, wait again
             }
 
-            handler();
+            callBack(KEY);
         } while (true);
     }
 };
 
-template <board::PinType PIN>
-std::function<void(void)> DebouncedPinIsr<PIN>::handler;
-template <board::PinType PIN>
-TaskHandle_t DebouncedPinIsr<PIN>::debounceTaskHandle;
-template <board::PinType PIN>
-TickType_t DebouncedPinIsr<PIN>::startupDelay;
+template <KeyId KEY>
+TaskHandle_t DebouncedPinIsr<KEY>::debounceTaskHandle = nullptr;
 
 /**
  * Generator for ISR function pointers.
@@ -108,7 +100,7 @@ struct FunctionPointerGenerator
     template <T (&VALUES)[N], std::size_t... Is>
     static std::array<void (*)(), N> createIsrPointers([[maybe_unused]] const std::index_sequence<Is...> indices)
     {
-        return {DebouncedPinIsr<VALUES[Is].first>(std::bind(callBack, VALUES[Is].second)).getInterruptFunction()...};
+        return {DebouncedPinIsr<VALUES[Is].second>().getInterruptFunction()...};
     }
 };
 
