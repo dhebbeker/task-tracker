@@ -21,7 +21,7 @@ class DebouncedPinIsr
   public:
     DebouncedPinIsr(const UBaseType_t priority = configMAX_PRIORITIES / 2)
     {
-        xTaskCreate(debounceTask, "pin debounce task", configMINIMAL_STACK_SIZE + (1 << 12), nullptr, priority, &debounceTaskHandle);
+        xTaskCreate(pinDebounce, "pinDebounce", stackSize, nullptr, priority, &debounceTaskHandle);
     }
 
     void (*getInterruptFunction() const)()
@@ -38,6 +38,13 @@ class DebouncedPinIsr
     static TaskHandle_t debounceTaskHandle;
     static constexpr TickType_t startupDelay = pdMS_TO_TICKS((200ms).count());
 
+    /**
+     * The necessary stack size in words.
+     * 
+     * Has been determined by measuring the stack high water mark and experimenting.
+     */
+    static constexpr configSTACK_DEPTH_TYPE stackSize = configMINIMAL_STACK_SIZE + 580;
+
     static void IRAM_ATTR interruptSubroutine()
     {
         BaseType_t higherPriorityTaskWoken = pdFALSE;
@@ -45,7 +52,7 @@ class DebouncedPinIsr
         portYIELD_FROM_ISR(higherPriorityTaskWoken);
     }
 
-    static void debounceTask(void *)
+    static void pinDebounce(void *)
     {
         do
         {
