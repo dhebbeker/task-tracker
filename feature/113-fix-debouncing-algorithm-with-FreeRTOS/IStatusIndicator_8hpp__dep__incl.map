@@ -1,0 +1,12 @@
+<map id="lib/application_business_rules/user_interaction/IStatusIndicator.hpp" name="lib/application_business_rules/user_interaction/IStatusIndicator.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="480,5,640,60"/>
+<area shape="rect" id="node2" href="$Presenter_8hpp.xhtml" title=" " alt="" coords="293,115,453,170"/>
+<area shape="rect" id="node7" href="$statusindicators__factory__interface_8hpp.xhtml" title="Dependency injection for the keypad." alt="" coords="478,108,642,177"/>
+<area shape="rect" id="node9" href="$status__indicators_8hpp.xhtml" title=" " alt="" coords="671,115,836,170"/>
+<area shape="rect" id="node3" href="$Presenter_8cpp.xhtml" title=" " alt="" coords="5,225,165,280"/>
+<area shape="rect" id="node4" href="$ProcessHmiInputs_8cpp.xhtml" title=" " alt="" coords="189,225,349,280"/>
+<area shape="rect" id="node5" href="$main_8cpp.xhtml" title=" " alt="" coords="373,240,469,265"/>
+<area shape="rect" id="node6" href="$test__hmi_8cpp.xhtml" title=" " alt="" coords="494,233,618,273"/>
+<area shape="rect" id="node8" href="$statusindicators__factory__interface_8cpp.xhtml" title=" " alt="" coords="643,225,864,280"/>
+<area shape="rect" id="node10" href="$status__indicators_8cpp.xhtml" title=" " alt="" coords="888,225,1053,280"/>
+</map>
