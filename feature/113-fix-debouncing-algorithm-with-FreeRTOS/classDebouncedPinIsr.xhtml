@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Task Tracker: DebouncedPinIsr&lt; PIN &gt; Class Template Reference</title>
+<title>Task Tracker: DebouncedPinIsr&lt; KEY &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -80,60 +80,44 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classDebouncedPinIsr-members.xhtml">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DebouncedPinIsr&lt; PIN &gt; Class Template Reference</div></div>
+  <div class="headertitle"><div class="title">DebouncedPinIsr&lt; KEY &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
-Collaboration diagram for DebouncedPinIsr&lt; PIN &gt;:</div>
+Collaboration diagram for DebouncedPinIsr&lt; KEY &gt;:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classDebouncedPinIsr__coll__graph.svg" width="224" height="168"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classDebouncedPinIsr__coll__graph.svg" width="226" height="168"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adc2e1ccffa605c895c4e9027c80ee379"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDebouncedPinIsr.xhtml#adc2e1ccffa605c895c4e9027c80ee379">DebouncedPinIsr</a> (std::function&lt; void(void)&gt; handler, const std::chrono::milliseconds startupDelay=200ms, const UBaseType_t priority=configMAX_PRIORITIES/2)</td></tr>
-<tr class="separator:adc2e1ccffa605c895c4e9027c80ee379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7581cf7e7e011b39026d4836b43eb75c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDebouncedPinIsr.xhtml#a7581cf7e7e011b39026d4836b43eb75c">DebouncedPinIsr</a> (const UBaseType_t priority=configMAX_PRIORITIES/2)</td></tr>
+<tr class="separator:a7581cf7e7e011b39026d4836b43eb75c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ac7b606f0dd328d50898d12ae1df247f1"><td class="memItemLeft" align="right" valign="top">void(*)()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDebouncedPinIsr.xhtml#ac7b606f0dd328d50898d12ae1df247f1">getInterruptFunction</a> () const</td></tr>
-<tr class="separator:ac7b606f0dd328d50898d12ae1df247f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c45372bc12ae8a4089499b60118c8f7"><td class="memItemLeft" align="right" valign="top">void(*)()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDebouncedPinIsr.xhtml#a3c45372bc12ae8a4089499b60118c8f7">getInterruptFunction</a> () const</td></tr>
+<tr class="separator:a3c45372bc12ae8a4089499b60118c8f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="adc2e1ccffa605c895c4e9027c80ee379" name="adc2e1ccffa605c895c4e9027c80ee379"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc2e1ccffa605c895c4e9027c80ee379">&#9670;&#160;</a></span>DebouncedPinIsr()</h2>
+<a id="a7581cf7e7e011b39026d4836b43eb75c" name="a7581cf7e7e011b39026d4836b43eb75c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7581cf7e7e011b39026d4836b43eb75c">&#9670;&#160;</a></span>DebouncedPinIsr()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespaceboard.xhtml#af091862f70321f1b4fd67a4f4751ef0c">board::PinType</a> PIN&gt; </div>
+template&lt;<a class="el" href="KeyIds_8hpp.xhtml#a251d5d8935f1af4cb86e18f962d9d33d">KeyId</a> KEY&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classDebouncedPinIsr.xhtml">DebouncedPinIsr</a>&lt; PIN &gt;<a class="el" href="classDebouncedPinIsr.xhtml">::DebouncedPinIsr</a> </td>
+          <td class="memname"><a class="el" href="classDebouncedPinIsr.xhtml">DebouncedPinIsr</a>&lt; KEY &gt;<a class="el" href="classDebouncedPinIsr.xhtml">::DebouncedPinIsr</a> </td>
           <td>(</td>
-          <td class="paramtype">std::function&lt; void(void)&gt;&#160;</td>
-          <td class="paramname"><em>handler</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::chrono::milliseconds&#160;</td>
-          <td class="paramname"><em>startupDelay</em> = <code>200ms</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const UBaseType_t&#160;</td>
-          <td class="paramname"><em>priority</em> = <code>configMAX_PRIORITIES&#160;/&#160;2</code>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>priority</em> = <code>configMAX_PRIORITIES&#160;/&#160;2</code></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -146,19 +130,19 @@ template&lt;<a class="el" href="namespaceboard.xhtml#af091862f70321f1b4fd67a4f47
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ac7b606f0dd328d50898d12ae1df247f1" name="ac7b606f0dd328d50898d12ae1df247f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7b606f0dd328d50898d12ae1df247f1">&#9670;&#160;</a></span>getInterruptFunction</h2>
+<a id="a3c45372bc12ae8a4089499b60118c8f7" name="a3c45372bc12ae8a4089499b60118c8f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c45372bc12ae8a4089499b60118c8f7">&#9670;&#160;</a></span>getInterruptFunction</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespaceboard.xhtml#af091862f70321f1b4fd67a4f4751ef0c">board::PinType</a> PIN&gt; </div>
+template&lt;<a class="el" href="KeyIds_8hpp.xhtml#a251d5d8935f1af4cb86e18f962d9d33d">KeyId</a> KEY&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void(*)() <a class="el" href="classDebouncedPinIsr.xhtml">DebouncedPinIsr</a>&lt; PIN &gt;::getInterruptFunction() const</td>
+          <td class="memname">void(*)() <a class="el" href="classDebouncedPinIsr.xhtml">DebouncedPinIsr</a>&lt; KEY &gt;::getInterruptFunction() const</td>
         </tr>
       </table>
   </td>
@@ -176,7 +160,7 @@ template&lt;<a class="el" href="namespaceboard.xhtml#af091862f70321f1b4fd67a4f47
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 30 2024 20:44:58 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Sat Mar 30 2024 21:07:33 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
