@@ -2,31 +2,75 @@
 #include <Arduino-wrapper.h>
 #include <array>
 #include <board_pins.hpp>
+#include <chrono>
 #include <cstddef>
+#include <freertos/FreeRTOS.h>
+#include <freertos/task.h>
+#include <functional>
 #include <thread>
 #include <type_traits>
 #include <utility>
 
+using namespace std::chrono_literals;
+
 static HmiHandler callBack;
 
-template <KeyId SELECTION>
-static void isr()
+template <board::PinType PIN>
+class DebouncedPinIsr
 {
-    static std::thread *p_callbackThread = nullptr;
-    const auto now = millis(); /* warning: `now()` from <chrono>/libc can not be used in ISRs */
-    static std::remove_const_t<decltype(now)> lastCall;
-    constexpr decltype(lastCall) debouncePeriod = 200; /* milliseconds */
-    if (now - lastCall > debouncePeriod)
+  public:
+    DebouncedPinIsr(std::function<void(void)> handler, const std::chrono::milliseconds startupDelay = 200ms, const UBaseType_t priority = configMAX_PRIORITIES / 2)
     {
-        lastCall = now;
-        if (p_callbackThread)
-        {
-            p_callbackThread->join();
-            delete p_callbackThread;
-        }
-        p_callbackThread = new std::thread(callBack, SELECTION);
+        DebouncedPinIsr::handler = handler;
+        DebouncedPinIsr::debounceTaskHandle = nullptr;
+        DebouncedPinIsr::startupDelay = pdMS_TO_TICKS(startupDelay.count());
+        xTaskCreate(debounceTask, "pin debounce task", configMINIMAL_STACK_SIZE + (1 << 12), nullptr, priority, &debounceTaskHandle);
     }
-}
+
+    void (*getInterruptFunction() const)()
+    {
+        return interruptSubroutine;
+    }
+
+  private:
+    static std::function<void(void)> handler;
+    static TaskHandle_t debounceTaskHandle;
+    static TickType_t startupDelay;
+
+    static void IRAM_ATTR interruptSubroutine()
+    {
+        BaseType_t higherPriorityTaskWoken = pdFALSE;
+        vTaskNotifyGiveFromISR(debounceTaskHandle, &higherPriorityTaskWoken);
+        portYIELD_FROM_ISR(higherPriorityTaskWoken);
+    }
+
+    static void debounceTask(void *)
+    {
+        do
+        {
+            // prepare for incoming notification
+            xTaskNotifyStateClear(nullptr);
+
+            // first stage: wait for start
+            ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+
+            // second stage: wait for uninterrupted period
+            while (ulTaskNotifyTake(pdTRUE, startupDelay) > 0)
+            {
+                continue; // has been interrupted, wait again
+            }
+
+            handler();
+        } while (true);
+    }
+};
+
+template <board::PinType PIN>
+std::function<void(void)> DebouncedPinIsr<PIN>::handler;
+template <board::PinType PIN>
+TaskHandle_t DebouncedPinIsr<PIN>::debounceTaskHandle;
+template <board::PinType PIN>
+TickType_t DebouncedPinIsr<PIN>::startupDelay;
 
 /**
  * Generator for ISR function pointers.
@@ -51,7 +95,7 @@ struct FunctionPointerGenerator
      * @returns an array with the same number of function pointers as the number of elements of the input values array
      */
     template <T (&VALUES)[N]>
-    constexpr static auto createIsrPointers()
+    static auto createIsrPointers()
     {
         return createIsrPointers<VALUES>(std::make_index_sequence<N>());
     }
@@ -62,9 +106,9 @@ struct FunctionPointerGenerator
      * @param indices is an object to derive `Is`
      */
     template <T (&VALUES)[N], std::size_t... Is>
-    constexpr static std::array<void (*)(), N> createIsrPointers([[maybe_unused]] const std::index_sequence<Is...> indices)
+    static std::array<void (*)(), N> createIsrPointers([[maybe_unused]] const std::index_sequence<Is...> indices)
     {
-        return {isr<VALUES[Is].second>...};
+        return {DebouncedPinIsr<VALUES[Is].first>(std::bind(callBack, VALUES[Is].second)).getInterruptFunction()...};
     }
 };
 
@@ -102,7 +146,7 @@ static constexpr std::pair<board::PinType, KeyId> selectionForPins[] = {
 Keypad::Keypad()
 {
     // input pins
-    constexpr auto functionPointers = createFPG(selectionForPins).createIsrPointers<selectionForPins>();
+    const auto functionPointers = createFPG(selectionForPins).createIsrPointers<selectionForPins>();
     std::size_t index = 0;
     for (const auto selectionForPin : selectionForPins)
     {
