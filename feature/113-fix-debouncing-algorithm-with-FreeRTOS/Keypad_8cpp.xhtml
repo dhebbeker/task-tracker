@@ -91,28 +91,31 @@ $(function() {
 <code>#include &lt;<a class="el" href="Arduino-wrapper_8h_source.xhtml">Arduino-wrapper.h</a>&gt;</code><br />
 <code>#include &lt;array&gt;</code><br />
 <code>#include &lt;<a class="el" href="board__pins_8hpp_source.xhtml">board_pins.hpp</a>&gt;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
 <code>#include &lt;cstddef&gt;</code><br />
+<code>#include &lt;freertos/FreeRTOS.h&gt;</code><br />
+<code>#include &lt;freertos/task.h&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
 <code>#include &lt;thread&gt;</code><br />
 <code>#include &lt;type_traits&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Keypad.cpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="Keypad_8cpp__incl.svg" width="887" height="359"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="Keypad_8cpp__incl.svg" width="1350" height="359"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDebouncedPinIsr.xhtml">DebouncedPinIsr&lt; PIN &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFunctionPointerGenerator.xhtml">FunctionPointerGenerator&lt; T, N &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generator for ISR function pointers.  <a href="structFunctionPointerGenerator.xhtml#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2db3ce89b570d4dd8a5e32692092e570"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="KeyIds_8hpp.xhtml#a251d5d8935f1af4cb86e18f962d9d33d">KeyId</a> SELECTION&gt; </td></tr>
-<tr class="memitem:a2db3ce89b570d4dd8a5e32692092e570"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="Keypad_8cpp.xhtml#a2db3ce89b570d4dd8a5e32692092e570">isr</a> ()</td></tr>
-<tr class="separator:a2db3ce89b570d4dd8a5e32692092e570"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd40bd4f3e9f436de59a7b40ea1b426e"><td class="memTemplParams" colspan="2">template&lt;class T , std::size_t N&gt; </td></tr>
 <tr class="memitem:abd40bd4f3e9f436de59a7b40ea1b426e"><td class="memTemplItemLeft" align="right" valign="top">static constexpr <a class="el" href="structFunctionPointerGenerator.xhtml">FunctionPointerGenerator</a>&lt; T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="Keypad_8cpp.xhtml#abd40bd4f3e9f436de59a7b40ea1b426e">createFPG</a> (T(&amp;array)[N])</td></tr>
 <tr class="memdesc:abd40bd4f3e9f436de59a7b40ea1b426e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates generator for function pointers.  <a href="Keypad_8cpp.xhtml#abd40bd4f3e9f436de59a7b40ea1b426e">More...</a><br /></td></tr>
@@ -169,33 +172,6 @@ template&lt;class T , std::size_t N&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>generator which can be used to generate function pointers </dd></dl>
-
-</div>
-</div>
-<a id="a2db3ce89b570d4dd8a5e32692092e570" name="a2db3ce89b570d4dd8a5e32692092e570"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2db3ce89b570d4dd8a5e32692092e570">&#9670;&#160;</a></span>isr()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="KeyIds_8hpp.xhtml#a251d5d8935f1af4cb86e18f962d9d33d">KeyId</a> SELECTION&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void isr </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -275,7 +251,7 @@ template&lt;<a class="el" href="KeyIds_8hpp.xhtml#a251d5d8935f1af4cb86e18f962d9d
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 30 2024 17:02:37 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Sat Mar 30 2024 20:44:58 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
