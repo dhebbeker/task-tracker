@@ -1,17 +1,20 @@
 #include "Keypad.hpp"
 #include <Arduino-wrapper.h>
 #include <Worker.hpp>
-#include <algorithm>
 #include <array>
+#include <atomic>
 #include <board_pins.hpp>
 #include <cassert>
 #include <chrono>
 #include <cstddef>
+#include <find.hpp>
+#include <functional>
 #include <iterator>
-#include <memory>
 #include <thread>
 #include <type_traits>
 #include <utility>
+
+using namespace std::chrono_literals;
 
 static HmiHandler callBack;
 
@@ -29,60 +32,44 @@ static constexpr std::pair<board::PinType, KeyId> selectionForPins[] = {
     {board::button::pin::back, KeyId::BACK},
 };
 
-template <board::PinType PIN>
-static void reactOnPinChange()
+static void reactOnPinChange(const board::PinType pin, KeyId keyId)
 {
-    const bool isPressed = digitalRead(PIN) == LOW;
+    const bool isPressed = digitalRead(pin) == LOW;
     if (isPressed)
     {
-        const auto candidateKeyId = std::find_if(std::cbegin(selectionForPins), std::cend(selectionForPins), [](const auto pair) {
-            return pair.first == PIN;
-        });
-        const bool foundKeyId = candidateKeyId != std::cend(selectionForPins);
-        assert(foundKeyId);
-        if (foundKeyId)
-        {
-            callBack(candidateKeyId->second);
-        }
+        callBack(keyId);
     }
 }
+
+static std::atomic_flag waitConditions[std::size(selectionForPins)] = {ATOMIC_FLAG_INIT};
+
+static std::thread workerManager([] {
+    // initialize for waiting
+    for (auto &waitCondition : waitConditions)
+    {
+        waitCondition.test_and_set();
+    }
+
+    static Worker workers[std::size(selectionForPins)];
+    while (true)
+    {
+        for (std::size_t i = 0; i < std::size(waitConditions); ++i)
+        {
+            if (!waitConditions[i].test_and_set())
+            {
+                workers[i].restart(std::bind(reactOnPinChange, selectionForPins[i].first, selectionForPins[i].second), 200ms);
+                std::this_thread::yield();
+            }
+        }
+        std::this_thread::sleep_for(1ms);
+    }
+});
 
 template <board::PinType PIN>
 static void ARDUINO_ISR_ATTR isr()
 {
-    /*
-     * It is not possible to have a `static Worker` (not pointer-Type) within the ISR.
-     * The constructor of Worker will call std::thread::thread() which tries to acquire a lock which will fail.
-     * It is possible to create a new Worker outside of the declaration of the static local variable.
-     */
-    static Worker *delayedStarter = nullptr;
-
-    {
-        /*
-         * START CRITICAL SECTION
-         * 
-         * Prevent concurrent Worker creation.
-         */
-        static std::atomic_flag criticalSectionOccupied = ATOMIC_FLAG_INIT;
-        while (criticalSectionOccupied.test_and_set(std::memory_order_acquire)) // lock section
-        {
-            std::this_thread::yield(); // spin
-        }
-        if (!delayedStarter)
-        {
-            delayedStarter = new Worker();
-        }
-        /*
-         * END CRITICAL SECTION
-         */
-        criticalSectionOccupied.clear(std::memory_order_release); // unlock section
-    }
-
-    // worker must be managed in a thread separate to the ISR to avoid deadlocks
-    std::thread workerManagement([]() { delayedStarter->restart(
-                                            reactOnPinChange<PIN>,
-                                            std::chrono::milliseconds(200)); });
-    workerManagement.detach();
+    constexpr std::size_t conditionIndex = find_index_for_first(selectionForPins, PIN).value();
+    waitConditions[conditionIndex].clear();
 }
 
 /**

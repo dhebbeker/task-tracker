@@ -10,7 +10,6 @@ class Worker
   public:
     void finish()
     {
-        std::unique_lock _(workerThreadControlMutex);
         if (delayedWorkerThread.joinable())
         {
             delayedWorkerThread.join();
@@ -19,7 +18,6 @@ class Worker
 
     void cancelStartup()
     {
-        std::unique_lock _(workerThreadControlMutex);
         if (delayedWorkerThread.joinable())
         {
             {
@@ -34,7 +32,6 @@ class Worker
     template <class Function, class Rep, class Period>
     void restart(Function &&work, const std::chrono::duration<Rep, Period> &startupDelay)
     {
-        std::unique_lock _(workerThreadControlMutex);
         cancelStartup();
 
         {
@@ -61,9 +58,8 @@ class Worker
     }
 
   private:
-    bool abortFlag;                                //!< condition for aborting the work
-    std::mutex abortMutex;                         //!< used to signal the abort condition to worker thread
-    std::recursive_mutex workerThreadControlMutex; //!< used to protect concurrent thread ending/starting
-    std::condition_variable abortSignalling;       //!< signals that it may be time to abort
-    std::thread delayedWorkerThread;               //!< performs the startup delay and work
+    bool abortFlag;                          //!< condition for aborting the work
+    std::mutex abortMutex;                   //!< used to signal the abort condition to worker thread
+    std::condition_variable abortSignalling; //!< signals that it may be time to abort
+    std::thread delayedWorkerThread;         //!< performs the startup delay and work
 };
