@@ -10,7 +10,7 @@
 static HmiHandler callBack;
 
 template <KeyId SELECTION>
-static void isr()
+static void ARDUINO_ISR_ATTR isr()
 {
     static std::thread *p_callbackThread = nullptr;
     const auto now = millis(); /* warning: `now()` from <chrono>/libc can not be used in ISRs */
