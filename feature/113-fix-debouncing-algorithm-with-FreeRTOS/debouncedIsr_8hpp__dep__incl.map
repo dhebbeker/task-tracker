@@ -1,5 +1,6 @@
 <map id="lib/board_adapters/input_device_interface/debouncedIsr.hpp" name="lib/board_adapters/input_device_interface/debouncedIsr.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="125,5,281,60"/>
+<area shape="rect" id="node1" title=" " alt="" coords="225,5,381,60"/>
 <area shape="rect" id="node2" href="$debouncedIsr_8cpp.xhtml" title=" " alt="" coords="5,115,200,155"/>
 <area shape="rect" id="node3" href="$Keypad_8cpp.xhtml" title=" " alt="" coords="225,108,381,163"/>
+<area shape="rect" id="node4" href="$test__hmi_8cpp.xhtml" title=" " alt="" coords="405,115,529,155"/>
 </map>
