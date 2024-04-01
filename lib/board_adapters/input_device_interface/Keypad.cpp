@@ -10,7 +10,6 @@
 #include <find.hpp>
 #include <functional>
 #include <iterator>
-#include <thread>
 #include <type_traits>
 #include <utility>
 
@@ -50,7 +49,13 @@ static void reactOnPinChange(const board::PinType pin, KeyId keyId)
 
 static std::atomic_flag waitConditions[std::size(selectionForPins)] = {ATOMIC_FLAG_INIT};
 
-static std::thread workerManager([] {
+/**
+ * Must be called periodically.
+ * 
+ * Preferably with 1-10kHz.
+ */
+void workerManager()
+{
     // initialize for waiting
     for (auto &waitCondition : waitConditions)
     {
@@ -58,19 +63,14 @@ static std::thread workerManager([] {
     }
 
     static Worker workers[std::size(selectionForPins)];
-    while (true)
+    for (std::size_t i = 0; i < std::size(waitConditions); ++i)
     {
-        for (std::size_t i = 0; i < std::size(waitConditions); ++i)
+        if (!waitConditions[i].test_and_set())
         {
-            if (!waitConditions[i].test_and_set())
-            {
-                workers[i].restart(std::bind(reactOnPinChange, selectionForPins[i].first, selectionForPins[i].second), debouncePeriod);
-                std::this_thread::yield();
-            }
+            workers[i].restart(std::bind(reactOnPinChange, selectionForPins[i].first, selectionForPins[i].second), debouncePeriod);
         }
-        std::this_thread::sleep_for(1ms);
     }
-});
+}
 
 template <board::PinType PIN>
 static void ARDUINO_ISR_ATTR isr()

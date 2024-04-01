@@ -1,5 +1,6 @@
 #include <Arduino-wrapper.h>
 #include <algorithm>
+#include <atomic>
 #include <board_pins.hpp>
 #include <board_types.hpp>
 #include <chrono>
@@ -21,6 +22,7 @@
 #include <user_interaction/keypad_factory_interface.hpp>
 #include <user_interaction/statusindicators_factory_interface.hpp>
 
+using namespace std::chrono_literals;
 using namespace fakeit;
 
 // mocks
@@ -39,12 +41,28 @@ namespace serial_port
 std::basic_ostream<CharType> &cout = std::cout;
 }
 
+std::atomic_flag continueCondition = ATOMIC_FLAG_INIT;
+
+extern void workerManager(); // TODO improve interface design
+
+std::thread test_loop([] {
+    continueCondition.test_and_set(); // initialize
+    while (continueCondition.test_and_set())
+    {
+        workerManager();
+        std::this_thread::yield();
+        std::this_thread::sleep_for(1ms);
+    }
+});
+
 void setUp()
 {
 }
 
 void tearDown()
 {
+    continueCondition.clear();
+    test_loop.join();
 }
 
 void test_Controller()

@@ -26,22 +26,31 @@ void setup()
     });
 }
 
+extern void workerManager(); // TODO improve interface design
+
 void loop()
 {
+    using namespace std::chrono_literals;
     static Menu singleMenu(board::getDisplay());
     static Presenter presenter(singleMenu, board::getStatusIndicators());
     static ProcessHmiInputs processHmiInputs(presenter, board::getKeypad());
 
-    for (auto task : device::tasks)
-    {
-        serial_port::cout << task.second.getLabel() << " : " << std::boolalpha << task.second.isRunning()
-                          << std::noboolalpha << "   with " << task.second.getRecordedDuration().count() << " s" << std::endl;
-    }
-    serial_port::cout << "_\r" << std::endl;
+    static std::thread continuouslyPrintStatus([] {
+        while (true)
+        {
+            for (auto task : device::tasks)
+            {
+                serial_port::cout << task.second.getLabel() << " : " << std::boolalpha << task.second.isRunning()
+                                  << std::noboolalpha << "   with " << task.second.getRecordedDuration().count() << " s" << std::endl;
+            }
+            serial_port::cout << "_\r" << std::endl;
 
-    std::this_thread::yield();
-    using namespace std::chrono_literals;
-    std::this_thread::sleep_for(1s);
+            std::this_thread::sleep_for(1s);
+        }
+    });
 
     presenter.loop();
+    workerManager();
+    std::this_thread::yield();
+    std::this_thread::sleep_for(1ms);
 }
