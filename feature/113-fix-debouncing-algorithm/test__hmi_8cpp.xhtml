@@ -131,8 +131,8 @@ Functions</h2></td></tr>
 <tr class="memitem:aa88430b46b76c7ad4001d156a3e3b88f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__hmi_8cpp.xhtml#aa88430b46b76c7ad4001d156a3e3b88f">workerManager</a> ()</td></tr>
 <tr class="memdesc:aa88430b46b76c7ad4001d156a3e3b88f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Must be called periodically.  <a href="test__hmi_8cpp.xhtml#aa88430b46b76c7ad4001d156a3e3b88f">More...</a><br /></td></tr>
 <tr class="separator:aa88430b46b76c7ad4001d156a3e3b88f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cda152e4cab91b6d5e43216b97e23f1"><td class="memItemLeft" align="right" valign="top">std::thread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__hmi_8cpp.xhtml#a2cda152e4cab91b6d5e43216b97e23f1">loop</a> ([] { continueCondition.test_and_set();while(continueCondition.test_and_set()) { <a class="el" href="Keypad_8cpp.xhtml#aa88430b46b76c7ad4001d156a3e3b88f">workerManager</a>();std::this_thread::yield();std::this_thread::sleep_for(1ms);} })</td></tr>
-<tr class="separator:a2cda152e4cab91b6d5e43216b97e23f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade6d7c0fd8521bbe35ef47ff96b83ed7"><td class="memItemLeft" align="right" valign="top">std::thread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__hmi_8cpp.xhtml#ade6d7c0fd8521bbe35ef47ff96b83ed7">test_loop</a> ([] { continueCondition.test_and_set();while(continueCondition.test_and_set()) { <a class="el" href="Keypad_8cpp.xhtml#aa88430b46b76c7ad4001d156a3e3b88f">workerManager</a>();std::this_thread::yield();std::this_thread::sleep_for(1ms);} })</td></tr>
+<tr class="separator:ade6d7c0fd8521bbe35ef47ff96b83ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63326a1b70b6e3f070e51687798e02de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__hmi_8cpp.xhtml#a63326a1b70b6e3f070e51687798e02de">setUp</a> ()</td></tr>
 <tr class="separator:a63326a1b70b6e3f070e51687798e02de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab804e0f66def63262c1d6b4e3d2a2bd7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__hmi_8cpp.xhtml#ab804e0f66def63262c1d6b4e3d2a2bd7">tearDown</a> ()</td></tr>
@@ -148,24 +148,6 @@ Variables</h2></td></tr>
 <tr class="separator:a4928562e3e8e8c0408d8434a3a70e01c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a2cda152e4cab91b6d5e43216b97e23f1" name="a2cda152e4cab91b6d5e43216b97e23f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2cda152e4cab91b6d5e43216b97e23f1">&#9670;&#160;</a></span>loop()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::thread loop </td>
-          <td>(</td>
-          <td class="paramtype">[] { continueCondition.test_and_set();while(continueCondition.test_and_set()) { <a class="el" href="Keypad_8cpp.xhtml#aa88430b46b76c7ad4001d156a3e3b88f">workerManager</a>();std::this_thread::yield();std::this_thread::sleep_for(1ms);} }&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a3c04138a5bfe5d72780bb7e82a18e627" name="a3c04138a5bfe5d72780bb7e82a18e627"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&#160;</a></span>main()</h2>
 
@@ -247,6 +229,24 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="ade6d7c0fd8521bbe35ef47ff96b83ed7" name="ade6d7c0fd8521bbe35ef47ff96b83ed7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade6d7c0fd8521bbe35ef47ff96b83ed7">&#9670;&#160;</a></span>test_loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::thread test_loop </td>
+          <td>(</td>
+          <td class="paramtype">[] { continueCondition.test_and_set();while(continueCondition.test_and_set()) { <a class="el" href="Keypad_8cpp.xhtml#aa88430b46b76c7ad4001d156a3e3b88f">workerManager</a>();std::this_thread::yield();std::this_thread::sleep_for(1ms);} }&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aa88430b46b76c7ad4001d156a3e3b88f" name="aa88430b46b76c7ad4001d156a3e3b88f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa88430b46b76c7ad4001d156a3e3b88f">&#9670;&#160;</a></span>workerManager()</h2>
 
@@ -285,7 +285,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 1 2024 10:19:44 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Mon Apr 1 2024 10:24:56 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

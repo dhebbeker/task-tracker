@@ -8,7 +8,7 @@ var searchData=
   ['license_2emd_5',['LICENSE.md',['../LICENSE_8md.xhtml',1,'']]],
   ['list_6',['list',['../Protocol_8cpp.xhtml#a2bf6dea54b124ec11c84992bdf95539a',1,'Protocol.cpp']]],
   ['listcmd_7',['listCmd',['../Protocol_8cpp.xhtml#ac637a1d9e3afd1ca839afe51140a4bbc',1,'Protocol.cpp']]],
-  ['loop_8',['loop',['../classMenu.xhtml#a23bb40aa976a2d694d5fcce7180fc53c',1,'Menu::loop()'],['../main_8cpp.xhtml#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;main.cpp'],['../test__hmi_8cpp.xhtml#a2cda152e4cab91b6d5e43216b97e23f1',1,'loop([] { continueCondition.test_and_set();while(continueCondition.test_and_set()) { workerManager();std::this_thread::yield();std::this_thread::sleep_for(1ms);} }):&#160;test_hmi.cpp'],['../classPresenter.xhtml#a08de6e9eb7f340e4bd532dc50c29b815',1,'Presenter::loop()']]],
+  ['loop_8',['loop',['../classMenu.xhtml#a23bb40aa976a2d694d5fcce7180fc53c',1,'Menu::loop()'],['../main_8cpp.xhtml#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;main.cpp'],['../classPresenter.xhtml#a08de6e9eb7f340e4bd532dc50c29b815',1,'Presenter::loop()']]],
   ['lv_5fassert_5fhandler_9',['LV_ASSERT_HANDLER',['../lv__conf_8h.xhtml#a7f89929bee5e1d1f3047b6fc57723602',1,'lv_conf.h']]],
   ['lv_5fassert_5fhandler_5finclude_10',['LV_ASSERT_HANDLER_INCLUDE',['../lv__conf_8h.xhtml#aa4d75719785838a72b61c58e920fc8f8',1,'lv_conf.h']]],
   ['lv_5fattribute_5fdma_11',['LV_ATTRIBUTE_DMA',['../lv__conf_8h.xhtml#ad75bbb40b927ad7efa7231d3625672b1',1,'lv_conf.h']]],
