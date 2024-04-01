@@ -7,6 +7,10 @@
 #include <functional>
 #include <utility>
 
+#if __has_include(<FunctionalInterrupt.h>) // specific to Arduino-ESP32
+#include <FunctionalInterrupt.h>
+#endif
+
 using namespace std::chrono_literals;
 
 static HmiHandler callBack;
