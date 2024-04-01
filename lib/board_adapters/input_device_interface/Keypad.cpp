@@ -32,6 +32,13 @@ static constexpr std::pair<board::PinType, KeyId> selectionForPins[] = {
     {board::button::pin::back, KeyId::BACK},
 };
 
+/**
+ * Debounce period.
+ * 
+ * Key presses must be at least this long to be detected.
+ */
+static constexpr auto debouncePeriod = 20ms;
+
 static void reactOnPinChange(const board::PinType pin, KeyId keyId)
 {
     const bool isPressed = digitalRead(pin) == LOW;
@@ -57,7 +64,7 @@ static std::thread workerManager([] {
         {
             if (!waitConditions[i].test_and_set())
             {
-                workers[i].restart(std::bind(reactOnPinChange, selectionForPins[i].first, selectionForPins[i].second), 200ms);
+                workers[i].restart(std::bind(reactOnPinChange, selectionForPins[i].first, selectionForPins[i].second), debouncePeriod);
                 std::this_thread::yield();
             }
         }
