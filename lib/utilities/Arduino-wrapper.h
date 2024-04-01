@@ -17,9 +17,26 @@
 #endif
 
 #if defined(ArduinoFake)
+
+/* the definition in ArduinoFake is too primitive for testing */
 #if defined(digitalPinToInterrupt)
-// the definition in ArduinoFake is too primitive for testing
 #undef digitalPinToInterrupt
 #define digitalPinToInterrupt(pinNumber) pinNumber
 #endif
+
+/*
+ * Memory type attributes relevant for ESP32 must be empty defined for testing.
+ * 
+ * https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/memory-types.html#how-to-place-code-in-iram
+ */
+#if !defined(ARDUINO_ISR_ATTR)
+#define ARDUINO_ISR_ATTR
 #endif
+#if !defined(IRAM_ATTR)
+#define IRAM_ATTR
+#endif
+#if !defined(DRAM_ATTR)
+#define DRAM_ATTR
+#endif
+
+#endif /* defined(ArduinoFake) */
