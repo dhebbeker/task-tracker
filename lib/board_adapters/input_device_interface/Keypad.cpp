@@ -56,11 +56,13 @@ static std::atomic_flag waitConditions[std::size(selectionForPins)] = {ATOMIC_FL
  */
 void workerManager()
 {
-    // initialize for waiting
-    for (auto &waitCondition : waitConditions)
-    {
-        waitCondition.test_and_set();
-    }
+    static const bool initialized = [] {
+        // initialize for waiting
+        for (auto &waitCondition : waitConditions)
+        {
+            waitCondition.test_and_set();
+        } 
+        return true; }();
 
     static Worker workers[std::size(selectionForPins)];
     for (std::size_t i = 0; i < std::size(waitConditions); ++i)
