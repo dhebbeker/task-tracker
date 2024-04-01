@@ -9,6 +9,8 @@
 
 #if __has_include(<FunctionalInterrupt.h>) // specific to Arduino-ESP32
 #include <FunctionalInterrupt.h>
+#else // we assume we build for unit tests
+extern void attachInterrupt(uint8_t pin, std::function<void(void)> intRoutine, int mode); // must be defined by the test
 #endif
 
 using namespace std::chrono_literals;
