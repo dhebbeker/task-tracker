@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include <cassert>
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
 #include <input_device_interface/debouncedIsr.hpp>
@@ -30,7 +31,7 @@ class Debouncer
           debounceTaskHandle(nullptr),
           startupDelay(pdMS_TO_TICKS(std::chrono::duration_cast<std::chrono::milliseconds>(debounceTime).count()))
     {
-        xTaskCreate(pinDebounce, "pinDebounce", stackSize, nullptr, priority, &debounceTaskHandle);
+        xTaskCreate(pinDebounce, "pinDebounce", stackSize, this, priority, &debounceTaskHandle);
     }
 
     UBaseType_t getTaskStackHighWaterMark() const
@@ -55,15 +56,17 @@ class Debouncer
      */
     static constexpr configSTACK_DEPTH_TYPE stackSize = configMINIMAL_STACK_SIZE + 580;
 
-    void ARDUINO_ISR_ATTR interruptServiceRoutine()
+    void ARDUINO_ISR_ATTR interruptServiceRoutine() const
     {
         BaseType_t higherPriorityTaskWoken = pdFALSE;
         vTaskNotifyGiveFromISR(debounceTaskHandle, &higherPriorityTaskWoken);
         portYIELD_FROM_ISR(higherPriorityTaskWoken);
     }
 
-    void pinDebounce(void *)
+    static void pinDebounce(void *const parameter)
     {
+        assert(parameter);
+        const Debouncer &debouncer = *reinterpret_cast<const Debouncer *>(parameter);
         while (true)
         {
             // prepare for incoming notification
@@ -73,12 +76,12 @@ class Debouncer
             ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
 
             // second stage: wait for uninterrupted period
-            while (ulTaskNotifyTake(pdTRUE, startupDelay) > 0)
+            while (ulTaskNotifyTake(pdTRUE, debouncer.startupDelay) > 0)
             {
                 continue; // has been interrupted, wait again
             }
 
-            handler();
+            debouncer.handler();
         }
     }
 };
