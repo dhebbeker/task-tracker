@@ -119,8 +119,8 @@ Classes</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a1d4dc7dc9338136509998d89199e1e48"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Keypad_8cpp.xhtml#a1d4dc7dc9338136509998d89199e1e48">reactOnPinChange</a> (const <a class="el" href="namespaceboard.xhtml#af091862f70321f1b4fd67a4f4751ef0c">board::PinType</a> pin, <a class="el" href="KeyIds_8hpp.xhtml#a251d5d8935f1af4cb86e18f962d9d33d">KeyId</a> keyId)</td></tr>
 <tr class="separator:a1d4dc7dc9338136509998d89199e1e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5d32fb90115419ad886eee171fd38c6"><td class="memItemLeft" align="right" valign="top">static std::thread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Keypad_8cpp.xhtml#ae5d32fb90115419ad886eee171fd38c6">workerManager</a> ([] { for(auto &amp;waitCondition :<a class="el" href="Keypad_8cpp.xhtml#abd425af3c75e39667414567798dda142">waitConditions</a>) { waitCondition.test_and_set();} static <a class="el" href="classWorker.xhtml">Worker</a> workers[std::size(<a class="el" href="Keypad_8cpp.xhtml#a49f14bf0c0675d6e92419f512907b280">selectionForPins</a>)];while(true) { for(std::size_t i=0;i&lt; std::size(<a class="el" href="Keypad_8cpp.xhtml#abd425af3c75e39667414567798dda142">waitConditions</a>);++i) { if(!<a class="el" href="Keypad_8cpp.xhtml#abd425af3c75e39667414567798dda142">waitConditions</a>[i].test_and_set()) { workers[i].restart(std::bind(<a class="el" href="Keypad_8cpp.xhtml#a1d4dc7dc9338136509998d89199e1e48">reactOnPinChange</a>, <a class="el" href="Keypad_8cpp.xhtml#a49f14bf0c0675d6e92419f512907b280">selectionForPins</a>[i].first, <a class="el" href="Keypad_8cpp.xhtml#a49f14bf0c0675d6e92419f512907b280">selectionForPins</a>[i].second), 200ms);std::this_thread::yield();} } std::this_thread::sleep_for(1ms);} })</td></tr>
-<tr class="separator:ae5d32fb90115419ad886eee171fd38c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabb246871594bae992286db12d8f8735"><td class="memItemLeft" align="right" valign="top">static std::thread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Keypad_8cpp.xhtml#aabb246871594bae992286db12d8f8735">workerManager</a> ([] { for(auto &amp;waitCondition :<a class="el" href="Keypad_8cpp.xhtml#abd425af3c75e39667414567798dda142">waitConditions</a>) { waitCondition.test_and_set();} static <a class="el" href="classWorker.xhtml">Worker</a> workers[std::size(<a class="el" href="Keypad_8cpp.xhtml#a49f14bf0c0675d6e92419f512907b280">selectionForPins</a>)];while(true) { for(std::size_t i=0;i&lt; std::size(<a class="el" href="Keypad_8cpp.xhtml#abd425af3c75e39667414567798dda142">waitConditions</a>);++i) { if(!<a class="el" href="Keypad_8cpp.xhtml#abd425af3c75e39667414567798dda142">waitConditions</a>[i].test_and_set()) { workers[i].restart(std::bind(<a class="el" href="Keypad_8cpp.xhtml#a1d4dc7dc9338136509998d89199e1e48">reactOnPinChange</a>, <a class="el" href="Keypad_8cpp.xhtml#a49f14bf0c0675d6e92419f512907b280">selectionForPins</a>[i].first, <a class="el" href="Keypad_8cpp.xhtml#a49f14bf0c0675d6e92419f512907b280">selectionForPins</a>[i].second), <a class="el" href="Keypad_8cpp.xhtml#a2cd0117d9fee8e51fd810c216fa9d9dc">debouncePeriod</a>);std::this_thread::yield();} } std::this_thread::sleep_for(1ms);} })</td></tr>
+<tr class="separator:aabb246871594bae992286db12d8f8735"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a9f8a39560228d492c7a38d819b311d"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespaceboard.xhtml#af091862f70321f1b4fd67a4f4751ef0c">board::PinType</a> PIN&gt; </td></tr>
 <tr class="memitem:a3a9f8a39560228d492c7a38d819b311d"><td class="memTemplItemLeft" align="right" valign="top">static void ARDUINO_ISR_ATTR&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="Keypad_8cpp.xhtml#a3a9f8a39560228d492c7a38d819b311d">isr</a> ()</td></tr>
 <tr class="separator:a3a9f8a39560228d492c7a38d819b311d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,6 +136,9 @@ Variables</h2></td></tr>
 <tr class="memitem:a49f14bf0c0675d6e92419f512907b280"><td class="memItemLeft" align="right" valign="top">static constexpr std::pair&lt; <a class="el" href="namespaceboard.xhtml#af091862f70321f1b4fd67a4f4751ef0c">board::PinType</a>, <a class="el" href="KeyIds_8hpp.xhtml#a251d5d8935f1af4cb86e18f962d9d33d">KeyId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Keypad_8cpp.xhtml#a49f14bf0c0675d6e92419f512907b280">selectionForPins</a> []</td></tr>
 <tr class="memdesc:a49f14bf0c0675d6e92419f512907b280"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps HMI buttons to events.  <a href="Keypad_8cpp.xhtml#a49f14bf0c0675d6e92419f512907b280">More...</a><br /></td></tr>
 <tr class="separator:a49f14bf0c0675d6e92419f512907b280"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cd0117d9fee8e51fd810c216fa9d9dc"><td class="memItemLeft" align="right" valign="top">static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Keypad_8cpp.xhtml#a2cd0117d9fee8e51fd810c216fa9d9dc">debouncePeriod</a> = 20ms</td></tr>
+<tr class="memdesc:a2cd0117d9fee8e51fd810c216fa9d9dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Debounce period.  <a href="Keypad_8cpp.xhtml#a2cd0117d9fee8e51fd810c216fa9d9dc">More...</a><br /></td></tr>
+<tr class="separator:a2cd0117d9fee8e51fd810c216fa9d9dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd425af3c75e39667414567798dda142"><td class="memItemLeft" align="right" valign="top">static std::atomic_flag&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Keypad_8cpp.xhtml#abd425af3c75e39667414567798dda142">waitConditions</a> [std::size(<a class="el" href="Keypad_8cpp.xhtml#a49f14bf0c0675d6e92419f512907b280">selectionForPins</a>)] = {ATOMIC_FLAG_INIT}</td></tr>
 <tr class="separator:abd425af3c75e39667414567798dda142"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -248,8 +251,8 @@ template&lt;<a class="el" href="namespaceboard.xhtml#af091862f70321f1b4fd67a4f47
 
 </div>
 </div>
-<a id="ae5d32fb90115419ad886eee171fd38c6" name="ae5d32fb90115419ad886eee171fd38c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5d32fb90115419ad886eee171fd38c6">&#9670;&#160;</a></span>workerManager()</h2>
+<a id="aabb246871594bae992286db12d8f8735" name="aabb246871594bae992286db12d8f8735"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabb246871594bae992286db12d8f8735">&#9670;&#160;</a></span>workerManager()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -260,7 +263,7 @@ template&lt;<a class="el" href="namespaceboard.xhtml#af091862f70321f1b4fd67a4f47
         <tr>
           <td class="memname">static std::thread workerManager </td>
           <td>(</td>
-          <td class="paramtype">[] { for(auto &amp;waitCondition :<a class="el" href="Keypad_8cpp.xhtml#abd425af3c75e39667414567798dda142">waitConditions</a>) { waitCondition.test_and_set();} static <a class="el" href="classWorker.xhtml">Worker</a> workers[std::size(<a class="el" href="Keypad_8cpp.xhtml#a49f14bf0c0675d6e92419f512907b280">selectionForPins</a>)];while(true) { for(std::size_t i=0;i&lt; std::size(<a class="el" href="Keypad_8cpp.xhtml#abd425af3c75e39667414567798dda142">waitConditions</a>);++i) { if(!<a class="el" href="Keypad_8cpp.xhtml#abd425af3c75e39667414567798dda142">waitConditions</a>[i].test_and_set()) { workers[i].restart(std::bind(<a class="el" href="Keypad_8cpp.xhtml#a1d4dc7dc9338136509998d89199e1e48">reactOnPinChange</a>, <a class="el" href="Keypad_8cpp.xhtml#a49f14bf0c0675d6e92419f512907b280">selectionForPins</a>[i].first, <a class="el" href="Keypad_8cpp.xhtml#a49f14bf0c0675d6e92419f512907b280">selectionForPins</a>[i].second), 200ms);std::this_thread::yield();} } std::this_thread::sleep_for(1ms);} }&#160;</td>
+          <td class="paramtype">[] { for(auto &amp;waitCondition :<a class="el" href="Keypad_8cpp.xhtml#abd425af3c75e39667414567798dda142">waitConditions</a>) { waitCondition.test_and_set();} static <a class="el" href="classWorker.xhtml">Worker</a> workers[std::size(<a class="el" href="Keypad_8cpp.xhtml#a49f14bf0c0675d6e92419f512907b280">selectionForPins</a>)];while(true) { for(std::size_t i=0;i&lt; std::size(<a class="el" href="Keypad_8cpp.xhtml#abd425af3c75e39667414567798dda142">waitConditions</a>);++i) { if(!<a class="el" href="Keypad_8cpp.xhtml#abd425af3c75e39667414567798dda142">waitConditions</a>[i].test_and_set()) { workers[i].restart(std::bind(<a class="el" href="Keypad_8cpp.xhtml#a1d4dc7dc9338136509998d89199e1e48">reactOnPinChange</a>, <a class="el" href="Keypad_8cpp.xhtml#a49f14bf0c0675d6e92419f512907b280">selectionForPins</a>[i].first, <a class="el" href="Keypad_8cpp.xhtml#a49f14bf0c0675d6e92419f512907b280">selectionForPins</a>[i].second), <a class="el" href="Keypad_8cpp.xhtml#a2cd0117d9fee8e51fd810c216fa9d9dc">debouncePeriod</a>);std::this_thread::yield();} } std::this_thread::sleep_for(1ms);} }&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -294,6 +297,31 @@ template&lt;<a class="el" href="namespaceboard.xhtml#af091862f70321f1b4fd67a4f47
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2cd0117d9fee8e51fd810c216fa9d9dc" name="a2cd0117d9fee8e51fd810c216fa9d9dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cd0117d9fee8e51fd810c216fa9d9dc">&#9670;&#160;</a></span>debouncePeriod</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto debouncePeriod = 20ms</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Debounce period. </p>
+<p >Key presses must be at least this long to be detected. </p>
 
 </div>
 </div>
@@ -372,7 +400,7 @@ template&lt;<a class="el" href="namespaceboard.xhtml#af091862f70321f1b4fd67a4f47
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 31 2024 20:46:34 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Mon Apr 1 2024 08:41:48 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
