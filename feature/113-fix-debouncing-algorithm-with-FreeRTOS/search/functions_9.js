@@ -5,5 +5,7 @@ var searchData=
   ['mapselectiontofrequency_2',['mapSelectionToFrequency',['../Presenter_8cpp.xhtml#ab58447859cf3dc4a82ae35bfd7f015b9',1,'Presenter.cpp']]],
   ['maptaskselectiontotask_3',['mapTaskSelectionToTask',['../ProcessHmiInputs_8cpp.xhtml#aa9cf0edd987c3177477d3e63b691be63',1,'ProcessHmiInputs.cpp']]],
   ['maptasktostatusindicator_4',['mapTaskToStatusIndicator',['../ProcessHmiInputs_8cpp.xhtml#afac4ee690ba74a23455c685e24f90581',1,'ProcessHmiInputs.cpp']]],
-  ['menu_5',['Menu',['../classMenu.xhtml#adb4da2a16fe065c343dc1b9a743aeba1',1,'Menu']]]
+  ['maxtoint_5',['maxToInt',['../namespacedebounce__task__priority.xhtml#aaf4fd7f318e9893495f853aec6907c18',1,'debounce_task_priority']]],
+  ['menu_6',['Menu',['../classMenu.xhtml#adb4da2a16fe065c343dc1b9a743aeba1',1,'Menu']]],
+  ['mintoint_7',['minToInt',['../namespacedebounce__task__priority.xhtml#a6e0ee6cb7ddfd9ca7a5c38c6ae4935ba',1,'debounce_task_priority']]]
 ];
