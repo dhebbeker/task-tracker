@@ -54,7 +54,7 @@ class Debouncer
      *
      * Has been determined by measuring the stack high water mark and by experimenting.
      */
-    static constexpr configSTACK_DEPTH_TYPE stackSize = configMINIMAL_STACK_SIZE + 580;
+    static constexpr configSTACK_DEPTH_TYPE stackSize = configMINIMAL_STACK_SIZE + 708;
 
     void ARDUINO_ISR_ATTR interruptServiceRoutine() const
     {
