@@ -45,7 +45,7 @@ class DebouncedPinIsr
      */
     static constexpr configSTACK_DEPTH_TYPE stackSize = configMINIMAL_STACK_SIZE + 580;
 
-    static void IRAM_ATTR interruptSubroutine()
+    static void ARDUINO_ISR_ATTR interruptSubroutine()
     {
         BaseType_t higherPriorityTaskWoken = pdFALSE;
         vTaskNotifyGiveFromISR(debounceTaskHandle, &higherPriorityTaskWoken);
