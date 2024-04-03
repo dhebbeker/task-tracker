@@ -24,6 +24,15 @@ static HmiHandler callBack;
  */
 static constexpr auto debouncePeriod = 20ms;
 
+/**
+ * Reacts on a debounced (stabilized) pin change.
+ *
+ * It will be checked if the pin has "active" state.
+ * If so, the callback handler will be called.
+ *
+ * @param pin must be the I/O pin which has changed
+ * @param keyId is an argument which will be passed to the callback handler
+ */
 static void reactOnPinChange(const board::PinType pin, KeyId keyId)
 {
     const bool isPressed = digitalRead(pin) == LOW;
@@ -57,10 +66,10 @@ Keypad::Keypad()
         attachInterrupt(
             digitalPinToInterrupt(selectionForPin.first),
             createDebouncer(std::bind(
-                                    reactOnPinChange,
-                                    selectionForPin.first,
-                                    selectionForPin.second),
-                                debouncePeriod),
+                                reactOnPinChange,
+                                selectionForPin.first,
+                                selectionForPin.second),
+                            debouncePeriod),
             CHANGE);
         index++;
     }
