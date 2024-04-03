@@ -19,9 +19,35 @@ int debouncer::defaultPriorityToInt()
     return (maxPriorityToInt() - minPriorityToInt()) / 2;
 }
 
+/**
+ * Non-memorizing startup delay for debouncing.
+ *
+ * Based of FreeRTOS task notifications.
+ *
+ * Using a startup delay has the advantage, that short pulses (shorter than the debounce period) will have no effect.
+ * In contrast classical debouncing trough ignoring changes for the debounce period, after an initial change, may
+ * miss the second state change of a short pulse.
+ *
+ * Operation:
+ *
+ * - if the interrupt function (typically called by an interrupt), provided by \ref getInterruptFunction()
+ *   is called, a timer for the startup delay will start
+ * - if the interrupt function is called again the timer will restart
+ * - when the timer expires, the handler will be called
+ *
+ */
 class Debouncer
 {
   public:
+    /**
+     * Setup and start an (initially idle) startup delay task.
+     *
+     * @tparam Rep Rep, an arithmetic type representing the number of ticks
+     * @tparam Period a std::ratio representing the tick period (i.e. the number of seconds per tick)
+     * @param handler is a function to be called when the timer expires
+     * @param debounceTime is the startup delay
+     * @param priority is the priority in which the delay task and therefore the handler shall be called
+     */
     template <class Rep, class Period>
     Debouncer(
         std::function<void(void)> handler,
@@ -34,11 +60,23 @@ class Debouncer
         xTaskCreate(pinDebounce, "pinDebounce", stackSize, this, priority, &debounceTaskHandle);
     }
 
+    /**
+     * Indicates minimum free memory on the task specific stack.
+     *
+     * This can be used to estimate the necessary stack size for the task.
+     *
+     * @return number of minimum free words on the task
+     */
     UBaseType_t getTaskStackHighWaterMark() const
     {
         return uxTaskGetStackHighWaterMark(debounceTaskHandle);
     }
 
+    /**
+     * Provides the function to be used to indicate state changes to be debounced.
+     *
+     * @returns a function which must be called when the observed state changes
+     */
     std::function<void(void)> getInterruptFunction() const
     {
         return std::bind(&Debouncer::interruptServiceRoutine, this);
@@ -56,6 +94,12 @@ class Debouncer
      */
     static constexpr configSTACK_DEPTH_TYPE stackSize = configMINIMAL_STACK_SIZE + 708;
 
+    /**
+     * Triggers the startup delay.
+     *
+     * This is designed such that it may be called from an interrupt.
+     * It is non-blocking and as short as possible
+     */
     void ARDUINO_ISR_ATTR interruptServiceRoutine() const
     {
         BaseType_t higherPriorityTaskWoken = pdFALSE;
@@ -63,6 +107,17 @@ class Debouncer
         portYIELD_FROM_ISR(higherPriorityTaskWoken);
     }
 
+    /**
+     * Performs the actual startup delay.
+     *
+     * \internal
+     * Function must be `static` in order to be able to provide a raw function pointer.
+     * In order to access the debouncer's non-static members, a pointer to the debouncer object
+     * must be provided.
+     * \endinternal
+     *
+     * @param parameter must be a pointer to the debouncer object used for debouncing
+     */
     static void pinDebounce(void *const parameter)
     {
         assert(parameter);

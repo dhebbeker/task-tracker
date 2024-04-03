@@ -28,7 +28,7 @@ static constexpr auto debouncePeriod = 20ms;
  * Reacts on a debounced (stabilized) pin change.
  *
  * It will be checked if the pin has "active" state.
- * If so, the callback handler will be called.
+ * If the pin is active, the callback handler will be called.
  *
  * @param pin must be the I/O pin which has changed
  * @param keyId is an argument which will be passed to the callback handler
