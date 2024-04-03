@@ -61,13 +61,13 @@ void attachInterrupt(const uint8_t interruptNum, const std::function<void(void)>
 }
 
 // test dummy for a FreeRTOS adapter function
-std::function<void(void)> createDebouncingIsr(const std::function<void(void)> handler, std::chrono::milliseconds, int)
+std::function<void(void)> createDebouncer(const std::function<void(void)> handler, std::chrono::milliseconds, int)
 {
     return handler;
 }
 
 // test dummy for a FreeRTOS adapter function
-int debounce_task_priority::defaultToInt()
+int debouncer::defaultPriorityToInt()
 {
     return 0xC0FFE;
 }

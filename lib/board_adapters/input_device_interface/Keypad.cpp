@@ -56,7 +56,7 @@ Keypad::Keypad()
         pinMode(selectionForPin.first, INPUT_PULLUP);
         attachInterrupt(
             digitalPinToInterrupt(selectionForPin.first),
-            createDebouncingIsr(std::bind(
+            createDebouncer(std::bind(
                                     reactOnPinChange,
                                     selectionForPin.first,
                                     selectionForPin.second),

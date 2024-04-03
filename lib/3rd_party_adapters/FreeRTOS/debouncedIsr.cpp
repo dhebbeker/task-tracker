@@ -4,19 +4,19 @@
 #include <freertos/task.h>
 #include <input_device_interface/debouncedIsr.hpp>
 
-int debounce_task_priority::minToInt()
+int debouncer::minPriorityToInt()
 {
     return 0; // by FreeRTOS specification
 }
 
-int debounce_task_priority::maxToInt()
+int debouncer::maxPriorityToInt()
 {
     return configMAX_PRIORITIES - 1;
 }
 
-int debounce_task_priority::defaultToInt()
+int debouncer::defaultPriorityToInt()
 {
-    return (maxToInt() - minToInt()) / 2;
+    return (maxPriorityToInt() - minPriorityToInt()) / 2;
 }
 
 class Debouncer
@@ -26,7 +26,7 @@ class Debouncer
     Debouncer(
         std::function<void(void)> handler,
         std::chrono::duration<Rep, Period> debounceTime,
-        int priority = debounce_task_priority::defaultToInt())
+        int priority = debouncer::defaultPriorityToInt())
         : handler(handler),
           debounceTaskHandle(nullptr),
           startupDelay(pdMS_TO_TICKS(std::chrono::duration_cast<std::chrono::milliseconds>(debounceTime).count()))
@@ -86,7 +86,7 @@ class Debouncer
     }
 };
 
-std::function<void(void)> createDebouncingIsr(
+std::function<void(void)> createDebouncer(
     const std::function<void(void)> handler,
     const std::chrono::milliseconds debounceTime,
     const int priority)
