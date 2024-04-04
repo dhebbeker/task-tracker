@@ -11,10 +11,6 @@ namespace task_tracker_systems
 struct TaskObject
 {
     /**
-     * duration in seconds
-     */
-    std::chrono::seconds::rep duration;
-    /**
      * unique identifier
      */
     unsigned int id;
@@ -22,5 +18,9 @@ struct TaskObject
      * name or summary; ASCII only, no line breaks
      */
     std::string label;
+    /**
+     * duration in seconds
+     */
+    std::chrono::seconds::rep duration;
 };
 } // namespace task_tracker_systems
