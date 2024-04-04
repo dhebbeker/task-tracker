@@ -10,13 +10,14 @@ namespace cli = command_line_interpreter;
 // --------------------------
 #include "JsonGenerator.hpp"
 #include <serial_protocol/ProtocolVersionObject.hpp>
+#include <serial_protocol/TaskObject.hpp>
 #include <string>
 
 using namespace task_tracker_systems;
 
 constexpr int defaultJsonIndent = 4;
 
-// command for into
+// command for info
 static const auto info = []() {
     constexpr ProtocolVersionObject version = {.major = 0, .minor = 1, .patch = 0};
     serial_port::cout << toJsonString(version) << std::endl;
@@ -29,7 +30,8 @@ static const auto listCmd = cli::makeCommand("list", std::function(list));
 
 // command for edit
 static const auto edit = [](const int id, const std::basic_string<ProtocolHandler::CharType> label, const int duration) {
-    serial_port::cout << "Edit id(" << id << ") label('" << label << "') duration(" << duration << ")" << std::endl;
+    const TaskObject task = {.id = id, .label = label, .duration = duration};
+    serial_port::cout << toJsonString(task) << std::endl;
 };
 static const cli::Option<int> id = {.labels = {"--id"}, .defaultValue = 0};
 static const cli::Option<std::basic_string<ProtocolHandler::CharType>> label = {.labels = {"--name"}, .defaultValue = "foo"};
