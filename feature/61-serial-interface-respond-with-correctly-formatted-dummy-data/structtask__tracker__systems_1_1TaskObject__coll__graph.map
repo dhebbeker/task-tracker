@@ -1,6 +1,6 @@
 <map id="task_tracker_systems::TaskObject" name="task_tracker_systems::TaskObject">
-<area shape="rect" id="node1" title="task object" alt="" coords="38,108,193,163"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,49,45"/>
-<area shape="rect" id="node3" title=" " alt="" coords="95,5,135,45"/>
-<area shape="rect" id="node4" title=" " alt="" coords="159,5,218,45"/>
+<area shape="rect" id="node1" title="task object" alt="" coords="21,108,176,163"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,45,45"/>
+<area shape="rect" id="node3" title=" " alt="" coords="69,5,128,45"/>
+<area shape="rect" id="node4" title=" " alt="" coords="153,5,197,45"/>
 </map>
