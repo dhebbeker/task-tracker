@@ -6,9 +6,9 @@ var searchData=
   ['mapselectiontofrequency_3',['mapSelectionToFrequency',['../Presenter_8cpp.xhtml#ab58447859cf3dc4a82ae35bfd7f015b9',1,'Presenter.cpp']]],
   ['maptaskselectiontotask_4',['mapTaskSelectionToTask',['../ProcessHmiInputs_8cpp.xhtml#aa9cf0edd987c3177477d3e63b691be63',1,'ProcessHmiInputs.cpp']]],
   ['maptasktostatusindicator_5',['mapTaskToStatusIndicator',['../ProcessHmiInputs_8cpp.xhtml#afac4ee690ba74a23455c685e24f90581',1,'ProcessHmiInputs.cpp']]],
-  ['maxtoint_6',['maxToInt',['../namespacedebounce__task__priority.xhtml#aaf4fd7f318e9893495f853aec6907c18',1,'debounce_task_priority']]],
+  ['maxprioritytoint_6',['maxPriorityToInt',['../group__debouncer__priority.xhtml#gafef35b417ced03b35db829776da9b7f4',1,'debouncer']]],
   ['menu_7',['Menu',['../classMenu.xhtml',1,'Menu'],['../classMenu.xhtml#adb4da2a16fe065c343dc1b9a743aeba1',1,'Menu::Menu()']]],
   ['menu_2ecpp_8',['Menu.cpp',['../Menu_8cpp.xhtml',1,'']]],
   ['menu_2ehpp_9',['Menu.hpp',['../Menu_8hpp.xhtml',1,'']]],
-  ['mintoint_10',['minToInt',['../namespacedebounce__task__priority.xhtml#a6e0ee6cb7ddfd9ca7a5c38c6ae4935ba',1,'debounce_task_priority']]]
+  ['minprioritytoint_10',['minPriorityToInt',['../group__debouncer__priority.xhtml#ga2e82448ac22d58c7ada6da770dd0414e',1,'debouncer']]]
 ];

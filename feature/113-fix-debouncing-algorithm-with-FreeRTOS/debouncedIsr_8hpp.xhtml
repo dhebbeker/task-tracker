@@ -105,29 +105,30 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:namespacedebounce__task__priority"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedebounce__task__priority.xhtml">debounce_task_priority</a></td></tr>
+<tr class="memitem:namespacedebouncer"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedebouncer.xhtml">debouncer</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a6e0ee6cb7ddfd9ca7a5c38c6ae4935ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedebounce__task__priority.xhtml#a6e0ee6cb7ddfd9ca7a5c38c6ae4935ba">debounce_task_priority::minToInt</a> ()</td></tr>
-<tr class="separator:a6e0ee6cb7ddfd9ca7a5c38c6ae4935ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf4fd7f318e9893495f853aec6907c18"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedebounce__task__priority.xhtml#aaf4fd7f318e9893495f853aec6907c18">debounce_task_priority::maxToInt</a> ()</td></tr>
-<tr class="separator:aaf4fd7f318e9893495f853aec6907c18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed6bbec95c05ee686026a8ce37356618"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedebounce__task__priority.xhtml#aed6bbec95c05ee686026a8ce37356618">debounce_task_priority::defaultToInt</a> ()</td></tr>
-<tr class="separator:aed6bbec95c05ee686026a8ce37356618"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b4b131f5c4ec0a1f41f9e1dd0fe5eab"><td class="memItemLeft" align="right" valign="top">std::function&lt; void(void)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debouncedIsr_8hpp.xhtml#a8b4b131f5c4ec0a1f41f9e1dd0fe5eab">createDebouncingIsr</a> (std::function&lt; void(void)&gt; handler, std::chrono::milliseconds debounceTime, int priority=<a class="el" href="namespacedebounce__task__priority.xhtml#aed6bbec95c05ee686026a8ce37356618">debounce_task_priority::defaultToInt</a>())</td></tr>
-<tr class="separator:a8b4b131f5c4ec0a1f41f9e1dd0fe5eab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2e82448ac22d58c7ada6da770dd0414e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__debouncer__priority.xhtml#ga2e82448ac22d58c7ada6da770dd0414e">debouncer::minPriorityToInt</a> ()</td></tr>
+<tr class="separator:ga2e82448ac22d58c7ada6da770dd0414e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafef35b417ced03b35db829776da9b7f4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__debouncer__priority.xhtml#gafef35b417ced03b35db829776da9b7f4">debouncer::maxPriorityToInt</a> ()</td></tr>
+<tr class="separator:gafef35b417ced03b35db829776da9b7f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0a5cb12d139cad7002bcb99eea151a59"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__debouncer__priority.xhtml#ga0a5cb12d139cad7002bcb99eea151a59">debouncer::defaultPriorityToInt</a> ()</td></tr>
+<tr class="separator:ga0a5cb12d139cad7002bcb99eea151a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18fe6328e4c577f6ea2429d812e9aede"><td class="memItemLeft" align="right" valign="top">std::function&lt; void(void)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debouncedIsr_8hpp.xhtml#a18fe6328e4c577f6ea2429d812e9aede">createDebouncer</a> (std::function&lt; void(void)&gt; handler, std::chrono::milliseconds debounceTime, int priority=<a class="el" href="group__debouncer__priority.xhtml#ga0a5cb12d139cad7002bcb99eea151a59">debouncer::defaultPriorityToInt</a>())</td></tr>
+<tr class="memdesc:a18fe6328e4c577f6ea2429d812e9aede"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classDebouncer.xhtml" title="Non-memorizing startup delay for debouncing.">Debouncer</a>.  <a href="debouncedIsr_8hpp.xhtml#a18fe6328e4c577f6ea2429d812e9aede">More...</a><br /></td></tr>
+<tr class="separator:a18fe6328e4c577f6ea2429d812e9aede"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a8b4b131f5c4ec0a1f41f9e1dd0fe5eab" name="a8b4b131f5c4ec0a1f41f9e1dd0fe5eab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b4b131f5c4ec0a1f41f9e1dd0fe5eab">&#9670;&#160;</a></span>createDebouncingIsr()</h2>
+<a id="a18fe6328e4c577f6ea2429d812e9aede" name="a18fe6328e4c577f6ea2429d812e9aede"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18fe6328e4c577f6ea2429d812e9aede">&#9670;&#160;</a></span>createDebouncer()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::function&lt; void(void)&gt; createDebouncingIsr </td>
+          <td class="memname">std::function&lt; void(void)&gt; createDebouncer </td>
           <td>(</td>
           <td class="paramtype">std::function&lt; void(void)&gt;&#160;</td>
           <td class="paramname"><em>handler</em>, </td>
@@ -142,7 +143,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>priority</em> = <code><a class="el" href="namespacedebounce__task__priority.xhtml#aed6bbec95c05ee686026a8ce37356618">debounce_task_priority::defaultToInt</a>()</code>&#160;</td>
+          <td class="paramname"><em>priority</em> = <code><a class="el" href="group__debouncer__priority.xhtml#ga0a5cb12d139cad7002bcb99eea151a59">debouncer::defaultPriorityToInt</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -152,12 +153,27 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Creates a <a class="el" href="classDebouncer.xhtml" title="Non-memorizing startup delay for debouncing.">Debouncer</a>. </p>
+<p >The <a class="el" href="classDebouncer.xhtml" title="Non-memorizing startup delay for debouncing.">Debouncer</a> takes a function ("handler") which will be called after a signal has been debounced. The <a class="el" href="classDebouncer.xhtml" title="Non-memorizing startup delay for debouncing.">Debouncer</a> provides a function which shall be called by the user to indicate the signal.</p>
+<p >The <a class="el" href="classDebouncer.xhtml" title="Non-memorizing startup delay for debouncing.">Debouncer</a> acts as a non-memorizing startup delay. A signal will only trigger the handler in case the debounce time expires while no further signal is recorded.</p>
+<p >The <a class="el" href="classDebouncer.xhtml" title="Non-memorizing startup delay for debouncing.">Debouncer</a> will use some kind of thread or task to wait for the debounce time.</p>
+<p >For each signal a separate <a class="el" href="classDebouncer.xhtml" title="Non-memorizing startup delay for debouncing.">Debouncer</a> needs to be created.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handler</td><td>is the function to be called by the <a class="el" href="classDebouncer.xhtml" title="Non-memorizing startup delay for debouncing.">Debouncer</a> </td></tr>
+    <tr><td class="paramname">debounceTime</td><td>is the time which shall be waited by the <a class="el" href="classDebouncer.xhtml" title="Non-memorizing startup delay for debouncing.">Debouncer</a> to recognize a stable signal </td></tr>
+    <tr><td class="paramname">priority</td><td>is the priority of the debounce task used for that debouncer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a function which must be called by the user to register new signals </dd></dl>
+
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 1 2024 21:15:55 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Apr 4 2024 16:24:04 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

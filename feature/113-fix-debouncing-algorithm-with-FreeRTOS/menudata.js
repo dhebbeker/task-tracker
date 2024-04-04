@@ -25,6 +25,7 @@
 var menudata={children:[
 {text:"Main Page",url:"index.xhtml"},
 {text:"Related Pages",url:"pages.xhtml"},
+{text:"Modules",url:"modules.xhtml"},
 {text:"Namespaces",url:"namespaces.xhtml",children:[
 {text:"Namespace List",url:"namespaces.xhtml"},
 {text:"Namespace Members",url:"namespacemembers.xhtml",children:[

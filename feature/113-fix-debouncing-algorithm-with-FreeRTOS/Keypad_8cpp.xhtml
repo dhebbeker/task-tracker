@@ -106,6 +106,7 @@ Functions</h2></td></tr>
 <tr class="memitem:ad04028b104cec75a1bf3eddaac3bca05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Keypad_8cpp.xhtml#ad04028b104cec75a1bf3eddaac3bca05">attachInterrupt</a> (uint8_t pin, std::function&lt; void(void)&gt; intRoutine, int mode)</td></tr>
 <tr class="separator:ad04028b104cec75a1bf3eddaac3bca05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d4dc7dc9338136509998d89199e1e48"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Keypad_8cpp.xhtml#a1d4dc7dc9338136509998d89199e1e48">reactOnPinChange</a> (const <a class="el" href="namespaceboard.xhtml#af091862f70321f1b4fd67a4f4751ef0c">board::PinType</a> pin, <a class="el" href="KeyIds_8hpp.xhtml#a251d5d8935f1af4cb86e18f962d9d33d">KeyId</a> keyId)</td></tr>
+<tr class="memdesc:a1d4dc7dc9338136509998d89199e1e48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reacts on a debounced (stabilized) pin change.  <a href="Keypad_8cpp.xhtml#a1d4dc7dc9338136509998d89199e1e48">More...</a><br /></td></tr>
 <tr class="separator:a1d4dc7dc9338136509998d89199e1e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
@@ -187,6 +188,16 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Reacts on a debounced (stabilized) pin change. </p>
+<p >It will be checked if the pin has "active" state. If the pin is active, the callback handler will be called.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pin</td><td>must be the I/O pin which has changed </td></tr>
+    <tr><td class="paramname">keyId</td><td>is an argument which will be passed to the callback handler </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -291,7 +302,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 1 2024 21:15:55 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Thu Apr 4 2024 16:24:04 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
