@@ -1,18 +1,18 @@
 <map id="lib/application_business_rules/user_interaction/Presenter.cpp" name="lib/application_business_rules/user_interaction/Presenter.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="644,5,804,60"/>
-<area shape="rect" id="node2" href="$Presenter_8hpp.xhtml" title=" " alt="" coords="253,108,355,133"/>
-<area shape="rect" id="node8" href="$board__interface_8hpp.xhtml" title=" " alt="" coords="517,108,651,133"/>
-<area shape="rect" id="node11" title=" " alt="" coords="659,181,720,207"/>
-<area shape="rect" id="node13" title=" " alt="" coords="727,108,793,133"/>
-<area shape="rect" id="node14" title=" " alt="" coords="817,108,879,133"/>
-<area shape="rect" id="node15" href="$pitches_8hpp.xhtml" title=" " alt="" coords="904,108,992,133"/>
-<area shape="rect" id="node3" href="$IStatusIndicator_8hpp.xhtml" title=" " alt="" coords="5,181,144,207"/>
-<area shape="rect" id="node4" href="$Menu_8hpp.xhtml" title=" " alt="" coords="169,181,247,207"/>
-<area shape="rect" id="node6" title=" " alt="" coords="271,181,337,207"/>
-<area shape="rect" id="node7" title=" " alt="" coords="361,181,420,207"/>
-<area shape="rect" id="node5" href="$IDisplay_8hpp.xhtml" title=" " alt="" coords="162,255,254,280"/>
-<area shape="rect" id="node9" href="$KeyIds_8hpp.xhtml" title=" " alt="" coords="445,181,531,207"/>
-<area shape="rect" id="node12" title=" " alt="" coords="555,181,634,207"/>
-<area shape="rect" id="node10" title=" " alt="" coords="453,255,523,280"/>
-<area shape="rect" id="node16" title=" " alt="" coords="917,181,979,207"/>
+<area shape="rect" id="node1" title=" " alt="" coords="682,5,861,61"/>
+<area shape="rect" id="node2" href="$Presenter_8hpp.xhtml" title=" " alt="" coords="271,109,381,136"/>
+<area shape="rect" id="node8" href="$board__interface_8hpp.xhtml" title=" " alt="" coords="546,109,698,136"/>
+<area shape="rect" id="node11" title=" " alt="" coords="702,184,769,211"/>
+<area shape="rect" id="node13" title=" " alt="" coords="773,109,842,136"/>
+<area shape="rect" id="node14" title=" " alt="" coords="867,109,937,136"/>
+<area shape="rect" id="node15" href="$pitches_8hpp.xhtml" title=" " alt="" coords="961,109,1059,136"/>
+<area shape="rect" id="node3" href="$IStatusIndicator_8hpp.xhtml" title=" " alt="" coords="5,184,156,211"/>
+<area shape="rect" id="node4" href="$Menu_8hpp.xhtml" title=" " alt="" coords="180,184,267,211"/>
+<area shape="rect" id="node6" title=" " alt="" coords="291,184,361,211"/>
+<area shape="rect" id="node7" title=" " alt="" coords="385,184,448,211"/>
+<area shape="rect" id="node5" href="$IDisplay_8hpp.xhtml" title=" " alt="" coords="173,259,274,285"/>
+<area shape="rect" id="node9" href="$KeyIds_8hpp.xhtml" title=" " alt="" coords="473,184,566,211"/>
+<area shape="rect" id="node12" title=" " alt="" coords="591,184,677,211"/>
+<area shape="rect" id="node10" title=" " alt="" coords="481,259,557,285"/>
+<area shape="rect" id="node16" title=" " alt="" coords="977,184,1043,211"/>
 </map>

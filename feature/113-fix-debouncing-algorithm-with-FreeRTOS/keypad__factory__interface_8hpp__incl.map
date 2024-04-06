@@ -1,7 +1,7 @@
 <map id="lib/application_business_rules/user_interaction/keypad_factory_interface.hpp" name="lib/application_business_rules/user_interaction/keypad_factory_interface.hpp">
-<area shape="rect" id="node1" title="Dependency injection for the keypad." alt="" coords="5,5,200,60"/>
-<area shape="rect" id="node2" href="$IKeypad_8hpp.xhtml" title=" " alt="" coords="56,108,149,133"/>
-<area shape="rect" id="node3" href="$KeyIds_8hpp.xhtml" title=" " alt="" coords="6,181,93,207"/>
-<area shape="rect" id="node5" title=" " alt="" coords="117,181,195,207"/>
-<area shape="rect" id="node4" title=" " alt="" coords="15,255,84,280"/>
+<area shape="rect" id="node1" title="Dependency injection for the keypad." alt="" coords="5,5,224,61"/>
+<area shape="rect" id="node2" href="$IKeypad_8hpp.xhtml" title=" " alt="" coords="63,109,166,136"/>
+<area shape="rect" id="node3" href="$KeyIds_8hpp.xhtml" title=" " alt="" coords="11,184,104,211"/>
+<area shape="rect" id="node5" title=" " alt="" coords="129,184,215,211"/>
+<area shape="rect" id="node4" title=" " alt="" coords="19,259,95,285"/>
 </map>
