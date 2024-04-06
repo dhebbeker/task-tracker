@@ -1,0 +1,39 @@
+@startuml
+title debouncing based on delay
+caption debouncing normal pulse
+hide time-axis
+scale 1 as 250 pixels
+binary "digital input" as D
+binary "debouncer waiting" as W
+binary "sampled signal" as B
+
+@0
+D is low
+note top of B : debounced
+B is low
+@+1
+D is {low,high}
+W is high
+note bottom of D : button pressed
+D@+0 <-> @+0.8 : bouncing
+@+0.8
+W@+0 <-> @+0.1 : delay
+D is high
+@+0.1
+W is low
+W -> B : rising edge detected
+B is high
+@+0.5
+note bottom of D : button released
+D is {low,high}
+W is high
+D@+0 <-> @+0.8 : bouncing
+@+0.8
+D is low
+W@+0 <-> @+0.1 : delay
+@+0.1
+W is low
+W -> B : falling edge detected
+B is low
+
+@enduml

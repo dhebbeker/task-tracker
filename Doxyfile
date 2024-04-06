@@ -7,6 +7,7 @@ EXTRACT_STATIC         = YES
 CITE_BIB_FILES         = doc/bibliography
 INPUT                  = .
 RECURSIVE              = YES
+EXAMPLE_PATH           = lib/3rd_party_adapters/FreeRTOS/
 IMAGE_PATH             = doc/
 USE_MDFILE_AS_MAINPAGE = ./README.md
 HTML_FILE_EXTENSION    = .xhtml

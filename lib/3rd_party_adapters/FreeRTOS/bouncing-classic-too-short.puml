@@ -1,0 +1,23 @@
+@startuml
+title debouncing by post-event filtering
+caption too short pulse leads to wrong state
+hide time-axis
+scale 1 as 250 pixels
+binary "digital input" as D
+binary "sampled signal" as B
+
+@0
+D is low
+note top of B : debounced
+B is low
+@+1
+D is {low,high}
+D@+0 <-> @+0.8 : bouncing
+D -> B : rising edge detected
+highlight +0 to +1 : state changes ignored
+B is high
+@+0.8
+D is low
+D -> B : state change ignored
+
+@enduml
