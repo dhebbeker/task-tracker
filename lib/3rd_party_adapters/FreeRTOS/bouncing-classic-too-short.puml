@@ -4,7 +4,7 @@ caption too short pulse leads to wrong state
 hide time-axis
 scale 1 as 250 pixels
 binary "digital input" as D
-binary "sampled signal" as B
+binary "debounced signal" as B
 
 @0
 D is low
