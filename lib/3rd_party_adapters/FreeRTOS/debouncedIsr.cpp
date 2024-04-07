@@ -35,6 +35,7 @@ int debouncer::defaultPriorityToInt()
  * - if the interrupt function is called again the timer will restart
  * - when the timer expires, the handler will be called
  *
+ * \see \ref debouncing_approaches
  */
 class Debouncer
 {

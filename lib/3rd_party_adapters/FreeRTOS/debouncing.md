@@ -1,4 +1,4 @@
-# Debouncing Approaches
+# Debouncing Approaches {#debouncing_approaches}
 
 Obtaining the state of switches and buttons generally requires to debounce the input signal because of contact bouncing.
 The waveform of an input may be smoothed physically using a low-pass filter.
