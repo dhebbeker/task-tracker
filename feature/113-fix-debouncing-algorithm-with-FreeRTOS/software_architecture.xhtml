@@ -73,20 +73,20 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#autotoc_md44">Objectives of the Software Architecture</a></li>
+<ul><li class="level1"><a href="#autotoc_md47">Objectives of the Software Architecture</a></li>
 <li class="level1"><a href="#flexible_structure">Achieving a Flexible Structure</a></li>
 <li class="level1"><a href="#plugin_architecture">Implementing a Plug-in Architecture</a><ul><li class="level2"><a href="#interpretation_dependency_rule">Interpretation of the Dependency Rule</a></li>
 <li class="level2"><a href="#dependency_injection">Dependency Injection</a></li>
-<li class="level2"><a href="#autotoc_md45">Interface Adapters</a></li>
-<li class="level2"><a href="#autotoc_md46">Components</a></li>
+<li class="level2"><a href="#autotoc_md48">Interface Adapters</a></li>
+<li class="level2"><a href="#autotoc_md49">Components</a></li>
 </ul>
 </li>
 <li class="level1"><a href="#component_architecture">Component Architecture</a></li>
-<li class="level1"><a href="#autotoc_md47">Further References</a></li>
+<li class="level1"><a href="#autotoc_md50">Further References</a></li>
 </ul>
 </div>
 <div class="textblock"><p><a class="anchor" id="md_doc_software_architecture"></a></p>
-<h1><a class="anchor" id="autotoc_md44"></a>
+<h1><a class="anchor" id="autotoc_md47"></a>
 Objectives of the Software Architecture</h1>
 <p>The objectives of the software architecture are:</p>
 <ul>
@@ -132,7 +132,7 @@ Interpretation of the Dependency Rule</h2>
 Dependency Injection</h2>
 <p>For a higher level package to use an implementation from a lower level, interfaces shall be used. At runtime the higher level package needs to use the actual object realizing the interface. But this shall be done without revealing the implementation details to the higher level package. For this, non-member "getter"- or "factory"- functions (Dependency Injector Function; DIF) shall be declared in the higher level package. Using functions as dependency injector allows to call the constructor of the implementation with run-time arguments. The actual object is created by the DIF which is defined in the lower layer package. The DIF provides the object to the caller, for example by returning a reference to it.</p>
 <p>The declaration of a DIF must reside in the (highest) level which calls it. Its definition must reside at the level which implements the dependency or at a lower level. But it should not reside in the same unit as the dependency. As the definition of the DIF depends on its usage it should not pollute the implementation's unit. This simplifies reusability and testability of the implementation.</p>
-<h2><a class="anchor" id="autotoc_md45"></a>
+<h2><a class="anchor" id="autotoc_md48"></a>
 Interface Adapters</h2>
 <p>In case an implementation detail can not be changed: For example because it is a stable software part, or 3rd-party or otherwise immutable. Then interface adapters must be implemented. Those interface adapters realize the higher layer interface while using the stable component. The usage may for example be realized using the delegation pattern.</p>
 <p><div class="dotgraph">
@@ -140,7 +140,7 @@ Interface Adapters</h2>
 example of dependency injection and interface adapter</div>
 </div>
 </p>
-<h2><a class="anchor" id="autotoc_md46"></a>
+<h2><a class="anchor" id="autotoc_md49"></a>
 Components</h2>
 <p>Components are parts of the software which may be exchanged or changed as a whole. For example a library (including any interface adapters) can be considered as one component. Another example of a component is the software for adapting to the board (the device's hardware used by the software). As a different board may be used for the same application.</p>
 <p>Also this definition of <em>components</em> from the <a href="https://c4model.com/">C4 software architecture model</a> by Simon Brown applies (<a class="el" href="citelist.xhtml#CITEREF_CleanArchitecture">[2]</a> p. 314) applies:</p>
@@ -165,7 +165,7 @@ component architecture for this software</div>
 <li><a class="el" href="board_adapters.xhtml">Board Adapters</a></li>
 <li><a class="el" href="third_party_adapters.xhtml">3rd Party Adapters</a></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md47"></a>
+<h1><a class="anchor" id="autotoc_md50"></a>
 Further References</h1>
 <ul>
 <li><a class="el" href="citelist.xhtml#CITEREF_TheCleanArchitecture">[1]</a> </li>
@@ -174,7 +174,7 @@ Further References</h1>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 7 2024 15:03:41 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Apr 7 2024 18:04:58 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
