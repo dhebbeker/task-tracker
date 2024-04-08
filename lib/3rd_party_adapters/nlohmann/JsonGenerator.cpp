@@ -33,30 +33,11 @@ std::string toJsonString<task_tracker_systems::TaskObject>(const task_tracker_sy
     return jsonObject.dump(defaultJsonIndent);
 }
 
-typedef struct
-{
-    unsigned int id;
-    std::string label;
-    std::chrono::seconds::rep duration;
-} my_struct_t;
-
-void to_json(nlohmann::json &j, const my_struct_t &ms)
-{
-    j = {ms.id, ms.label, ms.duration};
-}
-
 template <>
 std::string toJsonString<task_tracker_systems::TaskList>(const task_tracker_systems::TaskList &object)
 {
-    // nlohmann::json jsonObject = {{"array", object.list}};
-    // return jsonObject.dump(defaultJsonIndent);
-
-    my_struct_t struct_array[3];
-
-    task_tracker_systems::TaskObject array[3];
-
-    nlohmann::json result = {{"array", array}};
-    return "";
+    nlohmann::json jsonObject(object.list);
+    return jsonObject.dump(defaultJsonIndent);
 }
 
 template <>
