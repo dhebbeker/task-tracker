@@ -17,24 +17,46 @@ std::string toJsonString<task_tracker_systems::ProtocolVersionObject>(const task
     return jsonObject.dump(defaultJsonIndent);
 }
 
+void to_json(nlohmann::json &jsonObject, const task_tracker_systems::TaskObject &object)
+{
+    jsonObject["duration"] = object.duration;
+    jsonObject["id"] = object.id;
+    jsonObject["label"] = object.label;
+}
+
 template <>
 std::string toJsonString<task_tracker_systems::TaskObject>(const task_tracker_systems::TaskObject &object)
 {
     auto jsonObject = nlohmann::json::object();
-    jsonObject["duration"] = object.duration;
-    jsonObject["id"] = object.id;
-    jsonObject["label"] = object.label;
+    to_json(jsonObject, object);
     return jsonObject.dump(defaultJsonIndent);
+}
+
+typedef struct
+{
+    uint8_t a;
+    bool c;
+    float e;
+} my_struct_t;
+
+void to_json(nlohmann::json &j, const my_struct_t &ms)
+{
+    j = {ms.a, ms.c, ms.e};
 }
 
 template <>
 std::string toJsonString<task_tracker_systems::TaskList>(const task_tracker_systems::TaskList &object)
 {
-    auto jsonObject = nlohmann::json::object();
-    jsonObject["duration"] = object.duration;
-    jsonObject["id"] = object.id;
-    jsonObject["label"] = object.label;
-    return jsonObject.dump(defaultJsonIndent);
+    // nlohmann::json jsonObject = {{"array", object.list}};
+    // return jsonObject.dump(defaultJsonIndent);
+
+    my_struct_t struct_array[] = {
+        {1, true, 1.10},
+        {2, false, 2.20},
+        {3, true, 3.30}};
+
+    nlohmann::json result = {{"array", struct_array}};
+    return "";
 }
 
 template <>
