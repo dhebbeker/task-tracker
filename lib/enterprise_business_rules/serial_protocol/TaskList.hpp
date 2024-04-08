@@ -13,6 +13,6 @@ struct TaskList
     /**
      * list
      */
-    std::vector<TaskObject *> list;
+    std::vector<TaskObject> list;
 };
 } // namespace task_tracker_systems

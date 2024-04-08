@@ -10,6 +10,7 @@ namespace cli = command_line_interpreter;
 // --------------------------
 #include "JsonGenerator.hpp"
 #include <serial_protocol/ProtocolVersionObject.hpp>
+#include <serial_protocol/TaskList.hpp>
 #include <serial_protocol/TaskObject.hpp>
 #include <string>
 
@@ -25,7 +26,10 @@ static const auto info = []() {
 static const auto infoCmd = cli::makeCommand("info", std::function(info));
 
 // command for list
-static const auto list = []() { serial_port::cout << "this is a list: a, b, c, ..." << std::endl; };
+static const auto list = []() { 
+    const TaskList dummyList = {.list={{.id = 1, .label = "first", .duration = 100}, 
+    {.id = 2, .label =  "second", .duration = 200}}};
+    serial_port::cout << toJsonString(dummyList) << std::endl; };
 static const auto listCmd = cli::makeCommand("list", std::function(list));
 
 // command for edit
