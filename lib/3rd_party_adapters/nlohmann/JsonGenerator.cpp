@@ -21,7 +21,9 @@ namespace task_tracker_systems
 {
 void to_json(nlohmann::json &jsonObject, const task_tracker_systems::TaskObject &object)
 {
-    jsonObject = {object.duration, object.label, object.id};
+    jsonObject["id"] = object.id;
+    jsonObject["label"] = object.label;
+    jsonObject["duration"] = object.duration;
 }
 } // namespace task_tracker_systems
 
