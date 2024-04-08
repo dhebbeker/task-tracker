@@ -38,7 +38,7 @@ std::string toJsonString<task_tracker_systems::TaskObject>(const task_tracker_sy
 template <>
 std::string toJsonString<task_tracker_systems::TaskList>(const task_tracker_systems::TaskList &object)
 {
-    nlohmann::json jsonObject(object.list);
+    nlohmann::json jsonObject(object);
     return jsonObject.dump(defaultJsonIndent);
 }
 

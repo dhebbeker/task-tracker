@@ -27,8 +27,10 @@ static const auto infoCmd = cli::makeCommand("info", std::function(info));
 
 // command for list
 static const auto list = []() { 
-    const TaskList dummyList = {.list={{.id = 1, .label = "first", .duration = 100}, 
-    {.id = 2, .label =  "second", .duration = 200}}};
+    const TaskList dummyList = {
+        {.id = 1, .label = "first", .duration = 100U}, 
+        {.id = 2, .label =  "second", .duration = 200U},
+        };
     serial_port::cout << toJsonString(dummyList) << std::endl; };
 static const auto listCmd = cli::makeCommand("list", std::function(list));
 

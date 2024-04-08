@@ -8,11 +8,5 @@ namespace task_tracker_systems
 /**
  * list of tasks
  */
-struct TaskList
-{
-    /**
-     * list
-     */
-    std::vector<TaskObject> list;
-};
+typedef std::vector<TaskObject> TaskList;
 } // namespace task_tracker_systems
