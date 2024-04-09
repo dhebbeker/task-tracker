@@ -6,7 +6,7 @@ var searchData=
   ['left_3',['LEFT',['../KeyIds_8hpp.xhtml#a251d5d8935f1af4cb86e18f962d9d33da684d325a7303f52e64011467ff5c5758',1,'KeyIds.hpp']]],
   ['license_4',['LICENSE',['../md_LICENSE.xhtml',1,'']]],
   ['license_2emd_5',['LICENSE.md',['../LICENSE_8md.xhtml',1,'']]],
-  ['list_6',['list',['../structtask__tracker__systems_1_1TaskList.xhtml#a85e7ccb52245226f3faef155c3b2eb4e',1,'task_tracker_systems::TaskList::list()'],['../Protocol_8cpp.xhtml#a2bf6dea54b124ec11c84992bdf95539a',1,'list():&#160;Protocol.cpp']]],
+  ['list_6',['list',['../Protocol_8cpp.xhtml#a2bf6dea54b124ec11c84992bdf95539a',1,'Protocol.cpp']]],
   ['listcmd_7',['listCmd',['../Protocol_8cpp.xhtml#ac637a1d9e3afd1ca839afe51140a4bbc',1,'Protocol.cpp']]],
   ['loop_8',['loop',['../classMenu.xhtml#a23bb40aa976a2d694d5fcce7180fc53c',1,'Menu::loop()'],['../main_8cpp.xhtml#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;main.cpp'],['../classPresenter.xhtml#a08de6e9eb7f340e4bd532dc50c29b815',1,'Presenter::loop()']]],
   ['lv_5fassert_5fhandler_9',['LV_ASSERT_HANDLER',['../lv__conf_8h.xhtml#a7f89929bee5e1d1f3047b6fc57723602',1,'lv_conf.h']]],

@@ -13,11 +13,13 @@ var searchData=
   ['test_5ftime_5felapses_10',['test_time_elapses',['../task_8cpp.xhtml#a05fa3149832f15b7c8a9e3a590796b12',1,'task.cpp']]],
   ['test_5ftokenizestring1_11',['test_tokenizeString1',['../test__string__helpers_8cpp.xhtml#a471a182a9bfe06e2193fad2f9c51baf9',1,'test_string_helpers.cpp']]],
   ['test_5ftokenizestringendingquote_12',['test_tokenizeStringEndingQuote',['../test__string__helpers_8cpp.xhtml#a2c60b6469ba935ac73412310762b7649',1,'test_string_helpers.cpp']]],
-  ['to_5funderlying_13',['to_underlying',['../type__traits_8hpp.xhtml#a6d47bf9f710fac771fbbd29bc5205bf7',1,'type_traits.hpp']]],
-  ['tojsonstring_14',['toJsonString',['../JsonGenerator_8hpp.xhtml#ab570bec10f003b4067e8d8974ba69126',1,'JsonGenerator.hpp']]],
-  ['tojsonstring_3c_20task_5ftracker_5fsystems_3a_3adeletedtaskobject_20_3e_15',['toJsonString&lt; task_tracker_systems::DeletedTaskObject &gt;',['../JsonGenerator_8cpp.xhtml#a85d5f824bf73cb3c72a5bbbf1526e6aa',1,'JsonGenerator.cpp']]],
-  ['tojsonstring_3c_20task_5ftracker_5fsystems_3a_3aprotocolversionobject_20_3e_16',['toJsonString&lt; task_tracker_systems::ProtocolVersionObject &gt;',['../JsonGenerator_8cpp.xhtml#abbcbbef4c1fb266087c6a88dc30c2741',1,'JsonGenerator.cpp']]],
-  ['tojsonstring_3c_20task_5ftracker_5fsystems_3a_3ataskobject_20_3e_17',['toJsonString&lt; task_tracker_systems::TaskObject &gt;',['../JsonGenerator_8cpp.xhtml#ab0eef84934c9eece4b0a6696549a4bb5',1,'JsonGenerator.cpp']]],
-  ['tokenizequoted_18',['tokenizeQuoted',['../string__helpers_8hpp.xhtml#a2b46ef4e90ce4e0ab9dc22bf43851874',1,'string_helpers.hpp']]],
-  ['two_19',['two',['../test__cli_8cpp.xhtml#a5d8fae903c0fe6a0978e2252252ae859',1,'test_cli.cpp']]]
+  ['to_5fjson_13',['to_json',['../namespacetask__tracker__systems.xhtml#a5362f39006e981db8c1ed3cfb22624c8',1,'task_tracker_systems']]],
+  ['to_5funderlying_14',['to_underlying',['../type__traits_8hpp.xhtml#a6d47bf9f710fac771fbbd29bc5205bf7',1,'type_traits.hpp']]],
+  ['tojsonstring_15',['toJsonString',['../JsonGenerator_8hpp.xhtml#ab570bec10f003b4067e8d8974ba69126',1,'JsonGenerator.hpp']]],
+  ['tojsonstring_3c_20task_5ftracker_5fsystems_3a_3adeletedtaskobject_20_3e_16',['toJsonString&lt; task_tracker_systems::DeletedTaskObject &gt;',['../JsonGenerator_8cpp.xhtml#a85d5f824bf73cb3c72a5bbbf1526e6aa',1,'JsonGenerator.cpp']]],
+  ['tojsonstring_3c_20task_5ftracker_5fsystems_3a_3aprotocolversionobject_20_3e_17',['toJsonString&lt; task_tracker_systems::ProtocolVersionObject &gt;',['../JsonGenerator_8cpp.xhtml#abbcbbef4c1fb266087c6a88dc30c2741',1,'JsonGenerator.cpp']]],
+  ['tojsonstring_3c_20task_5ftracker_5fsystems_3a_3atasklist_20_3e_18',['toJsonString&lt; task_tracker_systems::TaskList &gt;',['../JsonGenerator_8cpp.xhtml#a75828cd0b97fcdb7b15013978a99e945',1,'JsonGenerator.cpp']]],
+  ['tojsonstring_3c_20task_5ftracker_5fsystems_3a_3ataskobject_20_3e_19',['toJsonString&lt; task_tracker_systems::TaskObject &gt;',['../JsonGenerator_8cpp.xhtml#ab0eef84934c9eece4b0a6696549a4bb5',1,'JsonGenerator.cpp']]],
+  ['tokenizequoted_20',['tokenizeQuoted',['../string__helpers_8hpp.xhtml#a2b46ef4e90ce4e0ab9dc22bf43851874',1,'string_helpers.hpp']]],
+  ['two_21',['two',['../test__cli_8cpp.xhtml#a5d8fae903c0fe6a0978e2252252ae859',1,'test_cli.cpp']]]
 ];

@@ -91,12 +91,13 @@ $(function() {
 <code>#include &lt;array&gt;</code><br />
 <code>#include &quot;<a class="el" href="JsonGenerator_8hpp_source.xhtml">JsonGenerator.hpp</a>&quot;</code><br />
 <code>#include &lt;<a class="el" href="ProtocolVersionObject_8hpp_source.xhtml">serial_protocol/ProtocolVersionObject.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="TaskList_8hpp_source.xhtml">serial_protocol/TaskList.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="TaskObject_8hpp_source.xhtml">serial_protocol/TaskObject.hpp</a>&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Protocol.cpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="Protocol_8cpp__incl.svg" width="1487" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="Protocol_8cpp__incl.svg" width="1516" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><table class="memberdecls">
@@ -108,7 +109,7 @@ Variables</h2></td></tr>
 <tr class="separator:aa494944475a226c613cdd03931ba061d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1b41dfb159b12da990d777541a393bc"><td class="memItemLeft" align="right" valign="top">static const auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Protocol_8cpp.xhtml#af1b41dfb159b12da990d777541a393bc">infoCmd</a> = cli::makeCommand(&quot;info&quot;, std::function(<a class="el" href="Protocol_8cpp.xhtml#aa494944475a226c613cdd03931ba061d">info</a>))</td></tr>
 <tr class="separator:af1b41dfb159b12da990d777541a393bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bf6dea54b124ec11c84992bdf95539a"><td class="memItemLeft" align="right" valign="top">static const auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Protocol_8cpp.xhtml#a2bf6dea54b124ec11c84992bdf95539a">list</a> = []() { <a class="el" href="namespaceserial__port.xhtml#a93c3f7f8728a750d9fa97277cb10378f">serial_port::cout</a> &lt;&lt; &quot;this is a list: a, b, c, ...&quot; &lt;&lt; std::endl; }</td></tr>
+<tr class="memitem:a2bf6dea54b124ec11c84992bdf95539a"><td class="memItemLeft" align="right" valign="top">static const auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Protocol_8cpp.xhtml#a2bf6dea54b124ec11c84992bdf95539a">list</a></td></tr>
 <tr class="separator:a2bf6dea54b124ec11c84992bdf95539a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac637a1d9e3afd1ca839afe51140a4bbc"><td class="memItemLeft" align="right" valign="top">static const auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Protocol_8cpp.xhtml#ac637a1d9e3afd1ca839afe51140a4bbc">listCmd</a> = cli::makeCommand(&quot;list&quot;, std::function(<a class="el" href="Protocol_8cpp.xhtml#a2bf6dea54b124ec11c84992bdf95539a">list</a>))</td></tr>
 <tr class="separator:ac637a1d9e3afd1ca839afe51140a4bbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -216,9 +217,9 @@ Variables</h2></td></tr>
 <div class="line">    <a class="code hl_variable" href="namespaceserial__port.xhtml#a93c3f7f8728a750d9fa97277cb10378f">serial_port::cout</a> &lt;&lt; <a class="code hl_function" href="JsonGenerator_8hpp.xhtml#ab570bec10f003b4067e8d8974ba69126">toJsonString</a>(task) &lt;&lt; std::endl;</div>
 <div class="line">}</div>
 <div class="ttc" id="aJsonGenerator_8hpp_xhtml_ab570bec10f003b4067e8d8974ba69126"><div class="ttname"><a href="JsonGenerator_8hpp.xhtml#ab570bec10f003b4067e8d8974ba69126">toJsonString</a></div><div class="ttdeci">std::string toJsonString(const T &amp;object)</div></div>
-<div class="ttc" id="aProtocol_8cpp_xhtml_a1b20024ce66c8fd53c28065da56ef8d3"><div class="ttname"><a href="Protocol_8cpp.xhtml#a1b20024ce66c8fd53c28065da56ef8d3">id</a></div><div class="ttdeci">static const cli::Option&lt; int &gt; id</div><div class="ttdef"><b>Definition:</b> Protocol.cpp:36</div></div>
-<div class="ttc" id="aProtocol_8cpp_xhtml_a59bc70cd98ed5c6ceb5dd452caa54ac3"><div class="ttname"><a href="Protocol_8cpp.xhtml#a59bc70cd98ed5c6ceb5dd452caa54ac3">duration</a></div><div class="ttdeci">static const cli::Option&lt; int &gt; duration</div><div class="ttdef"><b>Definition:</b> Protocol.cpp:38</div></div>
-<div class="ttc" id="aProtocol_8cpp_xhtml_abc14b7721aad8b82ca16d71de603499c"><div class="ttname"><a href="Protocol_8cpp.xhtml#abc14b7721aad8b82ca16d71de603499c">label</a></div><div class="ttdeci">static const cli::Option&lt; std::basic_string&lt; ProtocolHandler::CharType &gt; &gt; label</div><div class="ttdef"><b>Definition:</b> Protocol.cpp:37</div></div>
+<div class="ttc" id="aProtocol_8cpp_xhtml_a1b20024ce66c8fd53c28065da56ef8d3"><div class="ttname"><a href="Protocol_8cpp.xhtml#a1b20024ce66c8fd53c28065da56ef8d3">id</a></div><div class="ttdeci">static const cli::Option&lt; int &gt; id</div><div class="ttdef"><b>Definition:</b> Protocol.cpp:42</div></div>
+<div class="ttc" id="aProtocol_8cpp_xhtml_a59bc70cd98ed5c6ceb5dd452caa54ac3"><div class="ttname"><a href="Protocol_8cpp.xhtml#a59bc70cd98ed5c6ceb5dd452caa54ac3">duration</a></div><div class="ttdeci">static const cli::Option&lt; int &gt; duration</div><div class="ttdef"><b>Definition:</b> Protocol.cpp:44</div></div>
+<div class="ttc" id="aProtocol_8cpp_xhtml_abc14b7721aad8b82ca16d71de603499c"><div class="ttname"><a href="Protocol_8cpp.xhtml#abc14b7721aad8b82ca16d71de603499c">label</a></div><div class="ttdeci">static const cli::Option&lt; std::basic_string&lt; ProtocolHandler::CharType &gt; &gt; label</div><div class="ttdef"><b>Definition:</b> Protocol.cpp:43</div></div>
 <div class="ttc" id="anamespaceserial__port_xhtml_a93c3f7f8728a750d9fa97277cb10378f"><div class="ttname"><a href="namespaceserial__port.xhtml#a93c3f7f8728a750d9fa97277cb10378f">serial_port::cout</a></div><div class="ttdeci">std::basic_ostream&lt; CharType &gt; &amp; cout</div><div class="ttdoc">Output stream for characters to serial port.</div><div class="ttdef"><b>Definition:</b> serial_port.cpp:17</div></div>
 <div class="ttc" id="astructtask__tracker__systems_1_1TaskObject_xhtml"><div class="ttname"><a href="structtask__tracker__systems_1_1TaskObject.xhtml">task_tracker_systems::TaskObject</a></div><div class="ttdoc">task object</div><div class="ttdef"><b>Definition:</b> TaskObject.hpp:12</div></div>
 <div class="ttc" id="astructtask__tracker__systems_1_1TaskObject_xhtml_ad208870d93f664065d295998982f09f9"><div class="ttname"><a href="structtask__tracker__systems_1_1TaskObject.xhtml#ad208870d93f664065d295998982f09f9">task_tracker_systems::TaskObject::id</a></div><div class="ttdeci">unsigned int id</div><div class="ttdoc">unique identifier</div><div class="ttdef"><b>Definition:</b> TaskObject.hpp:16</div></div>
@@ -351,7 +352,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const auto list = []() { <a class="el" href="namespaceserial__port.xhtml#a93c3f7f8728a750d9fa97277cb10378f">serial_port::cout</a> &lt;&lt; &quot;this is a list: a, b, c, ...&quot; &lt;&lt; std::endl; }</td>
+          <td class="memname">const auto list</td>
         </tr>
       </table>
   </td>
@@ -360,7 +361,14 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">= []() { </div>
+<div class="line">    <span class="keyword">const</span> <a class="code hl_typedef" href="namespacetask__tracker__systems.xhtml#aba1e1d5b39686f8ab6c32a8d2f20edae">TaskList</a> dummyList = {</div>
+<div class="line">        {.id = 1, .label = <span class="stringliteral">&quot;first&quot;</span>, .duration = 100U}, </div>
+<div class="line">        {.id = 2, .label =  <span class="stringliteral">&quot;second&quot;</span>, .duration = 200U},</div>
+<div class="line">        };</div>
+<div class="line">    <a class="code hl_variable" href="namespaceserial__port.xhtml#a93c3f7f8728a750d9fa97277cb10378f">serial_port::cout</a> &lt;&lt; <a class="code hl_function" href="JsonGenerator_8hpp.xhtml#ab570bec10f003b4067e8d8974ba69126">toJsonString</a>(dummyList) &lt;&lt; std::endl; }</div>
+<div class="ttc" id="anamespacetask__tracker__systems_xhtml_aba1e1d5b39686f8ab6c32a8d2f20edae"><div class="ttname"><a href="namespacetask__tracker__systems.xhtml#aba1e1d5b39686f8ab6c32a8d2f20edae">task_tracker_systems::TaskList</a></div><div class="ttdeci">std::vector&lt; TaskObject &gt; TaskList</div><div class="ttdoc">list of tasks</div><div class="ttdef"><b>Definition:</b> TaskList.hpp:11</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac637a1d9e3afd1ca839afe51140a4bbc" name="ac637a1d9e3afd1ca839afe51140a4bbc"></a>
@@ -388,7 +396,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 4 2024 16:23:56 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Tue Apr 9 2024 07:13:15 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
