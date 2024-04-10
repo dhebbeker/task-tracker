@@ -1,0 +1,6 @@
+<map id="lib/application_business_rules/user_interaction/statusindicators_factory_interface.hpp" name="lib/application_business_rules/user_interaction/statusindicators_factory_interface.hpp">
+<area shape="rect" id="node1" title="Dependency injection for the keypad." alt="" coords="217,5,381,75"/>
+<area shape="rect" id="node2" href="$statusindicators__factory__interface_8cpp.xhtml" title=" " alt="" coords="5,123,227,177"/>
+<area shape="rect" id="node3" href="$main_8cpp.xhtml" title=" " alt="" coords="251,137,347,163"/>
+<area shape="rect" id="node4" href="$test__hmi_8cpp.xhtml" title=" " alt="" coords="371,130,495,170"/>
+</map>

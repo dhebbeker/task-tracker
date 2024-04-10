@@ -1,0 +1,4 @@
+<map id="IKeypad" name="IKeypad">
+<area shape="rect" id="node1" title="Interface to an human input device." alt="" coords="5,5,120,75"/>
+<area shape="rect" id="node2" href="$classKeypad.xhtml" title=" " alt="" coords="8,123,117,192"/>
+</map>
