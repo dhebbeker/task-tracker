@@ -30,7 +30,8 @@ void loop()
 {
     static Menu singleMenu(board::getDisplay());
     static Presenter presenter(singleMenu, board::getStatusIndicators());
-    static ProcessHmiInputs processHmiInputs(presenter, board::getKeypad());
+    static auto &keypad = board::getKeypad();
+    static ProcessHmiInputs processHmiInputs(presenter, keypad);
 
     for (auto task : device::tasks)
     {
@@ -38,6 +39,12 @@ void loop()
                           << std::noboolalpha << "   with " << task.second.getRecordedDuration().count() << " s" << std::endl;
     }
     serial_port::cout << "_\r" << std::endl;
+    serial_port::cout << "Buttons: \t";
+    for (std::size_t i = static_cast<std::size_t>(KeyId::LEFT); i <= static_cast<std::size_t>(KeyId::TASK4); i++)
+    {
+        serial_port::cout << std::boolalpha << keypad.isKeyPressed(static_cast<KeyId>(i)) << std::noboolalpha << " \t|";
+    }
+    serial_port::cout << std::endl;
 
     std::this_thread::yield();
     using namespace std::chrono_literals;
