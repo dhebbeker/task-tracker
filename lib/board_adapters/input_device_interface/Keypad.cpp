@@ -9,6 +9,7 @@
 #include <cstddef>
 #include <functional>
 #include <iterator>
+#include <optional>
 #include <utility>
 
 #if __has_include(<FunctionalInterrupt.h>) // specific to Arduino-ESP32
@@ -42,7 +43,19 @@ static constexpr std::pair<board::PinType, KeyId> selectionForPins[] = {
     {board::button::pin::back, KeyId::BACK},
 };
 
-static std::array<bool> keyPressedState[std::size(selectionForPins)];
+static std::array<bool, std::size(selectionForPins)> keyPressedState;
+
+static std::optional<std::size_t> getStateIndex(const KeyId keyId)
+{
+    for (std::size_t index = 0; index < std::size(selectionForPins); ++index)
+    {
+        if (selectionForPins[index].second == keyId)
+        {
+            return index;
+        }
+    }
+    return std::nullopt;
+}
 
 /**
  * Reacts on a debounced (stabilized) pin change.
@@ -60,7 +73,7 @@ static void reactOnPinChange(const board::PinType pin, KeyId keyId)
     {
         callBack(keyId);
     }
-    keyPressedState.at() = isPressed;
+    keyPressedState.at(getStateIndex(keyId).value()) = isPressed;
 }
 
 Keypad::Keypad()
@@ -90,14 +103,5 @@ void Keypad::setCallback(std::function<void(KeyId)> callbackFunction)
 
 bool Keypad::isKeyPressed(const KeyId keyInquiry)
 {
-    switch (keyInquiry)
-    {
-    case KeyId::LEFT: {
-        return keyPressedState.at();
-    }
-    default: {
-        assert(false);
-    }
-    }
-    return false;
+    return keyPressedState.at(getStateIndex(keyInquiry).value());
 }
