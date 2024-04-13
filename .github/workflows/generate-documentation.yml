@@ -13,6 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Install tools for generation of documentation
+      run: |
+        sudo apt-get install doxygen graphviz
+        sudo apt-get install texlive-base perl # necessary for citing bib files
+    
     - name: Checkout code
       uses: actions/checkout@v2
 
@@ -25,9 +30,9 @@ jobs:
         echo "DOC_OUTPUT_DIR=$output_dir" >> "$GITHUB_ENV"
 
     - name: generate documentation
-      uses: mattnotmitt/doxygen-action@v1.9.5
-      with:
-        additional-packages: texlive perl # necessary for citing bib files
+      run: |
+        wget https://github.com/plantuml/plantuml/releases/latest/download/plantuml.jar
+        (echo "PLANTUML_JAR_PATH = ."; cat Doxyfile) | doxygen -
 
     - name: deploy documentation
       uses: peaceiris/actions-gh-pages@v3
