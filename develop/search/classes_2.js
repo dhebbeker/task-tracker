@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['display_0',['Display',['../classDisplay.xhtml',1,'']]]
+  ['debouncer_529',['Debouncer',['../classDebouncer.xhtml',1,'']]],
+  ['display_530',['Display',['../classDisplay.xhtml',1,'']]]
 ];

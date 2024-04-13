@@ -1,5 +1,5 @@
 <map id="Display" name="Display">
-<area shape="rect" id="node1" title=" " alt="" coords="71,123,160,192"/>
-<area shape="rect" id="node2" href="$classIDisplay.xhtml" title="Interface to a display capable of displaying various information to a human." alt="" coords="5,5,92,60"/>
-<area shape="rect" id="node3" title=" " alt="" coords="117,13,250,53"/>
+<area shape="rect" id="node1" title=" " alt="" coords="73,145,169,237"/>
+<area shape="rect" id="node2" href="$classIDisplay.xhtml" title="Interface to a display capable of displaying various information to a human." alt="" coords="5,5,99,83"/>
+<area shape="rect" id="node3" title=" " alt="" coords="123,5,261,83"/>
 </map>

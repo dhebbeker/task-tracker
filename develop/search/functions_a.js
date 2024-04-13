@@ -1,6 +1,11 @@
 var searchData=
 [
-  ['off_0',['off',['../classIStatusIndicator.xhtml#a150f6857605407d025561a8c7d9df0f6',1,'IStatusIndicator::off()'],['../classLedStatusIndicator.xhtml#a33209ed4e39c67eb2ad79afa25258a48',1,'LedStatusIndicator::off()']]],
-  ['on_1',['on',['../classIStatusIndicator.xhtml#a68a6cc81336ab59dfc2a36b35bc2d96b',1,'IStatusIndicator::on()'],['../classLedStatusIndicator.xhtml#ad15eef220492ac65603b95137f9c5dac',1,'LedStatusIndicator::on()']]],
-  ['operator_3c_3c_2',['operator&lt;&lt;',['../serial__port_8hpp.xhtml#a75694147f57e39239699e0288d9c81ad',1,'operator&lt;&lt;(std::basic_ostream&lt; CharType &gt; &amp;os, const std::array&lt; bool, BITS &gt; &amp;bitArray):&#160;serial_port.hpp'],['../KeyIds_8cpp.xhtml#ae45f271a18515671253e6a78b09636bc',1,'operator&lt;&lt;(std::ostream &amp;os, const KeyId id):&#160;KeyIds.cpp'],['../KeyIds_8hpp.xhtml#ae45f271a18515671253e6a78b09636bc',1,'operator&lt;&lt;(std::ostream &amp;os, const KeyId id):&#160;KeyIds.cpp']]]
+  ['main_646',['main',['../test__cli_8cpp.xhtml#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;test_cli.cpp'],['../test__hmi_8cpp.xhtml#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;test_hmi.cpp'],['../test__string__helpers_8cpp.xhtml#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;test_string_helpers.cpp'],['../task_8cpp.xhtml#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;task.cpp']]],
+  ['makecommand_647',['makeCommand',['../namespacecommand__line__interpreter.xhtml#ab40010ea9e218f4ec37f205d1ec5ea48',1,'command_line_interpreter']]],
+  ['mapselectiontofrequency_648',['mapSelectionToFrequency',['../Presenter_8cpp.xhtml#ab58447859cf3dc4a82ae35bfd7f015b9',1,'Presenter.cpp']]],
+  ['maptaskselectiontotask_649',['mapTaskSelectionToTask',['../ProcessHmiInputs_8cpp.xhtml#a30205c5d79f1a51bb7219cec50048113',1,'ProcessHmiInputs.cpp']]],
+  ['maptasktostatusindicator_650',['mapTaskToStatusIndicator',['../ProcessHmiInputs_8cpp.xhtml#afac4ee690ba74a23455c685e24f90581',1,'ProcessHmiInputs.cpp']]],
+  ['maxprioritytoint_651',['maxPriorityToInt',['../group__debouncer__priority.xhtml#gafef35b417ced03b35db829776da9b7f4',1,'debouncer']]],
+  ['menu_652',['Menu',['../classMenu.xhtml#adb4da2a16fe065c343dc1b9a743aeba1',1,'Menu']]],
+  ['minprioritytoint_653',['minPriorityToInt',['../group__debouncer__priority.xhtml#ga2e82448ac22d58c7ada6da770dd0414e',1,'debouncer']]]
 ];

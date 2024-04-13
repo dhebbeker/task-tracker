@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['execute_0',['execute',['../structcommand__line__interpreter_1_1BaseCommand.xhtml#aeb0f4d6980251d6cd5cc6e95c57db61e',1,'command_line_interpreter::BaseCommand::execute()'],['../structcommand__line__interpreter_1_1Command.xhtml#ae36e295596f6a77f880026e17080d41b',1,'command_line_interpreter::Command::execute(const CharT *const commandLine) const override'],['../structcommand__line__interpreter_1_1Command.xhtml#a291fdafd22e7204d89e31925015fb840',1,'command_line_interpreter::Command::execute(const CharT *const commandLine, ReturnType *const pRetVal) const'],['../classProtocolHandler.xhtml#a8959d7c051b2f281371f55458336262d',1,'ProtocolHandler::execute()']]],
-  ['extractargument_1',['extractArgument',['../structcommand__line__interpreter_1_1Option.xhtml#a8d822e6a431699c223719aa6ca9e14ec',1,'command_line_interpreter::Option']]]
+  ['debouncer_620',['Debouncer',['../classDebouncer.xhtml#ab410c9dc2b0b906785a1e4124bde2c20',1,'Debouncer']]],
+  ['defaultprioritytoint_621',['defaultPriorityToInt',['../group__debouncer__priority.xhtml#ga0a5cb12d139cad7002bcb99eea151a59',1,'debouncer']]],
+  ['display_622',['Display',['../classDisplay.xhtml#aee386246a254610f92a64567c556f96d',1,'Display']]],
+  ['doesmatchname_623',['doesMatchName',['../structcommand__line__interpreter_1_1Option.xhtml#ae1858de91ff7e5d3c9b7fd1fe0e92f19',1,'command_line_interpreter::Option']]]
 ];
