@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['flushssd1306adafruit_634',['flushSSD1306Adafruit',['../Display_8cpp.xhtml#ad30457b57023f7ccb39012b3aec65009',1,'Display.cpp']]],
-  ['foo_635',['foo',['../test__cli_8cpp.xhtml#a535f77b46538fdb64ef421c6d4944374',1,'test_cli.cpp']]]
+  ['flushssd1306adafruit_636',['flushSSD1306Adafruit',['../Display_8cpp.xhtml#ad30457b57023f7ccb39012b3aec65009',1,'Display.cpp']]],
+  ['foo_637',['foo',['../test__cli_8cpp.xhtml#a535f77b46538fdb64ef421c6d4944374',1,'test_cli.cpp']]]
 ];
