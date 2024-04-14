@@ -130,6 +130,7 @@ var menudata={children:[
 {text:"a",url:"globals_func.xhtml#index_a"},
 {text:"b",url:"globals_func.xhtml#index_b"},
 {text:"c",url:"globals_func.xhtml#index_c"},
+{text:"d",url:"globals_func.xhtml#index_d"},
 {text:"f",url:"globals_func.xhtml#index_f"},
 {text:"g",url:"globals_func.xhtml#index_g"},
 {text:"i",url:"globals_func.xhtml#index_i"},
