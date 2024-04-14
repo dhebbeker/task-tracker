@@ -1,5 +1,8 @@
+#include <Arduino-wrapper.h>
 #include <input_device_interface/Keypad.hpp>
 #include <unity.h>
+
+using namespace fakeit;
 
 void setUp(void)
 {
@@ -17,6 +20,9 @@ void test_default_inactive()
 
 int main()
 {
+    // irrelevant test doubles
+    Fake(Method(ArduinoFake(), pinMode));
+
     UNITY_BEGIN();
 
     RUN_TEST(test_default_inactive);
