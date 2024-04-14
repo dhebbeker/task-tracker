@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['debouncer_550',['debouncer',['../namespacedebouncer.xhtml',1,'']]],
-  ['device_551',['device',['../namespacedevice.xhtml',1,'']]]
+  ['debouncer_553',['debouncer',['../namespacedebouncer.xhtml',1,'']]],
+  ['device_554',['device',['../namespacedevice.xhtml',1,'']]]
 ];

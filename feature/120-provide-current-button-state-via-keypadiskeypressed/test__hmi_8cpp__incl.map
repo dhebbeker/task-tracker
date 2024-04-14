@@ -1,5 +1,5 @@
-<map id="test/test_hmi/test_hmi.cpp" name="test/test_hmi/test_hmi.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="1083,5,1221,47"/>
+<map id="test/hmi/test_hmi/test_hmi.cpp" name="test/hmi/test_hmi/test_hmi.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="1069,5,1235,47"/>
 <area shape="rect" id="node2" href="$Arduino-wrapper_8h.xhtml" title="Circumvents problematic processor macros defined by Arduino framework." alt="" coords="5,102,147,129"/>
 <area shape="rect" id="node4" title=" " alt="" coords="171,102,256,129"/>
 <area shape="rect" id="node5" href="$board__pins_8hpp.xhtml" title="Provides named objects for the pins provided by the board." alt="" coords="331,102,453,129"/>

@@ -1,0 +1,8 @@
+<map id="test/hmi" name="test/hmi">
+<area shape="rect" id="node2" href="dir_4d8f59d547f7cfb88565f0f03a44bf08.xhtml" title="test_debounce" alt="" coords="141,63,259,111"/>
+<area shape="rect" id="node3" href="dir_de3c6f73cad814280cdb09df05607cfa.xhtml" title="test_hmi" alt="" coords="38,63,117,111"/>
+<area shape="rect" id="node4" href="dir_97aefd0d527b934f1d99a682da8fe6a9.xhtml" title="lib" alt="" coords="41,159,113,207"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000022_000003.xhtml" title="13" alt="" coords="77,133,94,148"/>
+<area shape="rect" id="clust2" href="dir_c1cfa12654bedbd6ee4587aa8a463538.xhtml" alt="" coords="27,52,365,121"/>
+<area shape="rect" id="clust1" href="dir_13e138d54eb8818da29c3992edef070a.xhtml" title="test" alt="" coords="16,16,376,132"/>
+</map>

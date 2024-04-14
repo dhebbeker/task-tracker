@@ -15,13 +15,14 @@ var searchData=
   ['getlabel_170',['getLabel',['../classTask.xhtml#ada97787ea9e1d67d6708eb6c306629dc',1,'Task']]],
   ['getline_171',['getLine',['../namespaceserial__port.xhtml#acbf89672a6ce72254d025e0c116a6c25',1,'serial_port']]],
   ['getrecordedduration_172',['getRecordedDuration',['../classTask.xhtml#a35c5ec0d50d2a92028a008721d132d5d',1,'Task']]],
-  ['getstatusindicators_173',['getStatusIndicators',['../namespaceboard.xhtml#a5898e6d262ab4dc0be1e8b3a24a3790c',1,'board']]],
-  ['gettaskstackhighwatermark_174',['getTaskStackHighWaterMark',['../classDebouncer.xhtml#adf482406de6a961916b2bd43f04a3896',1,'Debouncer']]],
-  ['gs1_175',['gs1',['../namespacenote.xhtml#a4a0532c6cfa8775dd979bdf248120040',1,'note']]],
-  ['gs2_176',['gs2',['../namespacenote.xhtml#a7c6877490c4b3c86d8721bde91320baf',1,'note']]],
-  ['gs3_177',['gs3',['../namespacenote.xhtml#ad2d04136970998928d8da89c010a1c8c',1,'note']]],
-  ['gs4_178',['gs4',['../namespacenote.xhtml#abf7345a337426bf6745b3d7e7700cccf',1,'note']]],
-  ['gs5_179',['gs5',['../namespacenote.xhtml#aa0a9944bbcdb0aa2c0c650ad50f460ef',1,'note']]],
-  ['gs6_180',['gs6',['../namespacenote.xhtml#a893d5aabe2e1d4d532f441d97acbe271',1,'note']]],
-  ['gs7_181',['gs7',['../namespacenote.xhtml#a5d291b0c67d7dffa2b3a8165ed3853e3',1,'note']]]
+  ['getstateindex_173',['getStateIndex',['../Keypad_8cpp.xhtml#a51b60ca4de98db844518d4f90dfe6e04',1,'Keypad.cpp']]],
+  ['getstatusindicators_174',['getStatusIndicators',['../namespaceboard.xhtml#a5898e6d262ab4dc0be1e8b3a24a3790c',1,'board']]],
+  ['gettaskstackhighwatermark_175',['getTaskStackHighWaterMark',['../classDebouncer.xhtml#adf482406de6a961916b2bd43f04a3896',1,'Debouncer']]],
+  ['gs1_176',['gs1',['../namespacenote.xhtml#a4a0532c6cfa8775dd979bdf248120040',1,'note']]],
+  ['gs2_177',['gs2',['../namespacenote.xhtml#a7c6877490c4b3c86d8721bde91320baf',1,'note']]],
+  ['gs3_178',['gs3',['../namespacenote.xhtml#ad2d04136970998928d8da89c010a1c8c',1,'note']]],
+  ['gs4_179',['gs4',['../namespacenote.xhtml#abf7345a337426bf6745b3d7e7700cccf',1,'note']]],
+  ['gs5_180',['gs5',['../namespacenote.xhtml#aa0a9944bbcdb0aa2c0c650ad50f460ef',1,'note']]],
+  ['gs6_181',['gs6',['../namespacenote.xhtml#a893d5aabe2e1d4d532f441d97acbe271',1,'note']]],
+  ['gs7_182',['gs7',['../namespacenote.xhtml#a5d291b0c67d7dffa2b3a8165ed3853e3',1,'note']]]
 ];
