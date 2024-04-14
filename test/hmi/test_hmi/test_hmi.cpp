@@ -58,13 +58,10 @@ void test_Controller()
     Menu singleMenu(board::getDisplay());
     Presenter presenter(singleMenu, board::getStatusIndicators());
     ProcessHmiInputs processor(presenter, board::getKeypad());
-    auto &task1 = std::begin(device::tasks)->second;                      // we are going to test for task 1
-    const auto isrTask1 = isr_collection.find(board::button::pin::task1); // ISR we expect for task 1
-    TEST_ASSERT_NOT_EQUAL(std::end(isr_collection), isrTask1);            // assert we found an ISR for task 1 in the list
+    auto &task1 = std::begin(device::tasks)->second; // we are going to test for task 1
 
-    std::cout << "trigger ISR for task 1: 'start task'" << std::endl;
     When(Method(ArduinoFake(), digitalRead).Using(board::button::pin::task1)).Return(LOW); // set task 1 button to low
-    isrTask1->second();                                                                    // trigger interrupt for task 1 button
+    changeButtonState(board::button::pin::task1);
 
     // wait for the task to be running
     while (!task1.isRunning())
@@ -75,9 +72,8 @@ void test_Controller()
     constexpr int millisecondsToWait = 1000;
     std::this_thread::sleep_for(std::chrono::milliseconds(millisecondsToWait)); // wait a defined time
 
-    std::cout << "trigger ISR for task 1: 'stop task'" << std::endl;
     When(Method(ArduinoFake(), digitalRead).Using(board::button::pin::task1)).Return(LOW); // set task 1 button to low
-    isrTask1->second();                                                                    // stop task
+    changeButtonState(board::button::pin::task1);                                          // stop task
 
     // wait for the task to be stopped
     while (task1.isRunning())
