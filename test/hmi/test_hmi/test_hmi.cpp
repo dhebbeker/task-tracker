@@ -1,15 +1,12 @@
+#include "../test_dummies.hpp"
 #include <Arduino-wrapper.h>
 #include <algorithm>
 #include <board_pins.hpp>
-#include <board_types.hpp>
 #include <chrono>
 #include <cstdint>
 #include <input_device_interface/debouncedIsr.hpp>
-#include <iomanip>
 #include <ios>
-#include <iostream>
 #include <iterator>
-#include <map>
 #include <serial_interface/serial_port.hpp>
 #include <tasks/Task.hpp>
 #include <thread>
@@ -41,8 +38,6 @@ namespace serial_port
 std::basic_ostream<CharType> &cout = std::cout;
 }
 
-static std::map<board::PinType, std::function<void(void)>> isr_collection;
-
 void setUp()
 {
     isr_collection.clear();
@@ -50,26 +45,6 @@ void setUp()
 
 void tearDown()
 {
-}
-
-// test dummy for Arduino-ESP32 specific function
-void attachInterrupt(const uint8_t interruptNum, const std::function<void(void)> userFunc, const int mode)
-{
-    isr_collection.emplace(interruptNum, userFunc);
-    std::cout << "Added ISR for interrupt number " << static_cast<unsigned int>(interruptNum)
-              << " function pointer " << std::showbase << std::hex << reinterpret_cast<std::intptr_t>(userFunc.target<void (*)(void)>()) << std::resetiosflags(std::ios::showbase | std::ios::basefield) << std::endl;
-}
-
-// test dummy for a FreeRTOS adapter function
-std::function<void(void)> createDebouncer(const std::function<void(void)> handler, std::chrono::milliseconds, int)
-{
-    return handler;
-}
-
-// test dummy for a FreeRTOS adapter function
-int debouncer::defaultPriorityToInt()
-{
-    return 0xC0FFE;
 }
 
 void test_Controller()
