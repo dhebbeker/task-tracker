@@ -1,9 +1,0 @@
-<map id="lib/application_business_rules/user_interaction/Menu.hpp" name="lib/application_business_rules/user_interaction/Menu.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="304,5,464,60"/>
-<area shape="rect" id="node2" href="$Menu_8cpp.xhtml" title=" " alt="" coords="61,108,221,163"/>
-<area shape="rect" id="node3" href="$Presenter_8hpp.xhtml" title=" " alt="" coords="245,108,405,163"/>
-<area shape="rect" id="node6" href="$main_8cpp.xhtml" title=" " alt="" coords="373,225,469,251"/>
-<area shape="rect" id="node7" href="$test__hmi_8cpp.xhtml" title=" " alt="" coords="494,218,618,258"/>
-<area shape="rect" id="node4" href="$Presenter_8cpp.xhtml" title=" " alt="" coords="5,211,165,265"/>
-<area shape="rect" id="node5" href="$ProcessHmiInputs_8cpp.xhtml" title=" " alt="" coords="189,211,349,265"/>
-</map>
