@@ -1,4 +1,11 @@
 <map id="test/hmi/test_debounce/test_debounce.cpp" name="test/hmi/test_debounce/test_debounce.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,180,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="60,95,125,121"/>
+<area shape="rect" id="node1" title=" " alt="" coords="169,5,343,47"/>
+<area shape="rect" id="node2" href="$Arduino-wrapper_8h.xhtml" title="Circumvents problematic processor macros defined by Arduino framework." alt="" coords="5,102,147,129"/>
+<area shape="rect" id="node4" href="$Keypad_8hpp.xhtml" title=" " alt="" coords="171,95,341,136"/>
+<area shape="rect" id="node9" title=" " alt="" coords="366,102,431,129"/>
+<area shape="rect" id="node3" title=" " alt="" coords="34,184,118,211"/>
+<area shape="rect" id="node5" href="$IKeypad_8hpp.xhtml" title=" " alt="" coords="151,184,361,211"/>
+<area shape="rect" id="node6" href="$KeyIds_8hpp.xhtml" title=" " alt="" coords="152,259,245,285"/>
+<area shape="rect" id="node8" title=" " alt="" coords="270,259,357,285"/>
+<area shape="rect" id="node7" title=" " alt="" coords="161,333,237,360"/>
 </map>

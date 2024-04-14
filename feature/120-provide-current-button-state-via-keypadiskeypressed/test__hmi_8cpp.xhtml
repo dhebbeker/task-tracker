@@ -74,24 +74,20 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">test_hmi.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="Arduino-wrapper_8h_source.xhtml">Arduino-wrapper.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="test__dummies_8hpp_source.xhtml">../test_dummies.hpp</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="Arduino-wrapper_8h_source.xhtml">Arduino-wrapper.h</a>&gt;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;<a class="el" href="board__pins_8hpp_source.xhtml">board_pins.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="board__types_8hpp_source.xhtml">board_types.hpp</a>&gt;</code><br />
 <code>#include &lt;chrono&gt;</code><br />
 <code>#include &lt;cstdint&gt;</code><br />
 <code>#include &lt;<a class="el" href="debouncedIsr_8hpp_source.xhtml">input_device_interface/debouncedIsr.hpp</a>&gt;</code><br />
-<code>#include &lt;iomanip&gt;</code><br />
 <code>#include &lt;ios&gt;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;iterator&gt;</code><br />
-<code>#include &lt;map&gt;</code><br />
 <code>#include &lt;<a class="el" href="serial__port_8hpp_source.xhtml">serial_interface/serial_port.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="Task_8hpp_source.xhtml">tasks/Task.hpp</a>&gt;</code><br />
 <code>#include &lt;thread&gt;</code><br />
@@ -106,7 +102,7 @@ $(function() {
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for test_hmi.cpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="test__hmi_8cpp__incl.svg" width="2830" height="380"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="test__hmi_8cpp__incl.svg" width="2707" height="380"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><table class="memberdecls">
@@ -125,105 +121,12 @@ Functions</h2></td></tr>
 <tr class="separator:a63326a1b70b6e3f070e51687798e02de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab804e0f66def63262c1d6b4e3d2a2bd7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__hmi_8cpp.xhtml#ab804e0f66def63262c1d6b4e3d2a2bd7">tearDown</a> ()</td></tr>
 <tr class="separator:ab804e0f66def63262c1d6b4e3d2a2bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac54d534567e677f136ca70a07353fd66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__hmi_8cpp.xhtml#ac54d534567e677f136ca70a07353fd66">attachInterrupt</a> (const uint8_t interruptNum, const std::function&lt; void(void)&gt; userFunc, const int mode)</td></tr>
-<tr class="separator:ac54d534567e677f136ca70a07353fd66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad98175331ffb50cfbde0c4fdf647ea2c"><td class="memItemLeft" align="right" valign="top">std::function&lt; void(void)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__hmi_8cpp.xhtml#ad98175331ffb50cfbde0c4fdf647ea2c">createDebouncer</a> (const std::function&lt; void(void)&gt; handler, std::chrono::milliseconds, int)</td></tr>
-<tr class="memdesc:ad98175331ffb50cfbde0c4fdf647ea2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classDebouncer.xhtml" title="Non-memorizing startup delay for debouncing.">Debouncer</a>.  <a href="test__hmi_8cpp.xhtml#ad98175331ffb50cfbde0c4fdf647ea2c">More...</a><br /></td></tr>
-<tr class="separator:ad98175331ffb50cfbde0c4fdf647ea2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aead596c460ac80289489fe89f3173065"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__hmi_8cpp.xhtml#aead596c460ac80289489fe89f3173065">test_Controller</a> ()</td></tr>
 <tr class="separator:aead596c460ac80289489fe89f3173065"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__hmi_8cpp.xhtml#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a682693c64830168780d2aab22f4454b0"><td class="memItemLeft" align="right" valign="top">static std::map&lt; <a class="el" href="namespaceboard.xhtml#af091862f70321f1b4fd67a4f4751ef0c">board::PinType</a>, std::function&lt; void(void)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__hmi_8cpp.xhtml#a682693c64830168780d2aab22f4454b0">isr_collection</a></td></tr>
-<tr class="separator:a682693c64830168780d2aab22f4454b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ac54d534567e677f136ca70a07353fd66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac54d534567e677f136ca70a07353fd66">&#9670;&nbsp;</a></span>attachInterrupt()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void attachInterrupt </td>
-          <td>(</td>
-          <td class="paramtype">const uint8_t&#160;</td>
-          <td class="paramname"><em>interruptNum</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::function&lt; void(void)&gt;&#160;</td>
-          <td class="paramname"><em>userFunc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>mode</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ad98175331ffb50cfbde0c4fdf647ea2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad98175331ffb50cfbde0c4fdf647ea2c">&#9670;&nbsp;</a></span>createDebouncer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::function&lt;void(void)&gt; createDebouncer </td>
-          <td>(</td>
-          <td class="paramtype">std::function&lt; void(void)&gt;&#160;</td>
-          <td class="paramname"><em>handler</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::chrono::milliseconds&#160;</td>
-          <td class="paramname"><em>debounceTime</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>priority</em> = <code><a class="el" href="group__debouncer__priority.xhtml#ga0a5cb12d139cad7002bcb99eea151a59">debouncer::defaultPriorityToInt</a>()</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Creates a <a class="el" href="classDebouncer.xhtml" title="Non-memorizing startup delay for debouncing.">Debouncer</a>. </p>
-<p>The <a class="el" href="classDebouncer.xhtml" title="Non-memorizing startup delay for debouncing.">Debouncer</a> takes a function ("handler") which will be called after a signal has been debounced. The <a class="el" href="classDebouncer.xhtml" title="Non-memorizing startup delay for debouncing.">Debouncer</a> provides a function which shall be called by the user to indicate the signal.</p>
-<p>The <a class="el" href="classDebouncer.xhtml" title="Non-memorizing startup delay for debouncing.">Debouncer</a> acts as a non-memorizing startup delay. A signal will only trigger the handler in case the debounce time expires while no further signal is recorded.</p>
-<p>The <a class="el" href="classDebouncer.xhtml" title="Non-memorizing startup delay for debouncing.">Debouncer</a> will use some kind of thread or task to wait for the debounce time.</p>
-<p>For each signal a separate <a class="el" href="classDebouncer.xhtml" title="Non-memorizing startup delay for debouncing.">Debouncer</a> needs to be created.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">handler</td><td>is the function to be called by the <a class="el" href="classDebouncer.xhtml" title="Non-memorizing startup delay for debouncing.">Debouncer</a> </td></tr>
-    <tr><td class="paramname">debounceTime</td><td>is the time which shall be waited by the <a class="el" href="classDebouncer.xhtml" title="Non-memorizing startup delay for debouncing.">Debouncer</a> to recognize a stable signal </td></tr>
-    <tr><td class="paramname">priority</td><td>is the priority of the debounce task used for that debouncer </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>a function which must be called by the user to register new signals </dd></dl>
-
-</div>
-</div>
 <a id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&nbsp;</a></span>main()</h2>
 
@@ -305,33 +208,10 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a682693c64830168780d2aab22f4454b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a682693c64830168780d2aab22f4454b0">&#9670;&nbsp;</a></span>isr_collection</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::map&lt;<a class="el" href="namespaceboard.xhtml#af091862f70321f1b4fd67a4f4751ef0c">board::PinType</a>, std::function&lt;void(void)&gt; &gt; isr_collection</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 14 2024 10:23:46 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Apr 14 2024 10:52:33 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
