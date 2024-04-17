@@ -48,3 +48,8 @@ Task::Duration Task::getRecordedDuration()
 }
 
 std::map<TaskId, Task> device::tasks;
+
+void Task::setRecordedDuration(Duration newDuration)
+{
+    recordedDuration = newDuration;
+}

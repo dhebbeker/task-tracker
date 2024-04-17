@@ -65,6 +65,14 @@ class Task
      * \returns the accumulated duration
      */
     Duration getRecordedDuration();
+
+    /**
+     * Sets the recorded duration.
+     *
+     * Useful for example if the task has been recorded outside the device.
+     * @param newDuration new duration to apply
+     */
+    void setRecordedDuration(Duration newDuration);
     bool isRunning() const;
 
   private:

@@ -13,6 +13,7 @@ namespace cli = command_line_interpreter;
 #include <serial_protocol/TaskList.hpp>
 #include <serial_protocol/TaskObject.hpp>
 #include <string>
+#include <tasks/Task.hpp>
 
 using namespace task_tracker_systems;
 
@@ -36,8 +37,17 @@ static const auto listCmd = cli::makeCommand("list", std::function(list));
 
 // command for edit
 static const auto edit = [](const int id, const std::basic_string<ProtocolHandler::CharType> label, const int duration) {
-    const TaskObject task = {.id = id, .label = label, .duration = duration};
-    serial_port::cout << toJsonString(task) << std::endl;
+    try
+    {
+        auto &task = device::tasks.at(id);
+        task.setLabel(label);
+        task.setRecordedDuration(std::chrono::seconds(duration));
+        serial_port::cout << toJsonString(task) << std::endl;
+    }
+    catch (std::out_of_range &e)
+    {
+        serial_port::cout << "ERROR: Task not found." << std::endl;
+    }
 };
 static const cli::Option<int> id = {.labels = {"--id"}, .defaultValue = 0};
 static const cli::Option<std::basic_string<ProtocolHandler::CharType>> label = {.labels = {"--name"}, .defaultValue = "foo"};
