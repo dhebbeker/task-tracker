@@ -27,12 +27,10 @@ static const auto info = []() {
 static const auto infoCmd = cli::makeCommand("info", std::function(info));
 
 // command for list
-static const auto list = []() { 
-    const TaskList dummyList = {
-        {.id = 1, .label = "first", .duration = 100U}, 
-        {.id = 2, .label =  "second", .duration = 200U},
-        };
-    serial_port::cout << toJsonString(dummyList) << std::endl; };
+static const auto list = []() {
+  std::vector<TaskObject> list;
+
+  serial_port::cout << toJsonString(device::tasks) << std::endl; };
 static const auto listCmd = cli::makeCommand("list", std::function(list));
 
 // command for edit
@@ -42,7 +40,8 @@ static const auto edit = [](const int id, const std::basic_string<ProtocolHandle
         auto &task = device::tasks.at(id);
         task.setLabel(label);
         task.setRecordedDuration(std::chrono::seconds(duration));
-        serial_port::cout << toJsonString(task) << std::endl;
+        const TaskObject taskObject = {.id = id, .label = task.getLabel(), .duration = task.getRecordedDuration().count()};
+        serial_port::cout << toJsonString(taskObject) << std::endl;
     }
     catch (std::out_of_range &e)
     {
