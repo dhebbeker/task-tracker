@@ -66,6 +66,8 @@ class Task
      */
     Duration getRecordedDuration();
 
+    Duration getLastRecordedDuration() const;
+
     /**
      * Sets the recorded duration.
      *
@@ -95,8 +97,10 @@ class Task
 
 namespace device
 {
+typedef std::map<TaskId, Task> TaskCollection;
+
 /**
  * *The* collection of tasks to be used by the device application.
  */
-extern std::map<TaskId, Task> tasks;
+extern TaskCollection tasks;
 } // namespace device
