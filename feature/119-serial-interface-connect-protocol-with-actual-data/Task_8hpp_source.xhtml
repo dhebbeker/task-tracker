@@ -106,43 +106,52 @@ $(function() {
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classTask.xhtml#ac503952d3049aede0a5427faea94ceb1">setLabel</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="classTask.xhtml#a0ffb7bfbd3ea9bb396e4fb03c1eeb9f6">String</a> &amp;label);</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_typedef" href="classTask.xhtml#ab58c86df7691c4efc868fb4dc56d0fe0">Duration</a> <a class="code hl_function" href="classTask.xhtml#a35c5ec0d50d2a92028a008721d132d5d">getRecordedDuration</a>();</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classTask.xhtml#ad6abe9097628c64d57347c1657e518c8">isRunning</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <a class="code hl_typedef" href="classTask.xhtml#a0ffb7bfbd3ea9bb396e4fb03c1eeb9f6">String</a> label;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keyword">enum class</span> State</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    {</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        IDLE,</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        RUNNING,</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    };</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    State state;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keyword">typedef</span> std::chrono::milliseconds DurationFraction;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    DurationFraction recordedDuration;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keyword">typedef</span> std::chrono::system_clock Clock;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    std::chrono::time_point&lt;Clock, DurationFraction&gt; timestampStart;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>};</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="namespacedevice.xhtml">   88</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacedevice.xhtml">device</a></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>{</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="keyword">extern</span> std::map&lt;TaskId, Task&gt; <a class="code hl_variable" href="namespacedevice.xhtml#a88ad1fcba11187034580cdd28c54d491">tasks</a>;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>} <span class="comment">// namespace device</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <a class="code hl_typedef" href="classTask.xhtml#ab58c86df7691c4efc868fb4dc56d0fe0">Duration</a> <a class="code hl_function" href="classTask.xhtml#a157a0f8ec9540ba139d03f9938d1b9be">getLastRecordedDuration</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classTask.xhtml#ac9d8d102598c9339a642219ac2fe363e">setRecordedDuration</a>(<a class="code hl_typedef" href="classTask.xhtml#ab58c86df7691c4efc868fb4dc56d0fe0">Duration</a> newDuration);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classTask.xhtml#ad6abe9097628c64d57347c1657e518c8">isRunning</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_typedef" href="classTask.xhtml#a0ffb7bfbd3ea9bb396e4fb03c1eeb9f6">String</a> label;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keyword">enum class</span> State</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        IDLE,</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        RUNNING,</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    };</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    State state;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keyword">typedef</span> std::chrono::milliseconds DurationFraction;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    DurationFraction recordedDuration;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keyword">typedef</span> std::chrono::system_clock Clock;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    std::chrono::time_point&lt;Clock, DurationFraction&gt; timestampStart;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>};</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="namespacedevice.xhtml">   98</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacedevice.xhtml">device</a></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>{</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="namespacedevice.xhtml#a90d875b11956ad0a34d442b164c1fd60">  100</a></span><span class="keyword">typedef</span> std::map&lt;TaskId, Task&gt; <a class="code hl_typedef" href="namespacedevice.xhtml#a90d875b11956ad0a34d442b164c1fd60">TaskCollection</a>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="keyword">extern</span> <a class="code hl_typedef" href="namespacedevice.xhtml#a90d875b11956ad0a34d442b164c1fd60">TaskCollection</a> <a class="code hl_variable" href="namespacedevice.xhtml#a5d868aecd5efe12cd7b64e2323f3886f">tasks</a>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>} <span class="comment">// namespace device</span></div>
 <div class="ttc" id="aTask_8hpp_xhtml_afa2efb6d57531344abcae953e6ec4ce1"><div class="ttname"><a href="Task_8hpp.xhtml#afa2efb6d57531344abcae953e6ec4ce1">TaskId</a></div><div class="ttdeci">unsigned int TaskId</div><div class="ttdoc">Task ID.</div><div class="ttdef"><b>Definition:</b> Task.hpp:12</div></div>
 <div class="ttc" id="aclassTask_xhtml"><div class="ttname"><a href="classTask.xhtml">Task</a></div><div class="ttdoc">Manages a task.</div><div class="ttdef"><b>Definition:</b> Task.hpp:22</div></div>
 <div class="ttc" id="aclassTask_xhtml_a0ffb7bfbd3ea9bb396e4fb03c1eeb9f6"><div class="ttname"><a href="classTask.xhtml#a0ffb7bfbd3ea9bb396e4fb03c1eeb9f6">Task::String</a></div><div class="ttdeci">std::string String</div><div class="ttdoc">String type used for labels of the task.</div><div class="ttdef"><b>Definition:</b> Task.hpp:40</div></div>
+<div class="ttc" id="aclassTask_xhtml_a157a0f8ec9540ba139d03f9938d1b9be"><div class="ttname"><a href="classTask.xhtml#a157a0f8ec9540ba139d03f9938d1b9be">Task::getLastRecordedDuration</a></div><div class="ttdeci">Duration getLastRecordedDuration() const</div><div class="ttdef"><b>Definition:</b> Task.cpp:57</div></div>
 <div class="ttc" id="aclassTask_xhtml_a35c5ec0d50d2a92028a008721d132d5d"><div class="ttname"><a href="classTask.xhtml#a35c5ec0d50d2a92028a008721d132d5d">Task::getRecordedDuration</a></div><div class="ttdeci">Duration getRecordedDuration()</div><div class="ttdoc">Gets the recorded duration.</div><div class="ttdef"><b>Definition:</b> Task.cpp:40</div></div>
 <div class="ttc" id="aclassTask_xhtml_a5d6a1d3c6cd5b587d2414737fab9f3ed"><div class="ttname"><a href="classTask.xhtml#a5d6a1d3c6cd5b587d2414737fab9f3ed">Task::start</a></div><div class="ttdeci">void start()</div><div class="ttdoc">Starts/continues capturing duration.</div><div class="ttdef"><b>Definition:</b> Task.cpp:14</div></div>
 <div class="ttc" id="aclassTask_xhtml_ab58c86df7691c4efc868fb4dc56d0fe0"><div class="ttname"><a href="classTask.xhtml#ab58c86df7691c4efc868fb4dc56d0fe0">Task::Duration</a></div><div class="ttdeci">std::chrono::seconds Duration</div><div class="ttdoc">Type used to record durations.</div><div class="ttdef"><b>Definition:</b> Task.hpp:31</div></div>
 <div class="ttc" id="aclassTask_xhtml_aba5eb3d6c2a034aa0e319383fbec68c4"><div class="ttname"><a href="classTask.xhtml#aba5eb3d6c2a034aa0e319383fbec68c4">Task::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">Stops/pauses capturing duration.</div><div class="ttdef"><b>Definition:</b> Task.cpp:20</div></div>
 <div class="ttc" id="aclassTask_xhtml_ac503952d3049aede0a5427faea94ceb1"><div class="ttname"><a href="classTask.xhtml#ac503952d3049aede0a5427faea94ceb1">Task::setLabel</a></div><div class="ttdeci">void setLabel(const String &amp;label)</div><div class="ttdef"><b>Definition:</b> Task.cpp:35</div></div>
+<div class="ttc" id="aclassTask_xhtml_ac9d8d102598c9339a642219ac2fe363e"><div class="ttname"><a href="classTask.xhtml#ac9d8d102598c9339a642219ac2fe363e">Task::setRecordedDuration</a></div><div class="ttdeci">void setRecordedDuration(Duration newDuration)</div><div class="ttdoc">Sets the recorded duration.</div><div class="ttdef"><b>Definition:</b> Task.cpp:52</div></div>
 <div class="ttc" id="aclassTask_xhtml_ad6abe9097628c64d57347c1657e518c8"><div class="ttname"><a href="classTask.xhtml#ad6abe9097628c64d57347c1657e518c8">Task::isRunning</a></div><div class="ttdeci">bool isRunning() const</div><div class="ttdef"><b>Definition:</b> Task.cpp:30</div></div>
 <div class="ttc" id="aclassTask_xhtml_ada97787ea9e1d67d6708eb6c306629dc"><div class="ttname"><a href="classTask.xhtml#ada97787ea9e1d67d6708eb6c306629dc">Task::getLabel</a></div><div class="ttdeci">const String &amp; getLabel() const</div><div class="ttdef"><b>Definition:</b> Task.cpp:4</div></div>
-<div class="ttc" id="anamespacedevice_xhtml"><div class="ttname"><a href="namespacedevice.xhtml">device</a></div><div class="ttdef"><b>Definition:</b> Task.hpp:89</div></div>
-<div class="ttc" id="anamespacedevice_xhtml_a88ad1fcba11187034580cdd28c54d491"><div class="ttname"><a href="namespacedevice.xhtml#a88ad1fcba11187034580cdd28c54d491">device::tasks</a></div><div class="ttdeci">std::map&lt; TaskId, Task &gt; tasks</div><div class="ttdoc">The collection of tasks to be used by the device application.</div><div class="ttdef"><b>Definition:</b> Task.cpp:50</div></div>
+<div class="ttc" id="anamespacedevice_xhtml"><div class="ttname"><a href="namespacedevice.xhtml">device</a></div><div class="ttdef"><b>Definition:</b> Task.hpp:99</div></div>
+<div class="ttc" id="anamespacedevice_xhtml_a5d868aecd5efe12cd7b64e2323f3886f"><div class="ttname"><a href="namespacedevice.xhtml#a5d868aecd5efe12cd7b64e2323f3886f">device::tasks</a></div><div class="ttdeci">TaskCollection tasks</div><div class="ttdoc">The collection of tasks to be used by the device application.</div><div class="ttdef"><b>Definition:</b> Task.cpp:50</div></div>
+<div class="ttc" id="anamespacedevice_xhtml_a90d875b11956ad0a34d442b164c1fd60"><div class="ttname"><a href="namespacedevice.xhtml#a90d875b11956ad0a34d442b164c1fd60">device::TaskCollection</a></div><div class="ttdeci">std::map&lt; TaskId, Task &gt; TaskCollection</div><div class="ttdef"><b>Definition:</b> Task.hpp:100</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 10 2024 05:44:53 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Mon Apr 22 2024 04:39:40 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

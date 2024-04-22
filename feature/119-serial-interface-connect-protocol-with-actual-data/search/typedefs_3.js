@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hmihandler_0',['HmiHandler',['../IKeypad_8hpp.xhtml#ae2fde3285f2c5c5ca51dcbbca7dfe513',1,'IKeypad.hpp']]]
+  ['duration_0',['Duration',['../classTask.xhtml#ab58c86df7691c4efc868fb4dc56d0fe0',1,'Task']]]
 ];

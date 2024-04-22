@@ -91,7 +91,7 @@ $(function() {
 <div class="dynheader">
 Collaboration diagram for Task:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classTask__coll__graph.svg" width="174" height="154"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classTask__coll__graph.svg" width="199" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -121,6 +121,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a35c5ec0d50d2a92028a008721d132d5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTask.xhtml#ab58c86df7691c4efc868fb4dc56d0fe0">Duration</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTask.xhtml#a35c5ec0d50d2a92028a008721d132d5d">getRecordedDuration</a> ()</td></tr>
 <tr class="memdesc:a35c5ec0d50d2a92028a008721d132d5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the recorded duration.  <a href="classTask.xhtml#a35c5ec0d50d2a92028a008721d132d5d">More...</a><br /></td></tr>
 <tr class="separator:a35c5ec0d50d2a92028a008721d132d5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a157a0f8ec9540ba139d03f9938d1b9be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTask.xhtml#ab58c86df7691c4efc868fb4dc56d0fe0">Duration</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTask.xhtml#a157a0f8ec9540ba139d03f9938d1b9be">getLastRecordedDuration</a> () const</td></tr>
+<tr class="separator:a157a0f8ec9540ba139d03f9938d1b9be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9d8d102598c9339a642219ac2fe363e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTask.xhtml#ac9d8d102598c9339a642219ac2fe363e">setRecordedDuration</a> (<a class="el" href="classTask.xhtml#ab58c86df7691c4efc868fb4dc56d0fe0">Duration</a> newDuration)</td></tr>
+<tr class="memdesc:ac9d8d102598c9339a642219ac2fe363e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the recorded duration.  <a href="classTask.xhtml#ac9d8d102598c9339a642219ac2fe363e">More...</a><br /></td></tr>
+<tr class="separator:ac9d8d102598c9339a642219ac2fe363e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6abe9097628c64d57347c1657e518c8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTask.xhtml#ad6abe9097628c64d57347c1657e518c8">isRunning</a> () const</td></tr>
 <tr class="separator:ad6abe9097628c64d57347c1657e518c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -207,6 +212,23 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a157a0f8ec9540ba139d03f9938d1b9be" name="a157a0f8ec9540ba139d03f9938d1b9be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a157a0f8ec9540ba139d03f9938d1b9be">&#9670;&#160;</a></span>getLastRecordedDuration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTask.xhtml#ab58c86df7691c4efc868fb4dc56d0fe0">Task::Duration</a> Task::getLastRecordedDuration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a35c5ec0d50d2a92028a008721d132d5d" name="a35c5ec0d50d2a92028a008721d132d5d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a35c5ec0d50d2a92028a008721d132d5d">&#9670;&#160;</a></span>getRecordedDuration()</h2>
 
@@ -263,6 +285,32 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ac9d8d102598c9339a642219ac2fe363e" name="ac9d8d102598c9339a642219ac2fe363e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9d8d102598c9339a642219ac2fe363e">&#9670;&#160;</a></span>setRecordedDuration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Task::setRecordedDuration </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classTask.xhtml#ab58c86df7691c4efc868fb4dc56d0fe0">Duration</a>&#160;</td>
+          <td class="paramname"><em>newDuration</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the recorded duration. </p>
+<p >Useful for example if the task has been recorded outside the device. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newDuration</td><td>new duration to apply </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a5d6a1d3c6cd5b587d2414737fab9f3ed" name="a5d6a1d3c6cd5b587d2414737fab9f3ed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5d6a1d3c6cd5b587d2414737fab9f3ed">&#9670;&#160;</a></span>start()</h2>
 
@@ -310,7 +358,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 10 2024 05:44:53 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Mon Apr 22 2024 04:39:41 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
