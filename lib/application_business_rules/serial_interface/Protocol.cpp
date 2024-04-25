@@ -28,11 +28,7 @@ static const auto info = []() {
 static const auto infoCmd = cli::makeCommand("info", std::function(info));
 
 // command for list
-static const auto list = []() { std::vector<TaskObjectIterator> itList;
-std::for_each(std::cbegin(device::tasks), std::cend(device::tasks), [&itList](auto it){
-    itList.emplace_back(it);
-});
-                                        serial_port::cout << toJsonString(itList) << std::endl; };
+static const auto list = []() { serial_port::cout << toJsonString(device::tasks) << std::endl; };
 static const auto listCmd = cli::makeCommand("list", std::function(list));
 
 // command for edit
