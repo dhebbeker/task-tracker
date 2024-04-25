@@ -36,7 +36,7 @@ std::for_each(std::cbegin(device::tasks), std::cend(device::tasks), [&itList](au
 static const auto listCmd = cli::makeCommand("list", std::function(list));
 
 // command for edit
-static const auto edit = [](const int id, const std::basic_string<ProtocolHandler::CharType> label, const int duration) {
+static const auto edit = [](const TaskId id, const std::basic_string<ProtocolHandler::CharType> label, const Task::Duration::rep duration) {
     try
     {
         auto &task = device::tasks.at(id);
@@ -50,9 +50,9 @@ static const auto edit = [](const int id, const std::basic_string<ProtocolHandle
         serial_port::cout << "ERROR: Task not found." << std::endl;
     }
 };
-static const cli::Option<int> id = {.labels = {"--id"}, .defaultValue = 0};
+static const cli::Option<TaskId> id = {.labels = {"--id"}, .defaultValue = 0};
 static const cli::Option<std::basic_string<ProtocolHandler::CharType>> label = {.labels = {"--name"}, .defaultValue = "foo"};
-static const cli::Option<int> duration = {.labels = {"--duration"}, .defaultValue = 0};
+static const cli::Option<Task::Duration::rep> duration = {.labels = {"--duration"}, .defaultValue = 0};
 static const auto editCmd = cli::makeCommand("edit", std::function(edit), std::make_tuple(&id, &label, &duration));
 
 static const std::array<const cli::BaseCommand<char> *, 3> commands = {&listCmd, &editCmd, &infoCmd};
