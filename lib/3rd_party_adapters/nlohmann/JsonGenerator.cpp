@@ -1,10 +1,10 @@
 #include <nlohmann/json.hpp>
 #include <serial_interface/JsonGenerator.hpp>
-#include <serial_interface/TaskIterator.hpp>
 #include <serial_protocol/DeletedTaskObject.hpp>
 #include <serial_protocol/ProtocolVersionObject.hpp>
 #include <serial_protocol/TaskList.hpp>
 #include <serial_protocol/TaskObject.hpp>
+#include <tasks/Task.hpp>
 
 constexpr int defaultJsonIndent = 4;
 
@@ -36,10 +36,17 @@ std::string toJsonString<task_tracker_systems::TaskObject>(const task_tracker_sy
     return jsonObject.dump(defaultJsonIndent);
 }
 
+void to_json(nlohmann::json &jsonObject, const device::TaskCollection::const_iterator &iterator)
+{
+    jsonObject["id"] = iterator->first;
+    jsonObject["label"] = iterator->second.getLabel();
+    jsonObject["duration"] = iterator->second.getLastRecordedDuration().count();
+}
+
 template <>
 std::string toJsonString<device::TaskCollection>(const device::TaskCollection &object)
 {
-    std::vector<TaskObjectIterator> itList;
+    std::vector<device::TaskCollection::const_iterator> itList;
     for (auto it = std::cbegin(object); it != std::cend(object); ++it)
     {
         itList.emplace_back(it);

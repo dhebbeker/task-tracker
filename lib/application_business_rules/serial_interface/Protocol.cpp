@@ -9,7 +9,6 @@ namespace cli = command_line_interpreter;
 // --- define commands ------
 // --------------------------
 #include "JsonGenerator.hpp"
-#include <serial_interface/TaskIterator.hpp>
 #include <serial_protocol/ProtocolVersionObject.hpp>
 #include <serial_protocol/TaskList.hpp>
 #include <serial_protocol/TaskObject.hpp>
