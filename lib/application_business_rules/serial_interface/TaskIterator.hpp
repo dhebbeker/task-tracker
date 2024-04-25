@@ -16,6 +16,11 @@ class TaskObjectIterator
     {
     }
 
+    operator reference_type() const
+    {
+        return this->operator*();
+    }
+
     reference_type operator*() const
     {
         return {
