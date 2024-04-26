@@ -36,22 +36,17 @@ std::string toJsonString<task_tracker_systems::TaskObject>(const task_tracker_sy
     return jsonObject.dump(defaultJsonIndent);
 }
 
-void to_json(nlohmann::json &jsonObject, const device::TaskCollection::const_iterator &iterator)
+void to_json(nlohmann::json &jsonObject, const device::TaskCollection::value_type &object)
 {
-    jsonObject["id"] = iterator->first;
-    jsonObject["label"] = iterator->second.getLabel();
-    jsonObject["duration"] = iterator->second.getLastRecordedDuration().count();
+    jsonObject["id"] = object.first;
+    jsonObject["label"] = object.second.getLabel();
+    jsonObject["duration"] = object.second.getLastRecordedDuration().count();
 }
 
 template <>
-std::string toJsonString<device::TaskCollection>(const device::TaskCollection &object)
+std::string toJsonString<device::TaskCollection>(const device::TaskCollection &container)
 {
-    std::vector<device::TaskCollection::const_iterator> itList;
-    for (auto it = std::cbegin(object); it != std::cend(object); ++it)
-    {
-        itList.emplace_back(it);
-    }
-    nlohmann::json jsonObject(itList);
+    nlohmann::json jsonObject(container);
     return jsonObject.dump(defaultJsonIndent);
 }
 
