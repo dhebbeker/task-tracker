@@ -37,7 +37,7 @@ static const auto edit = [](const TaskId id, const std::basic_string<ProtocolHan
         auto &task = device::tasks.at(id);
         task.setLabel(label);
         task.setRecordedDuration(std::chrono::seconds(duration));
-        const TaskObject taskObject = {.id = id, .label = task.getLabel(), .duration = task.getRecordedDuration().count()};
+        const TaskObject taskObject = {.id = id, .label = task.getLabel(), .duration = task.getLastRecordedDuration().count()};
         serial_port::cout << toJsonString(taskObject) << std::endl;
     }
     catch (std::out_of_range &e)
@@ -50,7 +50,27 @@ static const cli::Option<std::basic_string<ProtocolHandler::CharType>> label = {
 static const cli::Option<Task::Duration::rep> duration = {.labels = {"--duration"}, .defaultValue = 0};
 static const auto editCmd = cli::makeCommand("edit", std::function(edit), std::make_tuple(&id, &label, &duration));
 
-static const std::array<const cli::BaseCommand<char> *, 3> commands = {&listCmd, &editCmd, &infoCmd};
+// command for create/add
+static const auto add = [](const TaskId id, const std::basic_string<ProtocolHandler::CharType> label, const Task::Duration::rep duration) {
+    try
+    {
+        const auto &[element, created] = device::tasks.try_emplace(id, label, std::chrono::seconds(duration));
+        const auto &task = element->second;
+        const TaskObject taskObject = {.id = element->first, .label = task.getLabel(), .duration = task.getLastRecordedDuration().count()};
+        serial_port::cout << toJsonString(taskObject) << std::endl;
+        if (!created)
+        {
+            serial_port::cout << "ERROR: Task with the specified ID already exists." << std::endl;
+        }
+    }
+    catch (std::out_of_range &e)
+    {
+        serial_port::cout << "ERROR: Task not found." << std::endl;
+    }
+};
+static const auto addCmd = cli::makeCommand("add", std::function(add), std::make_tuple(&id, &label, &duration));
+
+static const std::array<const cli::BaseCommand<char> *, 4> commands = {&listCmd, &editCmd, &infoCmd, &addCmd};
 
 bool ProtocolHandler::execute(const CharType *const commandLine)
 {
