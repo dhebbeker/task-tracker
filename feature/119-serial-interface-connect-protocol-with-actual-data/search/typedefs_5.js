@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['iterator_5fcategory_0',['iterator_category',['../classTaskObjectIterator.xhtml#a9f9943f2464471ee21bcca675716ebbd',1,'TaskObjectIterator']]]
+  ['string_0',['String',['../classTask.xhtml#a0ffb7bfbd3ea9bb396e4fb03c1eeb9f6',1,'Task::String()'],['../namespaceserial__port.xhtml#a572553df2c28c025df5775458684cb92',1,'serial_port::String()']]],
+  ['stringhandler_1',['StringHandler',['../namespaceserial__port.xhtml#a105fbf17cff58df0ed4281de8ae0926a',1,'serial_port']]]
 ];

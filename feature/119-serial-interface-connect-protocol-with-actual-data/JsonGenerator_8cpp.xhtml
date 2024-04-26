@@ -89,15 +89,15 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &lt;nlohmann/json.hpp&gt;</code><br />
 <code>#include &lt;<a class="el" href="JsonGenerator_8hpp_source.xhtml">serial_interface/JsonGenerator.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="TaskIterator_8hpp_source.xhtml">serial_interface/TaskIterator.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="DeletedTaskObject_8hpp_source.xhtml">serial_protocol/DeletedTaskObject.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="ProtocolVersionObject_8hpp_source.xhtml">serial_protocol/ProtocolVersionObject.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="TaskList_8hpp_source.xhtml">serial_protocol/TaskList.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="TaskObject_8hpp_source.xhtml">serial_protocol/TaskObject.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="Task_8hpp_source.xhtml">tasks/Task.hpp</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for JsonGenerator.cpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="JsonGenerator_8cpp__incl.svg" width="1122" height="286"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="JsonGenerator_8cpp__incl.svg" width="938" height="286"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><table class="memberdecls">
@@ -116,9 +116,11 @@ Functions</h2></td></tr>
 <tr class="memitem:ab0eef84934c9eece4b0a6696549a4bb5"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
 <tr class="memitem:ab0eef84934c9eece4b0a6696549a4bb5"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="JsonGenerator_8cpp.xhtml#ab0eef84934c9eece4b0a6696549a4bb5">toJsonString&lt; task_tracker_systems::TaskObject &gt;</a> (const <a class="el" href="structtask__tracker__systems_1_1TaskObject.xhtml">task_tracker_systems::TaskObject</a> &amp;object)</td></tr>
 <tr class="separator:ab0eef84934c9eece4b0a6696549a4bb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04872e758b0ff15deef25ce7cca70533"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
-<tr class="memitem:a04872e758b0ff15deef25ce7cca70533"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="JsonGenerator_8cpp.xhtml#a04872e758b0ff15deef25ce7cca70533">toJsonString&lt; device::TaskCollection &gt;</a> (const <a class="el" href="namespacedevice.xhtml#a90d875b11956ad0a34d442b164c1fd60">device::TaskCollection</a> &amp;object)</td></tr>
-<tr class="separator:a04872e758b0ff15deef25ce7cca70533"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87cf6bf6cdfa9ea54475d0bfbf210502"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JsonGenerator_8cpp.xhtml#a87cf6bf6cdfa9ea54475d0bfbf210502">to_json</a> (nlohmann::json &amp;jsonObject, const device::TaskCollection::value_type &amp;object)</td></tr>
+<tr class="separator:a87cf6bf6cdfa9ea54475d0bfbf210502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ae42a0578f4dbbfd435dafe088769a2"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a6ae42a0578f4dbbfd435dafe088769a2"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="JsonGenerator_8cpp.xhtml#a6ae42a0578f4dbbfd435dafe088769a2">toJsonString&lt; device::TaskCollection &gt;</a> (const <a class="el" href="namespacedevice.xhtml#a90d875b11956ad0a34d442b164c1fd60">device::TaskCollection</a> &amp;container)</td></tr>
+<tr class="separator:a6ae42a0578f4dbbfd435dafe088769a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85d5f824bf73cb3c72a5bbbf1526e6aa"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
 <tr class="memitem:a85d5f824bf73cb3c72a5bbbf1526e6aa"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="JsonGenerator_8cpp.xhtml#a85d5f824bf73cb3c72a5bbbf1526e6aa">toJsonString&lt; task_tracker_systems::DeletedTaskObject &gt;</a> (const <a class="el" href="structtask__tracker__systems_1_1DeletedTaskObject.xhtml">task_tracker_systems::DeletedTaskObject</a> &amp;object)</td></tr>
 <tr class="separator:a85d5f824bf73cb3c72a5bbbf1526e6aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,8 +131,36 @@ Variables</h2></td></tr>
 <tr class="separator:a6623836d688a90789ef36d71208267ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a04872e758b0ff15deef25ce7cca70533" name="a04872e758b0ff15deef25ce7cca70533"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04872e758b0ff15deef25ce7cca70533">&#9670;&#160;</a></span>toJsonString&lt; device::TaskCollection &gt;()</h2>
+<a id="a87cf6bf6cdfa9ea54475d0bfbf210502" name="a87cf6bf6cdfa9ea54475d0bfbf210502"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87cf6bf6cdfa9ea54475d0bfbf210502">&#9670;&#160;</a></span>to_json()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void to_json </td>
+          <td>(</td>
+          <td class="paramtype">nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>jsonObject</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const device::TaskCollection::value_type &amp;&#160;</td>
+          <td class="paramname"><em>object</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6ae42a0578f4dbbfd435dafe088769a2" name="a6ae42a0578f4dbbfd435dafe088769a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ae42a0578f4dbbfd435dafe088769a2">&#9670;&#160;</a></span>toJsonString&lt; device::TaskCollection &gt;()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -141,7 +171,7 @@ template&lt;&gt; </div>
           <td class="memname">std::string <a class="el" href="JsonGenerator_8hpp.xhtml#ab570bec10f003b4067e8d8974ba69126">toJsonString</a>&lt; <a class="el" href="namespacedevice.xhtml#a90d875b11956ad0a34d442b164c1fd60">device::TaskCollection</a> &gt; </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespacedevice.xhtml#a90d875b11956ad0a34d442b164c1fd60">device::TaskCollection</a> &amp;&#160;</td>
-          <td class="paramname"><em>object</em></td><td>)</td>
+          <td class="paramname"><em>container</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -235,7 +265,7 @@ template&lt;&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 22 2024 04:39:40 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Fri Apr 26 2024 06:57:41 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

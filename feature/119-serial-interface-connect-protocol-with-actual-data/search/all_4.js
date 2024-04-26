@@ -37,6 +37,6 @@ var searchData=
   ['ds6_34',['ds6',['../namespacenote.xhtml#a0e3d7ab14f8e28061f65b5e9dbb50e5f',1,'note']]],
   ['ds7_35',['ds7',['../namespacenote.xhtml#a5c3983bcac2b6da2d581ea20653e71c8',1,'note']]],
   ['ds8_36',['ds8',['../namespacenote.xhtml#a1185b178af9b9497e74aaa1750009a85',1,'note']]],
-  ['duration_37',['duration',['../Protocol_8cpp.xhtml#a59bc70cd98ed5c6ceb5dd452caa54ac3',1,'duration():&#160;Protocol.cpp'],['../structtask__tracker__systems_1_1TaskObject.xhtml#aa6cc49e0311a89cd487e5d3761677b1d',1,'task_tracker_systems::TaskObject::duration()']]],
+  ['duration_37',['duration',['../Protocol_8cpp.xhtml#aac3a212559a034ef1c64cf04d211ec5b',1,'duration():&#160;Protocol.cpp'],['../structtask__tracker__systems_1_1TaskObject.xhtml#aa6cc49e0311a89cd487e5d3761677b1d',1,'task_tracker_systems::TaskObject::duration()']]],
   ['duration_38',['Duration',['../classTask.xhtml#ab58c86df7691c4efc868fb4dc56d0fe0',1,'Task']]]
 ];

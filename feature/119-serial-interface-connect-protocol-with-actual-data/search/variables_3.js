@@ -21,5 +21,5 @@ var searchData=
   ['ds6_18',['ds6',['../namespacenote.xhtml#a0e3d7ab14f8e28061f65b5e9dbb50e5f',1,'note']]],
   ['ds7_19',['ds7',['../namespacenote.xhtml#a5c3983bcac2b6da2d581ea20653e71c8',1,'note']]],
   ['ds8_20',['ds8',['../namespacenote.xhtml#a1185b178af9b9497e74aaa1750009a85',1,'note']]],
-  ['duration_21',['duration',['../structtask__tracker__systems_1_1TaskObject.xhtml#aa6cc49e0311a89cd487e5d3761677b1d',1,'task_tracker_systems::TaskObject::duration()'],['../Protocol_8cpp.xhtml#a59bc70cd98ed5c6ceb5dd452caa54ac3',1,'duration():&#160;Protocol.cpp']]]
+  ['duration_21',['duration',['../structtask__tracker__systems_1_1TaskObject.xhtml#aa6cc49e0311a89cd487e5d3761677b1d',1,'task_tracker_systems::TaskObject::duration()'],['../Protocol_8cpp.xhtml#aac3a212559a034ef1c64cf04d211ec5b',1,'duration():&#160;Protocol.cpp']]]
 ];
