@@ -35,13 +35,13 @@ static const auto list = []() {
 static const auto listCmd = cli::makeCommand("list", std::function(list));
 
 // command for edit
-static const auto edit = [](const int id, const std::basic_string<ProtocolHandler::CharType> label, const int duration) {
+static const auto edit = [](const unsigned int id, const std::basic_string<ProtocolHandler::CharType> label, const std::chrono::seconds::rep duration) {
     const TaskObject task = {.id = id, .label = label, .duration = duration};
     serial_port::cout << toJsonString(task) << std::endl;
 };
-static const cli::Option<int> id = {.labels = {"--id"}, .defaultValue = 0};
+static const cli::Option<unsigned int> id = {.labels = {"--id"}, .defaultValue = 0};
 static const cli::Option<std::basic_string<ProtocolHandler::CharType>> label = {.labels = {"--name"}, .defaultValue = "foo"};
-static const cli::Option<int> duration = {.labels = {"--duration"}, .defaultValue = 0};
+static const cli::Option<std::chrono::seconds::rep> duration = {.labels = {"--duration"}, .defaultValue = 0};
 static const auto editCmd = cli::makeCommand("edit", std::function(edit), std::make_tuple(&id, &label, &duration));
 
 static const std::array<const cli::BaseCommand<char> *, 3> commands = {&listCmd, &editCmd, &infoCmd};
