@@ -93,7 +93,7 @@ class Debouncer
      *
      * Has been determined by measuring the stack high water mark and by experimenting.
      */
-    static constexpr configSTACK_DEPTH_TYPE stackSize = configMINIMAL_STACK_SIZE + 708;
+    static constexpr configSTACK_DEPTH_TYPE stackSize = configMINIMAL_STACK_SIZE + 708 + 1'000;
 
     /**
      * Triggers the startup delay.
