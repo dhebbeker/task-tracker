@@ -9,6 +9,7 @@ namespace cli = command_line_interpreter;
 // --- define commands ------
 // --------------------------
 #include "JsonGenerator.hpp"
+#include <serial_protocol/DeletedTaskObject.hpp>
 #include <serial_protocol/ProtocolVersionObject.hpp>
 #include <serial_protocol/TaskList.hpp>
 #include <serial_protocol/TaskObject.hpp>
@@ -70,7 +71,19 @@ static const auto add = [](const TaskId id, const std::basic_string<ProtocolHand
 };
 static const auto addCmd = cli::makeCommand("add", std::function(add), std::make_tuple(&id, &label, &duration));
 
-static const std::array<const cli::BaseCommand<char> *, 4> commands = {&listCmd, &editCmd, &infoCmd, &addCmd};
+// command for delete/remove
+static const auto del = [](const TaskId id) {
+    const bool deleted = device::tasks.erase(id) > 0;
+    const DeletedTaskObject taskObject{.id = id};
+    serial_port::cout << toJsonString(taskObject) << std::endl;
+    if (!deleted)
+    {
+        serial_port::cout << "ERROR: No task deleted." << std::endl;
+    }
+};
+static const auto delCmd = cli::makeCommand("delete", std::function(del), std::make_tuple(&id));
+
+static const std::array<const cli::BaseCommand<char> *, 5> commands = {&listCmd, &editCmd, &infoCmd, &addCmd, &delCmd};
 
 bool ProtocolHandler::execute(const CharType *const commandLine)
 {
