@@ -90,6 +90,7 @@ $(function() {
 <code>#include &quot;<a class="el" href="serial__port_8hpp_source.xhtml">serial_port.hpp</a>&quot;</code><br />
 <code>#include &lt;array&gt;</code><br />
 <code>#include &quot;<a class="el" href="JsonGenerator_8hpp_source.xhtml">JsonGenerator.hpp</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="DeletedTaskObject_8hpp_source.xhtml">serial_protocol/DeletedTaskObject.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="ProtocolVersionObject_8hpp_source.xhtml">serial_protocol/ProtocolVersionObject.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="TaskList_8hpp_source.xhtml">serial_protocol/TaskList.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="TaskObject_8hpp_source.xhtml">serial_protocol/TaskObject.hpp</a>&gt;</code><br />
@@ -98,7 +99,7 @@ $(function() {
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Protocol.cpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="Protocol_8cpp__incl.svg" width="1440" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="Protocol_8cpp__incl.svg" width="1588" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><table class="memberdecls">
@@ -128,8 +129,12 @@ Variables</h2></td></tr>
 <tr class="separator:a08772b4d7dec2e352d1e1c7bab90fa3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a158fd8d1b67147e506833d2b44c8b3c7"><td class="memItemLeft" align="right" valign="top">static const auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Protocol_8cpp.xhtml#a158fd8d1b67147e506833d2b44c8b3c7">addCmd</a> = cli::makeCommand(&quot;add&quot;, std::function(<a class="el" href="Protocol_8cpp.xhtml#a08772b4d7dec2e352d1e1c7bab90fa3c">add</a>), std::make_tuple(&amp;<a class="el" href="Protocol_8cpp.xhtml#aabe97ddaaebd88de80d8a8af7bd09fc0">id</a>, &amp;<a class="el" href="Protocol_8cpp.xhtml#abc14b7721aad8b82ca16d71de603499c">label</a>, &amp;<a class="el" href="Protocol_8cpp.xhtml#aac3a212559a034ef1c64cf04d211ec5b">duration</a>))</td></tr>
 <tr class="separator:a158fd8d1b67147e506833d2b44c8b3c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0fc40241314e4604a843e4084efe18a"><td class="memItemLeft" align="right" valign="top">static const std::array&lt; const <a class="el" href="structcommand__line__interpreter_1_1BaseCommand.xhtml">cli::BaseCommand</a>&lt; char &gt; *, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Protocol_8cpp.xhtml#ae0fc40241314e4604a843e4084efe18a">commands</a> = {&amp;<a class="el" href="Protocol_8cpp.xhtml#ac637a1d9e3afd1ca839afe51140a4bbc">listCmd</a>, &amp;<a class="el" href="Protocol_8cpp.xhtml#a317dc164e000b87848282d91b5771e45">editCmd</a>, &amp;<a class="el" href="Protocol_8cpp.xhtml#af1b41dfb159b12da990d777541a393bc">infoCmd</a>, &amp;<a class="el" href="Protocol_8cpp.xhtml#a158fd8d1b67147e506833d2b44c8b3c7">addCmd</a>}</td></tr>
-<tr class="separator:ae0fc40241314e4604a843e4084efe18a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab91f87e72268d276734e078339e45a2e"><td class="memItemLeft" align="right" valign="top">static const auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Protocol_8cpp.xhtml#ab91f87e72268d276734e078339e45a2e">del</a></td></tr>
+<tr class="separator:ab91f87e72268d276734e078339e45a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b7350246196abc8003e88e623d711ff"><td class="memItemLeft" align="right" valign="top">static const auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Protocol_8cpp.xhtml#a5b7350246196abc8003e88e623d711ff">delCmd</a> = cli::makeCommand(&quot;delete&quot;, std::function(<a class="el" href="Protocol_8cpp.xhtml#ab91f87e72268d276734e078339e45a2e">del</a>), std::make_tuple(&amp;<a class="el" href="Protocol_8cpp.xhtml#aabe97ddaaebd88de80d8a8af7bd09fc0">id</a>))</td></tr>
+<tr class="separator:a5b7350246196abc8003e88e623d711ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3686942394aed65e3bc3cad8f03e6a28"><td class="memItemLeft" align="right" valign="top">static const std::array&lt; const <a class="el" href="structcommand__line__interpreter_1_1BaseCommand.xhtml">cli::BaseCommand</a>&lt; char &gt; *, 5 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Protocol_8cpp.xhtml#a3686942394aed65e3bc3cad8f03e6a28">commands</a> = {&amp;<a class="el" href="Protocol_8cpp.xhtml#ac637a1d9e3afd1ca839afe51140a4bbc">listCmd</a>, &amp;<a class="el" href="Protocol_8cpp.xhtml#a317dc164e000b87848282d91b5771e45">editCmd</a>, &amp;<a class="el" href="Protocol_8cpp.xhtml#af1b41dfb159b12da990d777541a393bc">infoCmd</a>, &amp;<a class="el" href="Protocol_8cpp.xhtml#a158fd8d1b67147e506833d2b44c8b3c7">addCmd</a>, &amp;<a class="el" href="Protocol_8cpp.xhtml#a5b7350246196abc8003e88e623d711ff">delCmd</a>}</td></tr>
+<tr class="separator:a3686942394aed65e3bc3cad8f03e6a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Variable Documentation</h2>
 <a id="a08772b4d7dec2e352d1e1c7bab90fa3c" name="a08772b4d7dec2e352d1e1c7bab90fa3c"></a>
@@ -169,9 +174,9 @@ Variables</h2></td></tr>
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="ttc" id="aJsonGenerator_8hpp_xhtml_ab570bec10f003b4067e8d8974ba69126"><div class="ttname"><a href="JsonGenerator_8hpp.xhtml#ab570bec10f003b4067e8d8974ba69126">toJsonString</a></div><div class="ttdeci">std::string toJsonString(const T &amp;object)</div></div>
-<div class="ttc" id="aProtocol_8cpp_xhtml_aabe97ddaaebd88de80d8a8af7bd09fc0"><div class="ttname"><a href="Protocol_8cpp.xhtml#aabe97ddaaebd88de80d8a8af7bd09fc0">id</a></div><div class="ttdeci">static const cli::Option&lt; TaskId &gt; id</div><div class="ttdef"><b>Definition:</b> Protocol.cpp:48</div></div>
-<div class="ttc" id="aProtocol_8cpp_xhtml_aac3a212559a034ef1c64cf04d211ec5b"><div class="ttname"><a href="Protocol_8cpp.xhtml#aac3a212559a034ef1c64cf04d211ec5b">duration</a></div><div class="ttdeci">static const cli::Option&lt; Task::Duration::rep &gt; duration</div><div class="ttdef"><b>Definition:</b> Protocol.cpp:50</div></div>
-<div class="ttc" id="aProtocol_8cpp_xhtml_abc14b7721aad8b82ca16d71de603499c"><div class="ttname"><a href="Protocol_8cpp.xhtml#abc14b7721aad8b82ca16d71de603499c">label</a></div><div class="ttdeci">static const cli::Option&lt; std::basic_string&lt; ProtocolHandler::CharType &gt; &gt; label</div><div class="ttdef"><b>Definition:</b> Protocol.cpp:49</div></div>
+<div class="ttc" id="aProtocol_8cpp_xhtml_aabe97ddaaebd88de80d8a8af7bd09fc0"><div class="ttname"><a href="Protocol_8cpp.xhtml#aabe97ddaaebd88de80d8a8af7bd09fc0">id</a></div><div class="ttdeci">static const cli::Option&lt; TaskId &gt; id</div><div class="ttdef"><b>Definition:</b> Protocol.cpp:49</div></div>
+<div class="ttc" id="aProtocol_8cpp_xhtml_aac3a212559a034ef1c64cf04d211ec5b"><div class="ttname"><a href="Protocol_8cpp.xhtml#aac3a212559a034ef1c64cf04d211ec5b">duration</a></div><div class="ttdeci">static const cli::Option&lt; Task::Duration::rep &gt; duration</div><div class="ttdef"><b>Definition:</b> Protocol.cpp:51</div></div>
+<div class="ttc" id="aProtocol_8cpp_xhtml_abc14b7721aad8b82ca16d71de603499c"><div class="ttname"><a href="Protocol_8cpp.xhtml#abc14b7721aad8b82ca16d71de603499c">label</a></div><div class="ttdeci">static const cli::Option&lt; std::basic_string&lt; ProtocolHandler::CharType &gt; &gt; label</div><div class="ttdef"><b>Definition:</b> Protocol.cpp:50</div></div>
 <div class="ttc" id="aTask_8hpp_xhtml_afa2efb6d57531344abcae953e6ec4ce1"><div class="ttname"><a href="Task_8hpp.xhtml#afa2efb6d57531344abcae953e6ec4ce1">TaskId</a></div><div class="ttdeci">unsigned int TaskId</div><div class="ttdoc">Task ID.</div><div class="ttdef"><b>Definition:</b> Task.hpp:12</div></div>
 <div class="ttc" id="anamespacedevice_xhtml_a5d868aecd5efe12cd7b64e2323f3886f"><div class="ttname"><a href="namespacedevice.xhtml#a5d868aecd5efe12cd7b64e2323f3886f">device::tasks</a></div><div class="ttdeci">TaskCollection tasks</div><div class="ttdoc">The collection of tasks to be used by the device application.</div><div class="ttdef"><b>Definition:</b> Task.cpp:50</div></div>
 <div class="ttc" id="anamespaceserial__port_xhtml_a93c3f7f8728a750d9fa97277cb10378f"><div class="ttname"><a href="namespaceserial__port.xhtml#a93c3f7f8728a750d9fa97277cb10378f">serial_port::cout</a></div><div class="ttdeci">std::basic_ostream&lt; CharType &gt; &amp; cout</div><div class="ttdoc">Output stream for characters to serial port.</div><div class="ttdef"><b>Definition:</b> serial_port.cpp:17</div></div>
@@ -202,8 +207,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ae0fc40241314e4604a843e4084efe18a" name="ae0fc40241314e4604a843e4084efe18a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0fc40241314e4604a843e4084efe18a">&#9670;&#160;</a></span>commands</h2>
+<a id="a3686942394aed65e3bc3cad8f03e6a28" name="a3686942394aed65e3bc3cad8f03e6a28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3686942394aed65e3bc3cad8f03e6a28">&#9670;&#160;</a></span>commands</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -212,7 +217,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::array&lt;const <a class="el" href="structcommand__line__interpreter_1_1BaseCommand.xhtml">cli::BaseCommand</a>&lt;char&gt; *, 4&gt; commands = {&amp;<a class="el" href="Protocol_8cpp.xhtml#ac637a1d9e3afd1ca839afe51140a4bbc">listCmd</a>, &amp;<a class="el" href="Protocol_8cpp.xhtml#a317dc164e000b87848282d91b5771e45">editCmd</a>, &amp;<a class="el" href="Protocol_8cpp.xhtml#af1b41dfb159b12da990d777541a393bc">infoCmd</a>, &amp;<a class="el" href="Protocol_8cpp.xhtml#a158fd8d1b67147e506833d2b44c8b3c7">addCmd</a>}</td>
+          <td class="memname">const std::array&lt;const <a class="el" href="structcommand__line__interpreter_1_1BaseCommand.xhtml">cli::BaseCommand</a>&lt;char&gt; *, 5&gt; commands = {&amp;<a class="el" href="Protocol_8cpp.xhtml#ac637a1d9e3afd1ca839afe51140a4bbc">listCmd</a>, &amp;<a class="el" href="Protocol_8cpp.xhtml#a317dc164e000b87848282d91b5771e45">editCmd</a>, &amp;<a class="el" href="Protocol_8cpp.xhtml#af1b41dfb159b12da990d777541a393bc">infoCmd</a>, &amp;<a class="el" href="Protocol_8cpp.xhtml#a158fd8d1b67147e506833d2b44c8b3c7">addCmd</a>, &amp;<a class="el" href="Protocol_8cpp.xhtml#a5b7350246196abc8003e88e623d711ff">delCmd</a>}</td>
         </tr>
       </table>
   </td>
@@ -240,6 +245,61 @@ Variables</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab91f87e72268d276734e078339e45a2e" name="ab91f87e72268d276734e078339e45a2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab91f87e72268d276734e078339e45a2e">&#9670;&#160;</a></span>del</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const auto del</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= [](<span class="keyword">const</span> <a class="code hl_typedef" href="Task_8hpp.xhtml#afa2efb6d57531344abcae953e6ec4ce1">TaskId</a> <a class="code hl_variable" href="Protocol_8cpp.xhtml#aabe97ddaaebd88de80d8a8af7bd09fc0">id</a>) {</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">bool</span> deleted = <a class="code hl_variable" href="namespacedevice.xhtml#a5d868aecd5efe12cd7b64e2323f3886f">device::tasks</a>.erase(<span class="keywordtype">id</span>) &gt; 0;</div>
+<div class="line">    <span class="keyword">const</span> <a class="code hl_struct" href="structtask__tracker__systems_1_1DeletedTaskObject.xhtml">DeletedTaskObject</a> taskObject{.<a class="code hl_variable" href="structtask__tracker__systems_1_1DeletedTaskObject.xhtml#a1bb01a8c2750fb2745ee4c3b8a37e8ec">id</a> = <span class="keywordtype">id</span>};</div>
+<div class="line">    <a class="code hl_variable" href="namespaceserial__port.xhtml#a93c3f7f8728a750d9fa97277cb10378f">serial_port::cout</a> &lt;&lt; <a class="code hl_function" href="JsonGenerator_8hpp.xhtml#ab570bec10f003b4067e8d8974ba69126">toJsonString</a>(taskObject) &lt;&lt; std::endl;</div>
+<div class="line">    <span class="keywordflow">if</span> (!deleted)</div>
+<div class="line">    {</div>
+<div class="line">        <a class="code hl_variable" href="namespaceserial__port.xhtml#a93c3f7f8728a750d9fa97277cb10378f">serial_port::cout</a> &lt;&lt; <span class="stringliteral">&quot;ERROR: No task deleted.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="astructtask__tracker__systems_1_1DeletedTaskObject_xhtml"><div class="ttname"><a href="structtask__tracker__systems_1_1DeletedTaskObject.xhtml">task_tracker_systems::DeletedTaskObject</a></div><div class="ttdoc">deleted task object</div><div class="ttdef"><b>Definition:</b> DeletedTaskObject.hpp:10</div></div>
+<div class="ttc" id="astructtask__tracker__systems_1_1DeletedTaskObject_xhtml_a1bb01a8c2750fb2745ee4c3b8a37e8ec"><div class="ttname"><a href="structtask__tracker__systems_1_1DeletedTaskObject.xhtml#a1bb01a8c2750fb2745ee4c3b8a37e8ec">task_tracker_systems::DeletedTaskObject::id</a></div><div class="ttdeci">unsigned int id</div><div class="ttdoc">unique identifier</div><div class="ttdef"><b>Definition:</b> DeletedTaskObject.hpp:14</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5b7350246196abc8003e88e623d711ff" name="a5b7350246196abc8003e88e623d711ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b7350246196abc8003e88e623d711ff">&#9670;&#160;</a></span>delCmd</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const auto delCmd = cli::makeCommand(&quot;delete&quot;, std::function(<a class="el" href="Protocol_8cpp.xhtml#ab91f87e72268d276734e078339e45a2e">del</a>), std::make_tuple(&amp;<a class="el" href="Protocol_8cpp.xhtml#aabe97ddaaebd88de80d8a8af7bd09fc0">id</a>))</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -467,7 +527,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 27 2024 14:16:26 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Tue May 7 2024 05:14:49 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
