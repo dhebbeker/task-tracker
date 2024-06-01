@@ -5,7 +5,7 @@
 #include <serial_protocol/TaskList.hpp>
 #include <serial_protocol/TaskObject.hpp>
 
-constexpr int defaultJsonIndent = 4;
+static constexpr int defaultJsonIndent = 4;
 
 template <>
 std::string toJsonString<task_tracker_systems::ProtocolVersionObject>(const task_tracker_systems::ProtocolVersionObject &object)
@@ -19,7 +19,7 @@ std::string toJsonString<task_tracker_systems::ProtocolVersionObject>(const task
 
 namespace task_tracker_systems
 {
-void to_json(nlohmann::json &jsonObject, const task_tracker_systems::TaskObject &object)
+static void to_json(nlohmann::json &jsonObject, const task_tracker_systems::TaskObject &object)
 {
     jsonObject["id"] = object.id;
     jsonObject["label"] = object.label;
