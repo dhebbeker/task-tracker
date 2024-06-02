@@ -37,8 +37,8 @@ static constexpr std::pair<board::PinType, KeyId> selectionForPins[] = {
     {board::button::pin::task2, KeyId::TASK2},
     {board::button::pin::task3, KeyId::TASK3},
     {board::button::pin::task4, KeyId::TASK4},
-    {board::button::pin::up, KeyId::LEFT},
-    {board::button::pin::down, KeyId::RIGHT},
+    {board::button::pin::left, KeyId::LEFT},
+    {board::button::pin::right, KeyId::RIGHT},
     {board::button::pin::enter, KeyId::ENTER},
     {board::button::pin::back, KeyId::BACK},
 };

@@ -9,8 +9,8 @@ namespace board
 {
 namespace button::pin
 {
-constexpr PinType up = 4;
-constexpr PinType down = 7;
+constexpr PinType left = 7;
+constexpr PinType right = 4;
 constexpr PinType enter = 5;
 constexpr PinType back = 6;
 constexpr PinType task1 = 9;
