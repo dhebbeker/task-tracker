@@ -1,4 +1,5 @@
 #include "Display.hpp"
+#include "Screen.hpp"
 #include <Adafruit_SSD1306.h>
 #include <user_interaction/MenuItem.hpp>
 
@@ -93,5 +94,6 @@ void Display::refresh()
 
 void Display::drawMenu(const MenuItemList *menuList)
 {
-    ;
+    auto ptrMenuScreen = new ScreenMenu{*menuList};
+    ptrMenuScreen->draw();
 }
