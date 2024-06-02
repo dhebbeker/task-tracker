@@ -18,6 +18,7 @@ class Display : public IDisplay
     };
     Display(const Configuration &configuration, TwoWire &i2c);
     virtual void refresh() override;
+    virtual void drawMenu(const MenuItemList* menuList) override;
 
     Adafruit_SSD1306 display;
 

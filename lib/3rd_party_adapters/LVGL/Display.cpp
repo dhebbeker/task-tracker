@@ -1,6 +1,6 @@
 #include "Display.hpp"
 #include <Adafruit_SSD1306.h>
-#include <cassert>
+#include <user_interaction/MenuItem.hpp>
 
 #if LV_USE_LOG != 0
 #include <Arduino.h>
@@ -73,6 +73,10 @@ Display::Display(const Configuration &configuration, TwoWire &i2c)
     lv_disp_drv_register(&disp_drv);
     delay(200);
 
+    // Create monochomatic theme and set it as default
+    lv_theme_t *mono_theme = lv_theme_mono_init(0, false, &lv_font_unscii_8);
+    lv_disp_set_theme(0, mono_theme);
+
     // create first text in lvgl
     lv_obj_t *label = lv_label_create(lv_scr_act());
     lv_label_set_text(label, "LVGL is up");
@@ -85,4 +89,9 @@ Display::Display(const Configuration &configuration, TwoWire &i2c)
 void Display::refresh()
 {
     lv_timer_handler();
+}
+
+void Display::drawMenu(const MenuItemList *menuList)
+{
+    ;
 }
