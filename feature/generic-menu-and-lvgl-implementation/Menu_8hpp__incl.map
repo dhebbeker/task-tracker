@@ -1,11 +1,11 @@
 <map id="lib/application_business_rules/user_interaction/Menu.hpp" name="lib/application_business_rules/user_interaction/Menu.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="78,5,238,60"/>
-<area shape="rect" id="node2" href="$IDisplay_8hpp.xhtml" title=" " alt="" coords="29,108,121,133"/>
-<area shape="rect" id="node6" href="$IKeypad_8hpp.xhtml" title=" " alt="" coords="146,108,335,133"/>
-<area shape="rect" id="node3" href="$MenuItem_8hpp.xhtml" title=" " alt="" coords="23,181,127,207"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,255,60,280"/>
-<area shape="rect" id="node5" title=" " alt="" coords="85,255,143,280"/>
-<area shape="rect" id="node7" href="$KeyIds_8hpp.xhtml" title=" " alt="" coords="175,181,261,207"/>
-<area shape="rect" id="node9" title=" " alt="" coords="285,181,364,207"/>
-<area shape="rect" id="node8" title=" " alt="" coords="183,255,253,280"/>
+<area shape="rect" id="node1" title=" " alt="" coords="153,5,332,61"/>
+<area shape="rect" id="node2" href="$IDisplay_8hpp.xhtml" title=" " alt="" coords="148,109,249,136"/>
+<area shape="rect" id="node6" href="$IKeypad_8hpp.xhtml" title=" " alt="" coords="181,184,392,211"/>
+<area shape="rect" id="node3" href="$MenuItem_8hpp.xhtml" title=" " alt="" coords="41,184,157,211"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,259,64,285"/>
+<area shape="rect" id="node5" title=" " alt="" coords="89,259,151,285"/>
+<area shape="rect" id="node7" href="$KeyIds_8hpp.xhtml" title=" " alt="" coords="219,259,312,285"/>
+<area shape="rect" id="node9" title=" " alt="" coords="337,259,423,285"/>
+<area shape="rect" id="node8" title=" " alt="" coords="227,333,303,360"/>
 </map>

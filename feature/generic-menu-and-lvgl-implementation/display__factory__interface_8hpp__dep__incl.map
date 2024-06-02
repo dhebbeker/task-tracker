@@ -1,6 +1,6 @@
 <map id="lib/application_business_rules/user_interaction/display_factory_interface.hpp" name="lib/application_business_rules/user_interaction/display_factory_interface.hpp">
-<area shape="rect" id="node1" title="Dependency injection for the display." alt="" coords="132,5,325,60"/>
-<area shape="rect" id="node2" href="$display__factory__interface_8cpp.xhtml" title=" " alt="" coords="5,108,156,163"/>
-<area shape="rect" id="node3" href="$main_8cpp.xhtml" title=" " alt="" coords="181,123,277,148"/>
-<area shape="rect" id="node4" href="$test__hmi_8cpp.xhtml" title=" " alt="" coords="301,115,425,155"/>
+<area shape="rect" id="node1" title="Dependency injection for the display." alt="" coords="141,5,360,61"/>
+<area shape="rect" id="node2" href="$display__factory__interface_8cpp.xhtml" title=" " alt="" coords="5,109,173,165"/>
+<area shape="rect" id="node3" href="$main_8cpp.xhtml" title=" " alt="" coords="198,124,303,151"/>
+<area shape="rect" id="node4" href="$test__hmi_8cpp.xhtml" title=" " alt="" coords="327,117,494,158"/>
 </map>

@@ -1,12 +1,21 @@
 var searchData=
 [
-  ['imenuitem_0',['IMenuItem',['../classIMenuItem.xhtml#a2aa6ac2dec5338b645744eeda97a0031',1,'IMenuItem']]],
-  ['initialize_1',['initialize',['../namespaceserial__port.xhtml#af033b97544f5d1bba48bf19f2a336608',1,'serial_port']]],
-  ['initializetasks_2',['initializeTasks',['../ProcessHmiInputs_8cpp.xhtml#aadcd1da774b5eafeeb4a9bcf6df4c725',1,'ProcessHmiInputs.cpp']]],
-  ['inv_3',['inv',['../test__cli_8cpp.xhtml#af5af026df8d4dc7081782b369358f87b',1,'test_cli.cpp']]],
-  ['iscreen_4',['IScreen',['../classIScreen.xhtml#a2793aa782c3035d0a1d44cb48203492d',1,'IScreen']]],
-  ['iscreen_5fleave_5',['IScreen_leave',['../Screen_8cpp.xhtml#a05b7b3bcdfc53d75e77b80ce732f0395',1,'Screen.cpp']]],
-  ['iskeypressed_6',['isKeyPressed',['../classIKeypad.xhtml#adaf913232976026af1ea73ea60a835f2',1,'IKeypad::isKeyPressed()'],['../classKeypad.xhtml#ab6629bedefe7bf95ee5e444e50f08c56',1,'Keypad::isKeyPressed()']]],
-  ['isr_7',['isr',['../Keypad_8cpp.xhtml#a2db3ce89b570d4dd8a5e32692092e570',1,'Keypad.cpp']]],
-  ['isrunning_8',['isRunning',['../classTask.xhtml#ad6abe9097628c64d57347c1657e518c8',1,'Task']]]
+  ['generatehelpmessage_702',['generateHelpMessage',['../structcommand__line__interpreter_1_1Command.xhtml#a3dd03abb454355c280740edbd321d48c',1,'command_line_interpreter::Command::generateHelpMessage()'],['../structcommand__line__interpreter_1_1BaseCommand.xhtml#a95afbd15390e5f93b68756f7e621f4da',1,'command_line_interpreter::BaseCommand::generateHelpMessage()']]],
+  ['getdecimals_703',['getDecimals',['../structMenuItemValue.xhtml#a9bc2510deabd7d1286b82eff80ae17e5',1,'MenuItemValue']]],
+  ['getdisplay_704',['getDisplay',['../namespaceboard.xhtml#adddb50b3d6bb4c6803d7e05b68f2ce4c',1,'board']]],
+  ['getinterruptfunction_705',['getInterruptFunction',['../classDebouncer.xhtml#af6f1115d3de147d670852e9564aeb34a',1,'Debouncer']]],
+  ['getkeypad_706',['getKeypad',['../namespaceboard.xhtml#a184034284ef8e16496b6b8e4b5c9f678',1,'board']]],
+  ['getlabel_707',['getLabel',['../classTask.xhtml#ada97787ea9e1d67d6708eb6c306629dc',1,'Task']]],
+  ['getline_708',['getLine',['../namespaceserial__port.xhtml#acbf89672a6ce72254d025e0c116a6c25',1,'serial_port']]],
+  ['getmax_709',['getMax',['../structMenuItemValue.xhtml#adb48eb91ff037416551095897efb9b60',1,'MenuItemValue']]],
+  ['getmin_710',['getMin',['../structMenuItemValue.xhtml#aeeb049b86100e6aac61ea6fcef924e4a',1,'MenuItemValue']]],
+  ['getptrbool_711',['getPtrBool',['../structMenuItemSwitch.xhtml#af62d313ba4119ce2973e2d9175060111',1,'MenuItemSwitch']]],
+  ['getptrdouble_712',['getPtrDouble',['../structMenuItemValue.xhtml#abaa8c2c56b67a20ead1652f270b5e523',1,'MenuItemValue']]],
+  ['getrecordedduration_713',['getRecordedDuration',['../classTask.xhtml#a35c5ec0d50d2a92028a008721d132d5d',1,'Task']]],
+  ['getstateindex_714',['getStateIndex',['../Keypad_8cpp.xhtml#a51b60ca4de98db844518d4f90dfe6e04',1,'Keypad.cpp']]],
+  ['getstatusindicators_715',['getStatusIndicators',['../namespaceboard.xhtml#a5898e6d262ab4dc0be1e8b3a24a3790c',1,'board']]],
+  ['getsubmenulist_716',['getSubMenuList',['../classMenuItemSubmenu.xhtml#a09fb852494a4dbb3513bba12ca1c7cc6',1,'MenuItemSubmenu']]],
+  ['gettaskstackhighwatermark_717',['getTaskStackHighWaterMark',['../classDebouncer.xhtml#adf482406de6a961916b2bd43f04a3896',1,'Debouncer']]],
+  ['gettext_718',['getText',['../structMenuItemValue.xhtml#adc36da23d5116f67eeb9e598ceb415af',1,'MenuItemValue::getText()'],['../structMenuItemSwitch.xhtml#a885f6f8b32fb04f2cfaa0fb2e329e4d0',1,'MenuItemSwitch::getText()'],['../classMenuItemSubmenu.xhtml#ae78ae8609af3a3fc0bee56822a491c67',1,'MenuItemSubmenu::getText()'],['../classIMenuItem.xhtml#a2bd7ef976d77f4b6613afb4aa1ce4be0',1,'IMenuItem::getText() const =0']]],
+  ['gettype_719',['getType',['../classIMenuItem.xhtml#abf969f12e289de3dd0ba0502480859cc',1,'IMenuItem::getType()'],['../classMenuItemSubmenu.xhtml#a8e93f425568983fe5e866af03535f901',1,'MenuItemSubmenu::getType()'],['../structMenuItemSwitch.xhtml#ae11d79710373809b56ed02007968dd91',1,'MenuItemSwitch::getType()'],['../structMenuItemValue.xhtml#a2d8e5780f26fad40d0b2d55b70c14330',1,'MenuItemValue::getType()']]]
 ];

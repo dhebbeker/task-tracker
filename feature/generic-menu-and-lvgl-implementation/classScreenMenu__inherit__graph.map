@@ -1,4 +1,4 @@
 <map id="ScreenMenu" name="ScreenMenu">
-<area shape="rect" id="node1" title=" " alt="" coords="5,137,127,221"/>
-<area shape="rect" id="node2" href="$classIScreen.xhtml" title=" " alt="" coords="19,5,113,89"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,160,144,267"/>
+<area shape="rect" id="node2" href="$classIScreen.xhtml" title=" " alt="" coords="21,5,128,112"/>
 </map>

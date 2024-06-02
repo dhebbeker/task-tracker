@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['task_20tracker_0',['Task Tracker',['../index.xhtml',1,'']]]
+  ['software_20architecture_1173',['Software Architecture',['../software_architecture.xhtml',1,'']]]
 ];

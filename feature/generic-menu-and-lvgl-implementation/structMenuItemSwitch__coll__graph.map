@@ -1,6 +1,6 @@
 <map id="MenuItemSwitch" name="MenuItemSwitch">
-<area shape="rect" id="node1" title=" " alt="" coords="97,167,243,280"/>
-<area shape="rect" id="node2" href="$classIMenuItem.xhtml" title=" " alt="" coords="5,5,116,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="141,35,199,75"/>
-<area shape="rect" id="node4" title=" " alt="" coords="223,35,274,75"/>
+<area shape="rect" id="node1" title=" " alt="" coords="99,189,266,325"/>
+<area shape="rect" id="node2" href="$classIMenuItem.xhtml" title=" " alt="" coords="5,5,133,127"/>
+<area shape="rect" id="node3" title=" " alt="" coords="157,27,208,105"/>
+<area shape="rect" id="node4" title=" " alt="" coords="253,27,312,105"/>
 </map>

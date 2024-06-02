@@ -1,11 +1,15 @@
 <map id="lib/3rd_party_adapters/LVGL/Display.hpp" name="lib/3rd_party_adapters/LVGL/Display.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="205,5,355,45"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,93,144,119"/>
-<area shape="rect" id="node3" title=" " alt="" coords="168,93,229,119"/>
-<area shape="rect" id="node4" title=" " alt="" coords="254,93,306,119"/>
-<area shape="rect" id="node5" title=" " alt="" coords="330,93,398,119"/>
-<area shape="rect" id="node6" href="$IDisplay_8hpp.xhtml" title=" " alt="" coords="422,93,610,119"/>
-<area shape="rect" id="node7" href="$MenuItem_8hpp.xhtml" title=" " alt="" coords="464,167,568,192"/>
-<area shape="rect" id="node8" title=" " alt="" coords="449,240,503,265"/>
-<area shape="rect" id="node9" title=" " alt="" coords="528,240,587,265"/>
+<area shape="rect" id="node1" title=" " alt="" coords="217,5,385,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,95,156,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="181,95,247,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="271,95,330,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="354,95,431,121"/>
+<area shape="rect" id="node6" href="$IDisplay_8hpp.xhtml" title=" " alt="" coords="455,95,666,121"/>
+<area shape="rect" id="node7" href="$MenuItem_8hpp.xhtml" title=" " alt="" coords="409,169,525,196"/>
+<area shape="rect" id="node10" href="$IKeypad_8hpp.xhtml" title=" " alt="" coords="550,169,761,196"/>
+<area shape="rect" id="node8" title=" " alt="" coords="374,244,433,271"/>
+<area shape="rect" id="node9" title=" " alt="" coords="457,244,520,271"/>
+<area shape="rect" id="node11" href="$KeyIds_8hpp.xhtml" title=" " alt="" coords="587,244,681,271"/>
+<area shape="rect" id="node13" title=" " alt="" coords="705,244,792,271"/>
+<area shape="rect" id="node12" title=" " alt="" coords="596,319,672,345"/>
 </map>

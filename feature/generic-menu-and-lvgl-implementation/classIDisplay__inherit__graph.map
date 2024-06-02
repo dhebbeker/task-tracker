@@ -1,4 +1,4 @@
 <map id="IDisplay" name="IDisplay">
-<area shape="rect" id="node1" title="Interface to a display capable of displaying various information to a human." alt="" coords="5,5,107,75"/>
-<area shape="rect" id="node2" href="$classDisplay.xhtml" title=" " alt="" coords="5,123,107,221"/>
+<area shape="rect" id="node1" title="Interface to a display capable of displaying various information to a human." alt="" coords="5,5,149,112"/>
+<area shape="rect" id="node2" href="$classDisplay.xhtml" title=" " alt="" coords="5,160,149,281"/>
 </map>
