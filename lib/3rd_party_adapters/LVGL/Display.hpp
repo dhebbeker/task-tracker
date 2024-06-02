@@ -17,6 +17,7 @@ class Display : public IDisplay
         std::uint8_t display_i2c_address;
     };
     Display(const Configuration &configuration, TwoWire &i2c);
+    virtual void registerKeyPad(IKeypad *keypad) override;
     virtual void refresh() override;
     virtual void drawMenu(const MenuItemList* menuList) override;
 

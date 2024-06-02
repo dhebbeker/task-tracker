@@ -28,7 +28,7 @@ void setup()
 
 void loop()
 {
-    static Menu singleMenu(board::getDisplay());
+    static Menu singleMenu(board::getDisplay(), board::getKeypad());
     static Presenter presenter(singleMenu, board::getStatusIndicators());
     static ProcessHmiInputs processHmiInputs(presenter, board::getKeypad());
 

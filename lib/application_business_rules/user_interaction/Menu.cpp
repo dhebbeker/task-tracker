@@ -1,9 +1,11 @@
 #include "Menu.hpp"
 #include "MenuItem.hpp"
 
-Menu::Menu(IDisplay &displayToUse)
+Menu::Menu(IDisplay &displayToUse, IKeypad &keypad)
     : display(displayToUse)
 {
+    display.registerKeyPad(&keypad);
+
     static auto mainMenu = MenuItemList();
     static auto subMenu1 = MenuItemList();
     static auto subMenu2 = MenuItemList();

@@ -29,9 +29,11 @@ static void flushSSD1306Adafruit(lv_disp_drv_t *disp_drv, const lv_area_t *area,
             color_p++;
         }
     }
-    display.display();
     lv_disp_flush_ready(disp_drv);
 }
+
+static IKeypad *myKeypad = nullptr;
+static lv_group_t *group = nullptr;
 
 Display::Display(const Configuration &configuration, TwoWire &i2c)
     : display(configuration.screen_width, configuration.screen_height, &i2c),
@@ -87,9 +89,89 @@ Display::Display(const Configuration &configuration, TwoWire &i2c)
     lv_timer_handler();
 }
 
+static void keypad_read_left(lv_indev_drv_t *indev_drv, lv_indev_data_t *data)
+{
+    if (!myKeypad)
+        return;
+
+    // assign key state
+    data->state = (myKeypad->isKeyPressed(KeyId::LEFT)) ? LV_INDEV_STATE_PRESSED : LV_INDEV_STATE_RELEASED;
+    data->key = LV_KEY_PREV;
+}
+
+static void keypad_read_right(lv_indev_drv_t *indev_drv, lv_indev_data_t *data)
+{
+    if (!myKeypad)
+        return;
+
+    // assign key state
+    data->state = (myKeypad->isKeyPressed(KeyId::RIGHT)) ? LV_INDEV_STATE_PRESSED : LV_INDEV_STATE_RELEASED;
+    data->key = LV_KEY_NEXT;
+}
+
+static void keypad_read_enter(lv_indev_drv_t *indev_drv, lv_indev_data_t *data)
+{
+    if (!myKeypad)
+        return;
+
+    // assign key state
+    data->state = (myKeypad->isKeyPressed(KeyId::ENTER)) ? LV_INDEV_STATE_PRESSED : LV_INDEV_STATE_RELEASED;
+    data->key = LV_KEY_ENTER;
+}
+
+static void keypad_read_back(lv_indev_drv_t *indev_drv, lv_indev_data_t *data)
+{
+    if (!myKeypad)
+        return;
+
+    // assign key state
+    data->state = (myKeypad->isKeyPressed(KeyId::BACK)) ? LV_INDEV_STATE_PRESSED : LV_INDEV_STATE_RELEASED;
+    data->key = LV_KEY_ESC;
+}
+
+void Display::registerKeyPad(IKeypad *keypad)
+{
+    //assign keypad reference to local pointer
+    myKeypad = keypad;
+
+    // create default group for button navigation and assign input device to it
+    group = lv_group_create();
+    lv_group_set_default(group);
+
+    // Register at least one display before you register any input devices
+    static lv_indev_drv_t indev_drv_left;
+    lv_indev_drv_init(&indev_drv_left);
+    indev_drv_left.type = LV_INDEV_TYPE_KEYPAD;
+    indev_drv_left.read_cb = keypad_read_left;
+
+    static lv_indev_drv_t indev_drv_right;
+    lv_indev_drv_init(&indev_drv_right);
+    indev_drv_right.type = LV_INDEV_TYPE_KEYPAD;
+    indev_drv_right.read_cb = keypad_read_right;
+
+    static lv_indev_drv_t indev_drv_enter;
+    lv_indev_drv_init(&indev_drv_enter);
+    indev_drv_enter.type = LV_INDEV_TYPE_KEYPAD;
+    indev_drv_enter.read_cb = keypad_read_enter;
+
+    static lv_indev_drv_t indev_drv_back;
+    lv_indev_drv_init(&indev_drv_back);
+    indev_drv_back.type = LV_INDEV_TYPE_KEYPAD;
+    indev_drv_back.read_cb = keypad_read_back;
+
+    // Register the driver in LVGL and save the created input device object
+    lv_indev_set_group(lv_indev_drv_register(&indev_drv_left), group);
+    lv_indev_set_group(lv_indev_drv_register(&indev_drv_right), group);
+    lv_indev_set_group(lv_indev_drv_register(&indev_drv_enter), group);
+    lv_indev_set_group(lv_indev_drv_register(&indev_drv_back), group);
+}
+
 void Display::refresh()
 {
     lv_timer_handler();
+    LV_LOG_USER("Adafruit display() start");
+    this->display.display();
+    LV_LOG_USER("Adafruit display() end");
 }
 
 void Display::drawMenu(const MenuItemList *menuList)
