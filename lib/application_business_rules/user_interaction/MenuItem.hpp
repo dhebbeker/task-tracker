@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include <string>
 #include <vector>
 
@@ -61,7 +62,7 @@ struct MenuItemSwitch final : public IMenuItem
 struct MenuItemValue final : public IMenuItem
 {
   public:
-    MenuItemValue(std::string text, double *ptrDouble, uint8_t decimals, double min, double max);
+    MenuItemValue(std::string text, double *ptrDouble, std::uint8_t decimals, double min, double max);
     ~MenuItemValue() override = default;
 
     std::string getText() const override;
@@ -71,14 +72,14 @@ struct MenuItemValue final : public IMenuItem
     };
 
     double *getPtrDouble() const;
-    uint8_t getDecimals() const;
+    std::uint8_t getDecimals() const;
     double getMin() const;
     double getMax() const;
 
   protected:
     const std::string _text;
     double *_ptrDouble;
-    uint8_t _decimals;
+    std::uint8_t _decimals;
     double _min;
     double _max;
 };
