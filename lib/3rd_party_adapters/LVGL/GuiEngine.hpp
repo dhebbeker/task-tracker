@@ -6,6 +6,10 @@
 #include <memory>
 #include <user_interaction/IGuiEngine.hpp>
 
+/**
+ * @brief lvgl version of a GuiEngine
+ * 
+ */
 class GuiEngine : public IGuiEngine
 {
   public:

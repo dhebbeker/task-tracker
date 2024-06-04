@@ -3,6 +3,10 @@
 #include <string>
 #include <vector>
 
+/**
+ * @brief Enumeration to distinguish the type of menu Items
+ * 
+ */
 enum class MenuItemType
 {
     SUBMENU,
@@ -10,6 +14,10 @@ enum class MenuItemType
     VALUE,
 };
 
+/**
+ * @brief interface for all menu items
+ * 
+ */
 class IMenuItem
 {
   public:
@@ -19,8 +27,18 @@ class IMenuItem
     virtual std::string getText() const = 0;
     virtual MenuItemType getType() const = 0;
 };
+
+/**
+ * @brief type definition for a list of menu items
+ * @note this is used for definition of menus
+ * 
+ */
 typedef std::vector<const IMenuItem *> MenuItemList;
 
+/**
+ * @brief menu item to call a submenu
+ * 
+ */
 class MenuItemSubmenu final : public IMenuItem
 {
   public:
@@ -40,6 +58,10 @@ class MenuItemSubmenu final : public IMenuItem
     const MenuItemList *_subMenuList;
 };
 
+/**
+ * @brief menu item to show and change boolean variables
+ * 
+ */
 struct MenuItemSwitch final : public IMenuItem
 {
   public:
@@ -59,6 +81,10 @@ struct MenuItemSwitch final : public IMenuItem
     bool *_ptrBool;
 };
 
+/**
+ * @brief menu item to show double variables and call a modification screen
+ * 
+ */
 struct MenuItemValue final : public IMenuItem
 {
   public:

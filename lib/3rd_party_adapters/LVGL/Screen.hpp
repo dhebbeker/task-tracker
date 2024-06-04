@@ -3,6 +3,10 @@
 #include <lvgl.h>
 #include <user_interaction/MenuItem.hpp>
 
+/**
+ * @brief Interface class for Screen objects
+ * 
+ */
 class IScreen
 {
   public:
@@ -12,6 +16,11 @@ class IScreen
     virtual void draw() = 0;
 };
 
+/**
+ * @brief Screen for menu navigation
+ * it receives a list of menu items for it's topology
+ * 
+ */
 class ScreenMenu final : public IScreen
 {
   public:
@@ -24,6 +33,10 @@ class ScreenMenu final : public IScreen
     const MenuItemList _List;
 };
 
+/**
+ * @brief Screen for value modification
+ * 
+ */
 class ScreenValueModifier final : public IScreen
 {
   public:

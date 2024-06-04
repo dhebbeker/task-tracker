@@ -3,13 +3,12 @@
 #include <Adafruit_SSD1306.h>
 #include <user_interaction/MenuItem.hpp>
 
+/* lvgl log functionality via serial interface */
 #if LV_USE_LOG != 0
-#include <Arduino.h>
-/* Serial debugging */
+#include <serial_interface/serial_port.hpp>
 static void lvgl_log_to_serial(const char *buf)
 {
-    Serial.printf(buf);
-    Serial.flush();
+    serial_port::cout << buf << std::endl;
 }
 #endif
 
@@ -29,12 +28,19 @@ static void flushSSD1306Adafruit(lv_disp_drv_t *disp_drv, const lv_area_t *area,
             color_p++;
         }
     }
+    //this->display.display();  //this has been removed from here due to performance, as multiple flushes are triggert, when mor areas on screen are refreshed
     lv_disp_flush_ready(disp_drv);
 }
 
 static IKeypad *myKeypad = nullptr;
 static lv_group_t *group = nullptr;
 
+/**
+ * @brief Construct a new Gui Engine:: GuiEngine object
+ * 
+ * @param configuration - structure fith configuration information
+ * @param i2c           - reference to the i2c/TwoWire object for communication
+ */
 GuiEngine::GuiEngine(const Configuration &configuration, TwoWire &i2c)
     : display(configuration.screen_width, configuration.screen_height, &i2c),
       buf(std::make_unique<lv_color_t[]>(configuration.screen_width * 16))
@@ -89,6 +95,9 @@ GuiEngine::GuiEngine(const Configuration &configuration, TwoWire &i2c)
     lv_timer_handler();
 }
 
+/**
+ * @brief implementation for lvgl read_cb for the left key
+ */
 static void keypad_read_left(lv_indev_drv_t *indev_drv, lv_indev_data_t *data)
 {
     if (!myKeypad)
@@ -99,6 +108,9 @@ static void keypad_read_left(lv_indev_drv_t *indev_drv, lv_indev_data_t *data)
     data->key = LV_KEY_PREV;
 }
 
+/**
+ * @brief implementation for lvgl read_cb for the right key
+ */
 static void keypad_read_right(lv_indev_drv_t *indev_drv, lv_indev_data_t *data)
 {
     if (!myKeypad)
@@ -109,6 +121,9 @@ static void keypad_read_right(lv_indev_drv_t *indev_drv, lv_indev_data_t *data)
     data->key = LV_KEY_NEXT;
 }
 
+/**
+ * @brief implementation for lvgl read_cb for the enter key
+ */
 static void keypad_read_enter(lv_indev_drv_t *indev_drv, lv_indev_data_t *data)
 {
     if (!myKeypad)
@@ -119,6 +134,9 @@ static void keypad_read_enter(lv_indev_drv_t *indev_drv, lv_indev_data_t *data)
     data->key = LV_KEY_ENTER;
 }
 
+/**
+ * @brief implementation for lvgl read_cb for the back key
+ */
 static void keypad_read_back(lv_indev_drv_t *indev_drv, lv_indev_data_t *data)
 {
     if (!myKeypad)
@@ -129,6 +147,11 @@ static void keypad_read_back(lv_indev_drv_t *indev_drv, lv_indev_data_t *data)
     data->key = LV_KEY_ESC;
 }
 
+/**
+ * @brief register the Keypad to read the button states from
+ * 
+ * @param keypad - pointer to the Keypad object
+ */
 void GuiEngine::registerKeyPad(IKeypad *keypad)
 {
     //assign keypad reference to local pointer
@@ -138,7 +161,7 @@ void GuiEngine::registerKeyPad(IKeypad *keypad)
     group = lv_group_create();
     lv_group_set_default(group);
 
-    // Register at least one display before you register any input devices
+    // Register all buttons as individual indev, so they all have their seperate "old" state (lvgl has only one "old" state per indev)
     static lv_indev_drv_t indev_drv_left;
     lv_indev_drv_init(&indev_drv_left);
     indev_drv_left.type = LV_INDEV_TYPE_KEYPAD;
@@ -159,13 +182,18 @@ void GuiEngine::registerKeyPad(IKeypad *keypad)
     indev_drv_back.type = LV_INDEV_TYPE_KEYPAD;
     indev_drv_back.read_cb = keypad_read_back;
 
-    // Register the driver in LVGL and save the created input device object
+    // Register the drivers in LVGL and save the created input device object
     lv_indev_set_group(lv_indev_drv_register(&indev_drv_left), group);
     lv_indev_set_group(lv_indev_drv_register(&indev_drv_right), group);
     lv_indev_set_group(lv_indev_drv_register(&indev_drv_enter), group);
     lv_indev_set_group(lv_indev_drv_register(&indev_drv_back), group);
 }
 
+/**
+ * @brief cyclic function to be called to handle lvgl
+ *   This also flushes the data to the display.
+ * 
+ */
 void GuiEngine::refresh()
 {
     lv_timer_handler();
@@ -174,6 +202,11 @@ void GuiEngine::refresh()
     LV_LOG_USER("Adafruit display() end");
 }
 
+/**
+ * @brief function to draw a menu Screen onto the display
+ * 
+ * @param menuList - list of items for the menu to display
+ */
 void GuiEngine::drawMenu(const MenuItemList *menuList)
 {
     auto ptrMenuScreen = new ScreenMenu{*menuList};
