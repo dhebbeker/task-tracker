@@ -15,7 +15,7 @@
 #include <user_interaction/Menu.hpp>
 #include <user_interaction/Presenter.hpp>
 #include <user_interaction/ProcessHmiInputs.hpp>
-#include <user_interaction/display_factory_interface.hpp>
+#include <user_interaction/guiEngine_factory_interface.hpp>
 #include <user_interaction/keypad_factory_interface.hpp>
 #include <user_interaction/statusindicators_factory_interface.hpp>
 
