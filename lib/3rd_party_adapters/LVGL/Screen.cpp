@@ -1,5 +1,4 @@
 #include "Screen.hpp"
-#include <lvgl.h>
 #include <math.h>
 #include <stack>
 
@@ -357,16 +356,13 @@ static void ScreenValueModifier_valueChange_cb(lv_event_t *e)
 {
     lv_event_code_t code = lv_event_get_code(e);
 
-    auto item = reinterpret_cast<const MenuItemValue *const>(lv_event_get_user_data(e));
+    auto screen = reinterpret_cast<ScreenValueModifier *>(lv_event_get_user_data(e));
 
-    //TODO: the source of the spinbox object to get the current value from is not clear yet
-    lv_obj_t *spinbox = nullptr;
-
-    if ((code == LV_EVENT_VALUE_CHANGED) && (item != nullptr) && (spinbox != nullptr))
+    if ((code == LV_EVENT_VALUE_CHANGED) && (screen != nullptr) && (screen->_menuItem != nullptr) && (screen->_spinbox != nullptr))
     {
         //if we changed the value of the spinbox, write it according the decimals to the source variable.
-        auto ptr = item->getPtrDouble();
-        *ptr = ((double)lv_spinbox_get_value(spinbox)) / std::pow(10, item->getDecimals());
+        auto ptr = screen->_menuItem->getPtrDouble();
+        *ptr = ((double)lv_spinbox_get_value(screen->_spinbox)) / std::pow(10, screen->_menuItem->getDecimals());
     }
     else if (code == LV_EVENT_KEY)
     {
@@ -399,7 +395,6 @@ void ScreenValueModifier::draw()
 {
     lv_obj_t *btn;
     lv_obj_t *lab;
-    lv_obj_t *spinbox;
 
     /* clear the current displayed screen */
     lv_obj_clean(lv_scr_act());
@@ -417,28 +412,29 @@ void ScreenValueModifier::draw()
     lv_obj_add_style(screen, &style_small_padding, 0);
 
     /* draw spinbox */
-    spinbox = lv_spinbox_create(screen);
-    lv_group_remove_obj(spinbox); //remove the spinbox from being selectable by default
-    lv_obj_set_width(spinbox, lv_pct(55));
-    lv_obj_add_style(spinbox, &style_small_padding, 0);
-    lv_obj_center(spinbox);
-    lv_spinbox_set_digit_format(spinbox, 7, (7 - _menuItem->getDecimals()));
+    _spinbox = lv_spinbox_create(screen);
+    lv_group_remove_obj(_spinbox); //remove the spinbox from being selectable by default
+    lv_obj_set_width(_spinbox, lv_pct(55));
+    lv_obj_add_style(_spinbox, &style_small_padding, 0);
+    lv_obj_center(_spinbox);
+    lv_spinbox_set_digit_format(_spinbox, 7, (7 - _menuItem->getDecimals()));
     int32_t min = ((_menuItem->getMin()) * std::pow(10, _menuItem->getDecimals()));
     int32_t max = ((_menuItem->getMax()) * std::pow(10, _menuItem->getDecimals()));
-    lv_spinbox_set_range(spinbox, min, max);
+    lv_spinbox_set_range(_spinbox, min, max);
     int32_t val = ((*_menuItem->getPtrDouble()) * std::pow(10, _menuItem->getDecimals()));
-    lv_spinbox_set_value(spinbox, val);
-    lv_obj_add_event_cb(spinbox, ScreenValueModifier_valueChange_cb, LV_EVENT_ALL, (void *)_menuItem);
+    lv_spinbox_set_value(_spinbox, val);
+    lv_obj_add_event_cb(_spinbox, ScreenValueModifier_valueChange_cb, LV_EVENT_VALUE_CHANGED, (void *)this);
+    lv_obj_add_event_cb(_spinbox, ScreenValueModifier_valueChange_cb, LV_EVENT_KEY, nullptr);
 
-    lv_coord_t h = lv_obj_get_height(spinbox);
+    lv_coord_t h = lv_obj_get_height(_spinbox);
 
     /* draw incrementation button */
     btn = lv_btn_create(screen);
     lv_obj_set_size(btn, h, h);
     lv_obj_add_style(btn, &style_small_padding, 0);
-    lv_obj_align_to(btn, spinbox, LV_ALIGN_OUT_RIGHT_MID, 2, 0);
-    lv_obj_add_event_cb(btn, ScreenValueModifier_inc_cb, LV_EVENT_LONG_PRESSED_REPEAT, spinbox);
-    lv_obj_add_event_cb(btn, ScreenValueModifier_inc_cb, LV_EVENT_SHORT_CLICKED, spinbox);
+    lv_obj_align_to(btn, _spinbox, LV_ALIGN_OUT_RIGHT_MID, 2, 0);
+    lv_obj_add_event_cb(btn, ScreenValueModifier_inc_cb, LV_EVENT_LONG_PRESSED_REPEAT, _spinbox);
+    lv_obj_add_event_cb(btn, ScreenValueModifier_inc_cb, LV_EVENT_SHORT_CLICKED, _spinbox);
     lv_obj_add_event_cb(btn, ScreenValueModifier_inc_cb, LV_EVENT_KEY, nullptr);
     lab = lv_label_create(btn);
     lv_label_set_text_static(lab, "+");
@@ -448,9 +444,9 @@ void ScreenValueModifier::draw()
     btn = lv_btn_create(screen);
     lv_obj_set_size(btn, h, h);
     lv_obj_add_style(btn, &style_small_padding, 0);
-    lv_obj_align_to(btn, spinbox, LV_ALIGN_OUT_LEFT_MID, -2, 0);
-    lv_obj_add_event_cb(btn, ScreenValueModifier_dec_cb, LV_EVENT_LONG_PRESSED_REPEAT, spinbox);
-    lv_obj_add_event_cb(btn, ScreenValueModifier_dec_cb, LV_EVENT_SHORT_CLICKED, spinbox);
+    lv_obj_align_to(btn, _spinbox, LV_ALIGN_OUT_LEFT_MID, -2, 0);
+    lv_obj_add_event_cb(btn, ScreenValueModifier_dec_cb, LV_EVENT_LONG_PRESSED_REPEAT, _spinbox);
+    lv_obj_add_event_cb(btn, ScreenValueModifier_dec_cb, LV_EVENT_SHORT_CLICKED, _spinbox);
     lv_obj_add_event_cb(btn, ScreenValueModifier_dec_cb, LV_EVENT_KEY, nullptr);
     lab = lv_label_create(btn);
     lv_label_set_text_static(lab, "-");
@@ -460,9 +456,9 @@ void ScreenValueModifier::draw()
     btn = lv_btn_create(screen);
     lv_obj_set_size(btn, 10, 10);
     lv_obj_add_style(btn, &style_small_padding, 0);
-    lv_obj_align_to(btn, spinbox, LV_ALIGN_OUT_BOTTOM_MID, 0, 2);
-    lv_obj_add_event_cb(btn, ScreenValueModifier_step_cb, LV_EVENT_LONG_PRESSED_REPEAT, spinbox);
-    lv_obj_add_event_cb(btn, ScreenValueModifier_step_cb, LV_EVENT_SHORT_CLICKED, spinbox);
+    lv_obj_align_to(btn, _spinbox, LV_ALIGN_OUT_BOTTOM_MID, 0, 2);
+    lv_obj_add_event_cb(btn, ScreenValueModifier_step_cb, LV_EVENT_LONG_PRESSED_REPEAT, _spinbox);
+    lv_obj_add_event_cb(btn, ScreenValueModifier_step_cb, LV_EVENT_SHORT_CLICKED, _spinbox);
     lv_obj_add_event_cb(btn, ScreenValueModifier_step_cb, LV_EVENT_KEY, nullptr);
     lab = lv_label_create(btn);
     lv_label_set_text_static(lab, "*");

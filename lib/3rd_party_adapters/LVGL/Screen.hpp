@@ -1,5 +1,6 @@
 #pragma once
 
+#include <lvgl.h>
 #include <user_interaction/MenuItem.hpp>
 
 class IScreen
@@ -31,6 +32,6 @@ class ScreenValueModifier final : public IScreen
 
     void draw() override;
 
-  private:
     const MenuItemValue *const _menuItem;
+    lv_obj_t *_spinbox;
 };
