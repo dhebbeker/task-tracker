@@ -1,7 +1,8 @@
 <map id="lib/3rd_party_adapters/LVGL/Screen.hpp" name="lib/3rd_party_adapters/LVGL/Screen.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="41,5,209,47"/>
-<area shape="rect" id="node2" href="$MenuItem_8hpp.xhtml" title=" " alt="" coords="13,95,238,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,169,72,196"/>
-<area shape="rect" id="node4" title=" " alt="" coords="96,169,155,196"/>
-<area shape="rect" id="node5" title=" " alt="" coords="179,169,242,196"/>
+<area shape="rect" id="node1" title=" " alt="" coords="33,5,201,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,95,64,121"/>
+<area shape="rect" id="node3" href="$MenuItem_8hpp.xhtml" title=" " alt="" coords="87,95,313,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="80,169,147,196"/>
+<area shape="rect" id="node5" title=" " alt="" coords="171,169,229,196"/>
+<area shape="rect" id="node6" title=" " alt="" coords="254,169,317,196"/>
 </map>

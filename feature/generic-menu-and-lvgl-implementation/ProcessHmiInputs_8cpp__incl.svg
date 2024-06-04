@@ -267,9 +267,9 @@
 <!-- Node10 -->
 <g id="node10" class="node">
 <title>Node10</title>
-<g id="a_node10"><a xlink:href="IDisplay_8hpp.xhtml" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="581,-179.5 581,-198.5 657,-198.5 657,-179.5 581,-179.5"/>
-<text text-anchor="middle" x="619" y="-186.5" font-family="Helvetica,sans-Serif" font-size="10.00">IDisplay.hpp</text>
+<g id="a_node10"><a xlink:href="IGuiEngine_8hpp.xhtml" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="574,-179.5 574,-198.5 664,-198.5 664,-179.5 574,-179.5"/>
+<text text-anchor="middle" x="619" y="-186.5" font-family="Helvetica,sans-Serif" font-size="10.00">IGuiEngine.hpp</text>
 </a>
 </g>
 </g>

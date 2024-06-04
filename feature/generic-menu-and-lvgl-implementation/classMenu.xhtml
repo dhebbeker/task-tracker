@@ -76,6 +76,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>class to hold the menu structure of the HMI  
+ <a href="classMenu.xhtml#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="Menu_8hpp_source.xhtml">Menu.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for Menu:</div>
@@ -86,14 +89,18 @@ Collaboration diagram for Menu:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab0387e3cab8a88db3dcf323d8794ab04"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenu.xhtml#ab0387e3cab8a88db3dcf323d8794ab04">Menu</a> (<a class="el" href="classIDisplay.xhtml">IDisplay</a> &amp;, <a class="el" href="classIKeypad.xhtml">IKeypad</a> &amp;keypad)</td></tr>
-<tr class="separator:ab0387e3cab8a88db3dcf323d8794ab04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f188f46ffe9b1cf70b3136fda5c6f37"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenu.xhtml#a1f188f46ffe9b1cf70b3136fda5c6f37">Menu</a> (<a class="el" href="classIGuiEngine.xhtml">IGuiEngine</a> &amp;, <a class="el" href="classIKeypad.xhtml">IKeypad</a> &amp;keypad)</td></tr>
+<tr class="memdesc:a1f188f46ffe9b1cf70b3136fda5c6f37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classMenu.xhtml" title="class to hold the menu structure of the HMI">Menu</a>:: <a class="el" href="classMenu.xhtml" title="class to hold the menu structure of the HMI">Menu</a> object.  <a href="classMenu.xhtml#a1f188f46ffe9b1cf70b3136fda5c6f37">More...</a><br /></td></tr>
+<tr class="separator:a1f188f46ffe9b1cf70b3136fda5c6f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23bb40aa976a2d694d5fcce7180fc53c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenu.xhtml#a23bb40aa976a2d694d5fcce7180fc53c">loop</a> ()</td></tr>
+<tr class="memdesc:a23bb40aa976a2d694d5fcce7180fc53c"><td class="mdescLeft">&#160;</td><td class="mdescRight">cyclic refresh function  <a href="classMenu.xhtml#a23bb40aa976a2d694d5fcce7180fc53c">More...</a><br /></td></tr>
 <tr class="separator:a23bb40aa976a2d694d5fcce7180fc53c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ab0387e3cab8a88db3dcf323d8794ab04"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0387e3cab8a88db3dcf323d8794ab04">&#9670;&nbsp;</a></span>Menu()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>class to hold the menu structure of the HMI </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a1f188f46ffe9b1cf70b3136fda5c6f37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f188f46ffe9b1cf70b3136fda5c6f37">&#9670;&nbsp;</a></span>Menu()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -101,8 +108,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">Menu::Menu </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classIDisplay.xhtml">IDisplay</a> &amp;&#160;</td>
-          <td class="paramname"><em>displayToUse</em>, </td>
+          <td class="paramtype"><a class="el" href="classIGuiEngine.xhtml">IGuiEngine</a> &amp;&#160;</td>
+          <td class="paramname"><em>guiEngineToUse</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -117,6 +124,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Construct a new <a class="el" href="classMenu.xhtml" title="class to hold the menu structure of the HMI">Menu</a>:: <a class="el" href="classMenu.xhtml" title="class to hold the menu structure of the HMI">Menu</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">guiEngineToUse</td><td>- <a class="el" href="classGuiEngine.xhtml" title="lvgl version of a GuiEngine">GuiEngine</a> to be used for display </td></tr>
+    <tr><td class="paramname">keypad</td><td>- <a class="el" href="classKeypad.xhtml">Keypad</a> to get <a class="el" href="classMenu.xhtml" title="class to hold the menu structure of the HMI">Menu</a> controlls from </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -144,6 +160,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>cyclic refresh function </p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
@@ -153,7 +171,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 4 2024 19:20:55 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue Jun 4 2024 22:15:36 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -12,7 +12,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="interface for all menu items">
 <polygon fill="#bfbfbf" stroke="black" points="171.5,-215.5 171.5,-305.5 267.5,-305.5 267.5,-215.5 171.5,-215.5"/>
 <text text-anchor="middle" x="219.5" y="-293.5" font-family="Helvetica,sans-Serif" font-size="10.00">IMenuItem</text>
 <polyline fill="none" stroke="black" points="171.5,-286.5 267.5,-286.5 "/>
@@ -28,7 +28,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classMenuItemSubmenu.xhtml" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classMenuItemSubmenu.xhtml" target="_top" xlink:title="menu item to call a submenu">
 <polygon fill="white" stroke="black" points="0,-33.5 0,-145.5 139,-145.5 139,-33.5 0,-33.5"/>
 <text text-anchor="middle" x="69.5" y="-133.5" font-family="Helvetica,sans-Serif" font-size="10.00">MenuItemSubmenu</text>
 <polyline fill="none" stroke="black" points="0,-126.5 139,-126.5 "/>
@@ -52,7 +52,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="structMenuItemSwitch.xhtml" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="structMenuItemSwitch.xhtml" target="_top" xlink:title="menu item to show and change boolean variables">
 <polygon fill="white" stroke="black" points="157,-33.5 157,-145.5 282,-145.5 282,-33.5 157,-33.5"/>
 <text text-anchor="middle" x="219.5" y="-133.5" font-family="Helvetica,sans-Serif" font-size="10.00">MenuItemSwitch</text>
 <polyline fill="none" stroke="black" points="157,-126.5 282,-126.5 "/>
@@ -76,7 +76,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="structMenuItemValue.xhtml" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="structMenuItemValue.xhtml" target="_top" xlink:title="menu item to show double variables and call a modification screen">
 <polygon fill="white" stroke="black" points="300.5,-0.5 300.5,-178.5 420.5,-178.5 420.5,-0.5 300.5,-0.5"/>
 <text text-anchor="middle" x="360.5" y="-166.5" font-family="Helvetica,sans-Serif" font-size="10.00">MenuItemValue</text>
 <polyline fill="none" stroke="black" points="300.5,-159.5 420.5,-159.5 "/>

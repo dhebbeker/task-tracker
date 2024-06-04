@@ -12,7 +12,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="menu item to show and change boolean variables">
 <polygon fill="#bfbfbf" stroke="black" points="70.5,-0.5 70.5,-101.5 195.5,-101.5 195.5,-0.5 70.5,-0.5"/>
 <text text-anchor="middle" x="133" y="-89.5" font-family="Helvetica,sans-Serif" font-size="10.00">MenuItemSwitch</text>
 <polyline fill="none" stroke="black" points="70.5,-82.5 195.5,-82.5 "/>
@@ -29,7 +29,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classIMenuItem.xhtml" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classIMenuItem.xhtml" target="_top" xlink:title="interface for all menu items">
 <polygon fill="white" stroke="black" points="0,-149.5 0,-239.5 96,-239.5 96,-149.5 0,-149.5"/>
 <text text-anchor="middle" x="48" y="-227.5" font-family="Helvetica,sans-Serif" font-size="10.00">IMenuItem</text>
 <polyline fill="none" stroke="black" points="0,-220.5 96,-220.5 "/>

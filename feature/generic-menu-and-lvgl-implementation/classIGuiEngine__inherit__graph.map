@@ -1,0 +1,4 @@
+<map id="IGuiEngine" name="IGuiEngine">
+<area shape="rect" id="node1" title="Interface to a guiEngine capable of displaying various information to a human." alt="" coords="5,5,149,112"/>
+<area shape="rect" id="node2" href="$classGuiEngine.xhtml" title="lvgl version of a GuiEngine" alt="" coords="5,160,149,281"/>
+</map>

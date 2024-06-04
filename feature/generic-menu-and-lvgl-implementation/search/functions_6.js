@@ -2,7 +2,7 @@ var searchData=
 [
   ['generatehelpmessage_702',['generateHelpMessage',['../structcommand__line__interpreter_1_1Command.xhtml#a3dd03abb454355c280740edbd321d48c',1,'command_line_interpreter::Command::generateHelpMessage()'],['../structcommand__line__interpreter_1_1BaseCommand.xhtml#a95afbd15390e5f93b68756f7e621f4da',1,'command_line_interpreter::BaseCommand::generateHelpMessage()']]],
   ['getdecimals_703',['getDecimals',['../structMenuItemValue.xhtml#a9bc2510deabd7d1286b82eff80ae17e5',1,'MenuItemValue']]],
-  ['getdisplay_704',['getDisplay',['../namespaceboard.xhtml#adddb50b3d6bb4c6803d7e05b68f2ce4c',1,'board']]],
+  ['getguiengine_704',['getGuiEngine',['../namespaceboard.xhtml#ada76066aca19103b7ca50cb741c5a26f',1,'board']]],
   ['getinterruptfunction_705',['getInterruptFunction',['../classDebouncer.xhtml#af6f1115d3de147d670852e9564aeb34a',1,'Debouncer']]],
   ['getkeypad_706',['getKeypad',['../namespaceboard.xhtml#a184034284ef8e16496b6b8e4b5c9f678',1,'board']]],
   ['getlabel_707',['getLabel',['../classTask.xhtml#ada97787ea9e1d67d6708eb6c306629dc',1,'Task']]],
@@ -17,5 +17,6 @@ var searchData=
   ['getsubmenulist_716',['getSubMenuList',['../classMenuItemSubmenu.xhtml#a09fb852494a4dbb3513bba12ca1c7cc6',1,'MenuItemSubmenu']]],
   ['gettaskstackhighwatermark_717',['getTaskStackHighWaterMark',['../classDebouncer.xhtml#adf482406de6a961916b2bd43f04a3896',1,'Debouncer']]],
   ['gettext_718',['getText',['../structMenuItemValue.xhtml#adc36da23d5116f67eeb9e598ceb415af',1,'MenuItemValue::getText()'],['../structMenuItemSwitch.xhtml#a885f6f8b32fb04f2cfaa0fb2e329e4d0',1,'MenuItemSwitch::getText()'],['../classMenuItemSubmenu.xhtml#ae78ae8609af3a3fc0bee56822a491c67',1,'MenuItemSubmenu::getText()'],['../classIMenuItem.xhtml#a2bd7ef976d77f4b6613afb4aa1ce4be0',1,'IMenuItem::getText() const =0']]],
-  ['gettype_719',['getType',['../classIMenuItem.xhtml#abf969f12e289de3dd0ba0502480859cc',1,'IMenuItem::getType()'],['../classMenuItemSubmenu.xhtml#a8e93f425568983fe5e866af03535f901',1,'MenuItemSubmenu::getType()'],['../structMenuItemSwitch.xhtml#ae11d79710373809b56ed02007968dd91',1,'MenuItemSwitch::getType()'],['../structMenuItemValue.xhtml#a2d8e5780f26fad40d0b2d55b70c14330',1,'MenuItemValue::getType()']]]
+  ['gettype_719',['getType',['../classIMenuItem.xhtml#abf969f12e289de3dd0ba0502480859cc',1,'IMenuItem::getType()'],['../classMenuItemSubmenu.xhtml#a8e93f425568983fe5e866af03535f901',1,'MenuItemSubmenu::getType()'],['../structMenuItemSwitch.xhtml#ae11d79710373809b56ed02007968dd91',1,'MenuItemSwitch::getType()'],['../structMenuItemValue.xhtml#a2d8e5780f26fad40d0b2d55b70c14330',1,'MenuItemValue::getType()']]],
+  ['guiengine_720',['GuiEngine',['../classGuiEngine.xhtml#ab0527456bad14517f1d04596ac87fe4b',1,'GuiEngine']]]
 ];

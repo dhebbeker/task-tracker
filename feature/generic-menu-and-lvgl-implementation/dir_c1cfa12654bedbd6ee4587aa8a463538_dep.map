@@ -1,8 +1,8 @@
 <map id="test/hmi" name="test/hmi">
 <area shape="rect" id="node4" href="dir_97aefd0d527b934f1d99a682da8fe6a9.xhtml" title="lib" alt="" coords="176,159,248,207"/>
-<area shape="rect" id="edge3-headlabel" href="dir_000020_000003.xhtml" title="19" alt="" coords="247,145,264,160"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000020_000003.xhtml" title="18" alt="" coords="247,145,264,160"/>
 <area shape="rect" id="node2" href="dir_de3c6f73cad814280cdb09df05607cfa.xhtml" title="test_hmi" alt="" coords="173,63,251,111"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000021_000003.xhtml" title="12" alt="" coords="212,133,229,148"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000021_000003.xhtml" title="11" alt="" coords="212,133,229,148"/>
 <area shape="rect" id="node3" href="dir_82ca70e91e3157e9fafa427add4e3439.xhtml" title="test_keyState" alt="" coords="38,63,149,111"/>
 <area shape="rect" id="edge2-headlabel" href="dir_000022_000003.xhtml" title="3" alt="" coords="169,133,179,148"/>
 <area shape="rect" id="clust2" href="dir_c1cfa12654bedbd6ee4587aa8a463538.xhtml" alt="" coords="27,52,359,121"/>
