@@ -4,9 +4,9 @@
 #include <cstdint>
 #include <lvgl.h>
 #include <memory>
-#include <user_interaction/IDisplay.hpp>
+#include <user_interaction/IGuiEngine.hpp>
 
-class Display : public IDisplay
+class GuiEngine : public IGuiEngine
 {
   public:
     struct Configuration
@@ -16,10 +16,10 @@ class Display : public IDisplay
         bool generateDisplayVoltageInternally;
         std::uint8_t display_i2c_address;
     };
-    Display(const Configuration &configuration, TwoWire &i2c);
+    GuiEngine(const Configuration &configuration, TwoWire &i2c);
     virtual void registerKeyPad(IKeypad *keypad) override;
     virtual void refresh() override;
-    virtual void drawMenu(const MenuItemList* menuList) override;
+    virtual void drawMenu(const MenuItemList *menuList) override;
 
     Adafruit_SSD1306 display;
 

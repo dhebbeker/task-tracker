@@ -1,4 +1,4 @@
-#include "Display.hpp"
+#include "GuiEngine.hpp"
 #include "Screen.hpp"
 #include <Adafruit_SSD1306.h>
 #include <user_interaction/MenuItem.hpp>
@@ -16,7 +16,7 @@ static void lvgl_log_to_serial(const char *buf)
 /* Display flushing */
 static void flushSSD1306Adafruit(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *color_p)
 {
-    const auto displayAdapter = reinterpret_cast<Display *>(disp_drv->user_data);
+    const auto displayAdapter = reinterpret_cast<GuiEngine *>(disp_drv->user_data);
     auto &display = displayAdapter->display;
     uint32_t width = (area->x2 - area->x1 + 1);
     uint32_t height = (area->y2 - area->y1 + 1);
@@ -35,7 +35,7 @@ static void flushSSD1306Adafruit(lv_disp_drv_t *disp_drv, const lv_area_t *area,
 static IKeypad *myKeypad = nullptr;
 static lv_group_t *group = nullptr;
 
-Display::Display(const Configuration &configuration, TwoWire &i2c)
+GuiEngine::GuiEngine(const Configuration &configuration, TwoWire &i2c)
     : display(configuration.screen_width, configuration.screen_height, &i2c),
       buf(std::make_unique<lv_color_t[]>(configuration.screen_width * 16))
 {
@@ -129,7 +129,7 @@ static void keypad_read_back(lv_indev_drv_t *indev_drv, lv_indev_data_t *data)
     data->key = LV_KEY_ESC;
 }
 
-void Display::registerKeyPad(IKeypad *keypad)
+void GuiEngine::registerKeyPad(IKeypad *keypad)
 {
     //assign keypad reference to local pointer
     myKeypad = keypad;
@@ -166,7 +166,7 @@ void Display::registerKeyPad(IKeypad *keypad)
     lv_indev_set_group(lv_indev_drv_register(&indev_drv_back), group);
 }
 
-void Display::refresh()
+void GuiEngine::refresh()
 {
     lv_timer_handler();
     LV_LOG_USER("Adafruit display() start");
@@ -174,7 +174,7 @@ void Display::refresh()
     LV_LOG_USER("Adafruit display() end");
 }
 
-void Display::drawMenu(const MenuItemList *menuList)
+void GuiEngine::drawMenu(const MenuItemList *menuList)
 {
     auto ptrMenuScreen = new ScreenMenu{*menuList};
     ptrMenuScreen->draw();

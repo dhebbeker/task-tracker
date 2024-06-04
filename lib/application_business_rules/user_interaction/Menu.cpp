@@ -1,10 +1,10 @@
 #include "Menu.hpp"
 #include "MenuItem.hpp"
 
-Menu::Menu(IDisplay &displayToUse, IKeypad &keypad)
-    : display(displayToUse)
+Menu::Menu(IGuiEngine &guiEngineToUse, IKeypad &keypad)
+    : guiEngine(guiEngineToUse)
 {
-    display.registerKeyPad(&keypad);
+    guiEngine.registerKeyPad(&keypad);
 
     static auto mainMenu = MenuItemList();
     static auto subMenu1 = MenuItemList();
@@ -39,10 +39,10 @@ Menu::Menu(IDisplay &displayToUse, IKeypad &keypad)
     subMenu3.push_back(&Sub3Button1);
     subMenu3.push_back(&Sub3Button2);
 
-    display.drawMenu(&mainMenu);
+    guiEngine.drawMenu(&mainMenu);
 }
 
 void Menu::loop()
 {
-    display.refresh();
+    guiEngine.refresh();
 }

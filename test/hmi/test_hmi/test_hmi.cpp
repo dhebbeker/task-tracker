@@ -26,7 +26,7 @@ using namespace fakeit;
 
 namespace board
 {
-IDisplay &getDisplay()
+IDisplay &getGuiEngine()
 {
     Mock<IDisplay> fakeDisplay;
     return fakeDisplay.get();
@@ -55,7 +55,7 @@ void test_Controller()
     Fake(Method(ArduinoFake(), tone));
 
     // get collaborator objects
-    Menu singleMenu(board::getDisplay());
+    Menu singleMenu(board::getGuiEngine(), board::getKeypad());
     Presenter presenter(singleMenu, board::getStatusIndicators());
     ProcessHmiInputs processor(presenter, board::getKeypad());
     auto &task1 = std::begin(device::tasks)->second; // we are going to test for task 1

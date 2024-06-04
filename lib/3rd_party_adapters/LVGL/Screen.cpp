@@ -1,7 +1,7 @@
 #include "Screen.hpp"
 #include <lvgl.h>
-#include <stack>
 #include <math.h>
+#include <stack>
 
 static std::stack<IScreen *> screenHistory;
 
@@ -247,7 +247,7 @@ void ScreenMenu::draw()
                 /* if pointer to double variable is valid, show it's value and assign callbacks */
                 lv_label_set_text_fmt(lab, "%.*f", valItem->getDecimals(), *valItem->getPtrDouble());
                 lv_obj_add_event_cb(btn, ScreenMenu_value_cb, LV_EVENT_SHORT_CLICKED, (void *)item); /* assign the value callback for event short clicked */
-                lv_obj_add_event_cb(btn, ScreenMenu_value_cb, LV_EVENT_KEY, nullptr); /* assign the value callback for event key press */
+                lv_obj_add_event_cb(btn, ScreenMenu_value_cb, LV_EVENT_KEY, nullptr);                /* assign the value callback for event key press */
             }
             break;
         }
@@ -333,7 +333,7 @@ static void ScreenValueModifier_step_cb(lv_event_t *e)
     {
         //if we were clicked shortly, or press it for long time, increment the step of spinbox object, given the object pointer is ok
         uint32_t step = lv_spinbox_get_step(spinbox);
-        step = (step > 100000) ? 1 : (step * 10);   //multiply old step by 10 or set it to 1, if the value is beyond 1.000.000
+        step = (step > 100000) ? 1 : (step * 10); //multiply old step by 10 or set it to 1, if the value is beyond 1.000.000
         lv_spinbox_set_step(spinbox, step);
     }
     else if (code == LV_EVENT_KEY)
@@ -418,7 +418,7 @@ void ScreenValueModifier::draw()
 
     /* draw spinbox */
     spinbox = lv_spinbox_create(screen);
-    lv_group_remove_obj(spinbox);   //remove the spinbox from being selectable by default
+    lv_group_remove_obj(spinbox); //remove the spinbox from being selectable by default
     lv_obj_set_width(spinbox, lv_pct(55));
     lv_obj_add_style(spinbox, &style_small_padding, 0);
     lv_obj_center(spinbox);
