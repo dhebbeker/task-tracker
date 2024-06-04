@@ -362,7 +362,7 @@ static void ScreenValueModifier_valueChange_cb(lv_event_t *e)
     //TODO: the source of the spinbox object to get the current value from is not clear yet
     lv_obj_t *spinbox = nullptr;
 
-    if ((code == LV_EVENT_VALUE_CHANGED) && (item != nullptr))
+    if ((code == LV_EVENT_VALUE_CHANGED) && (item != nullptr) && (spinbox != nullptr))
     {
         //if we changed the value of the spinbox, write it according the decimals to the source variable.
         auto ptr = item->getPtrDouble();
