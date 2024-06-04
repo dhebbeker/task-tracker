@@ -9,6 +9,6 @@ var searchData=
   ['menu_742',['Menu',['../classMenu.xhtml#ab0387e3cab8a88db3dcf323d8794ab04',1,'Menu']]],
   ['menuitemsubmenu_743',['MenuItemSubmenu',['../classMenuItemSubmenu.xhtml#aea6b7342c975b632700cc992578ed949',1,'MenuItemSubmenu']]],
   ['menuitemswitch_744',['MenuItemSwitch',['../structMenuItemSwitch.xhtml#a5fa96c9a2218fff196ac0d754f294576',1,'MenuItemSwitch']]],
-  ['menuitemvalue_745',['MenuItemValue',['../structMenuItemValue.xhtml#a45fac1ff93c55e72089dfa8ae610b7b3',1,'MenuItemValue']]],
+  ['menuitemvalue_745',['MenuItemValue',['../structMenuItemValue.xhtml#ab924e4cc86e7e4163ffbdb488b7b7cca',1,'MenuItemValue']]],
   ['minprioritytoint_746',['minPriorityToInt',['../group__debouncer__priority.xhtml#ga2e82448ac22d58c7ada6da770dd0414e',1,'debouncer']]]
 ];

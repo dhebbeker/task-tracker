@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['_5fdecimals_806',['_decimals',['../structMenuItemValue.xhtml#a4996c3020f21ca0fac197869a3950c27',1,'MenuItemValue']]],
+  ['_5fdecimals_806',['_decimals',['../structMenuItemValue.xhtml#a12b7e0f70203eca2b40311b2b7124330',1,'MenuItemValue']]],
   ['_5fmax_807',['_max',['../structMenuItemValue.xhtml#a445042c65b39b091b9f461adba71f4d5',1,'MenuItemValue']]],
   ['_5fmin_808',['_min',['../structMenuItemValue.xhtml#a6c395ad12fdfbd77a896e920d335eb4d',1,'MenuItemValue']]],
   ['_5fptrbool_809',['_ptrBool',['../structMenuItemSwitch.xhtml#a6d5a95413f8e0415ee9e49608bbe4dab',1,'MenuItemSwitch']]],
