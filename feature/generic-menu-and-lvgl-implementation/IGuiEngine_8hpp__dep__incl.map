@@ -1,13 +1,12 @@
 <map id="lib/application_business_rules/user_interaction/IGuiEngine.hpp" name="lib/application_business_rules/user_interaction/IGuiEngine.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="324,5,503,61"/>
-<area shape="rect" id="node2" href="$GuiEngine_8hpp.xhtml" title=" " alt="" coords="103,117,271,158"/>
-<area shape="rect" id="node5" href="$guiEngine__factory__interface_8hpp.xhtml" title="Dependency injection for the guiEngine." alt="" coords="295,109,531,165"/>
-<area shape="rect" id="node8" href="$Menu_8hpp.xhtml" title=" " alt="" coords="556,109,735,165"/>
+<area shape="rect" id="node1" title=" " alt="" coords="269,5,448,61"/>
+<area shape="rect" id="node2" href="$GuiEngine_8hpp.xhtml" title=" " alt="" coords="48,117,216,158"/>
+<area shape="rect" id="node5" href="$guiEngine__factory__interface_8hpp.xhtml" title="Dependency injection for the guiEngine." alt="" coords="241,109,477,165"/>
+<area shape="rect" id="node7" href="$Menu_8hpp.xhtml" title=" " alt="" coords="501,109,680,165"/>
 <area shape="rect" id="node3" href="$GuiEngine_8cpp.xhtml" title=" " alt="" coords="5,221,173,262"/>
 <area shape="rect" id="node4" href="$guiEngine__factory__interface_8cpp.xhtml" title=" " alt="" coords="197,213,376,269"/>
-<area shape="rect" id="node6" href="$main_8cpp.xhtml" title=" " alt="" coords="361,332,466,359"/>
-<area shape="rect" id="node7" href="$test__hmi_8cpp.xhtml" title=" " alt="" coords="694,325,861,366"/>
-<area shape="rect" id="node9" href="$Menu_8cpp.xhtml" title=" " alt="" coords="805,213,984,269"/>
-<area shape="rect" id="node10" href="$Presenter_8hpp.xhtml" title=" " alt="" coords="501,213,680,269"/>
-<area shape="rect" id="node11" href="$Presenter_8cpp.xhtml" title=" " alt="" coords="491,317,669,373"/>
+<area shape="rect" id="node6" href="$main_8cpp.xhtml" title=" " alt="" coords="411,332,517,359"/>
+<area shape="rect" id="node8" href="$Menu_8cpp.xhtml" title=" " alt="" coords="501,213,680,269"/>
+<area shape="rect" id="node9" href="$Presenter_8hpp.xhtml" title=" " alt="" coords="704,213,883,269"/>
+<area shape="rect" id="node10" href="$Presenter_8cpp.xhtml" title=" " alt="" coords="704,317,883,373"/>
 </map>
