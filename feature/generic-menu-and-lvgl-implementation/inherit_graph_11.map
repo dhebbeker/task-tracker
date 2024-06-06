@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classMenu.xhtml" title="class to hold the menu structure of the HMI" alt="" coords="5,5,64,32"/>
+<area shape="rect" id="node1" href="$classIStatusIndicator.xhtml" title="Interface to an indicator capable to visualize a state." alt="" coords="5,5,129,32"/>
+<area shape="rect" id="node2" href="$classLedStatusIndicator.xhtml" title=" " alt="" coords="177,5,320,32"/>
 </map>

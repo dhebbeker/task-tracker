@@ -1,0 +1,4 @@
+<map id="IPresenter" name="IPresenter">
+<area shape="rect" id="node1" title="Responsible for advertising information and alerts to a human user." alt="" coords="5,5,200,83"/>
+<area shape="rect" id="node2" href="$classPresenter.xhtml" title=" " alt="" coords="5,131,200,237"/>
+</map>
