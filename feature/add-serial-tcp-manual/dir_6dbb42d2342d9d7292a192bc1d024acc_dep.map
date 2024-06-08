@@ -1,0 +1,12 @@
+<map id="lib/application_business_rules" name="lib/application_business_rules">
+<area shape="rect" id="node1" href="dir_3a2f33b0f26bc6229d595c2c354e6333.xhtml" title="utilities" alt="" coords="153,255,225,303"/>
+<area shape="rect" id="node3" href="dir_17a6007a5c84c34f300c622be50c188b.xhtml" title="serial_interface" alt="" coords="37,159,160,207"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000012_000008.xhtml" title="1" alt="" coords="156,228,165,243"/>
+<area shape="rect" id="node4" href="dir_dab382b21b73aae3d74d7668eeeacf78.xhtml" title="tasks" alt="" coords="184,159,256,207"/>
+<area shape="rect" id="node5" href="dir_6c970bd3e9ed525c032ca1b33f237f5b.xhtml" title="user_interaction" alt="" coords="38,63,165,111"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000014_000008.xhtml" title="2" alt="" coords="241,249,250,264"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000014_000012.xhtml" title="1" alt="" coords="104,133,113,148"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000014_000013.xhtml" title="1" alt="" coords="177,133,187,148"/>
+<area shape="rect" id="clust2" href="dir_6dbb42d2342d9d7292a192bc1d024acc.xhtml" alt="" coords="27,52,397,217"/>
+<area shape="rect" id="clust1" href="dir_97aefd0d527b934f1d99a682da8fe6a9.xhtml" title="lib" alt="" coords="16,16,408,313"/>
+</map>
