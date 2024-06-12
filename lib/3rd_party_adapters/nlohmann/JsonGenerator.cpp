@@ -5,6 +5,9 @@
 #include <serial_protocol/TaskList.hpp>
 #include <serial_protocol/TaskObject.hpp>
 
+/**
+ * Indentation used by default for formating JSON.
+ */
 static constexpr int defaultJsonIndent = 4;
 
 template <>
