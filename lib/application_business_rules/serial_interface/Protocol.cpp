@@ -16,8 +16,6 @@ namespace cli = command_line_interpreter;
 
 using namespace task_tracker_systems;
 
-constexpr int defaultJsonIndent = 4;
-
 // command for info
 static const auto info = []() {
     constexpr ProtocolVersionObject version = {.major = 0, .minor = 1, .patch = 0};
