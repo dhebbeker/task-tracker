@@ -1,0 +1,15 @@
+@startuml
+autoactivate on
+mainframe **seq** loop
+
+main -> Presenter : ""loop()""
+Presenter -> Menu : ""loop()""
+Menu -> GuiEngine : ""refresh()""
+GuiEngine -> Display : ""display()""
+return
+return
+return
+return
+
+
+@enduml
