@@ -8,7 +8,7 @@ var searchData=
   ['d6_5',['d6',['../namespacenote.xhtml#a1edeaaa7e732e79aeb4d61fcb9159f77',1,'note']]],
   ['d7_6',['d7',['../namespacenote.xhtml#a3f70430f59a825a08bd42ee552378f5b',1,'note']]],
   ['d8_7',['d8',['../namespacenote.xhtml#a7698c4f1a6bd9fe81ce8c6a783987756',1,'note']]],
-  ['defaultjsonindent_8',['defaultJsonIndent',['../Protocol_8cpp.xhtml#a6623836d688a90789ef36d71208267ee',1,'defaultJsonIndent():&#160;Protocol.cpp'],['../JsonGenerator_8cpp.xhtml#a6623836d688a90789ef36d71208267ee',1,'defaultJsonIndent():&#160;JsonGenerator.cpp']]],
+  ['defaultjsonindent_8',['defaultJsonIndent',['../JsonGenerator_8cpp.xhtml#a6623836d688a90789ef36d71208267ee',1,'JsonGenerator.cpp']]],
   ['defaultvalue_9',['defaultValue',['../structcommand__line__interpreter_1_1Option.xhtml#a4a6cb7889b429ef7805043848b19cacc',1,'command_line_interpreter::Option']]],
   ['deletedtaskobject_10',['DeletedTaskObject',['../structtask__tracker__systems_1_1DeletedTaskObject.xhtml',1,'task_tracker_systems']]],
   ['deletedtaskobject_2ehpp_11',['DeletedTaskObject.hpp',['../DeletedTaskObject_8hpp.xhtml',1,'']]],
@@ -37,7 +37,6 @@ var searchData=
   ['ds6_34',['ds6',['../namespacenote.xhtml#a0e3d7ab14f8e28061f65b5e9dbb50e5f',1,'note']]],
   ['ds7_35',['ds7',['../namespacenote.xhtml#a5c3983bcac2b6da2d581ea20653e71c8',1,'note']]],
   ['ds8_36',['ds8',['../namespacenote.xhtml#a1185b178af9b9497e74aaa1750009a85',1,'note']]],
-  ['duration_37',['duration',['../Protocol_8cpp.xhtml#a22938ed003acd1083cd9f2997bc326b0',1,'Protocol.cpp']]],
-  ['duration_38',['Duration',['../classTask.xhtml#ab58c86df7691c4efc868fb4dc56d0fe0',1,'Task']]],
-  ['duration_39',['duration',['../structtask__tracker__systems_1_1TaskObject.xhtml#aa6cc49e0311a89cd487e5d3761677b1d',1,'task_tracker_systems::TaskObject']]]
+  ['duration_37',['duration',['../Protocol_8cpp.xhtml#a22938ed003acd1083cd9f2997bc326b0',1,'duration():&#160;Protocol.cpp'],['../structtask__tracker__systems_1_1TaskObject.xhtml#aa6cc49e0311a89cd487e5d3761677b1d',1,'task_tracker_systems::TaskObject::duration()']]],
+  ['duration_38',['Duration',['../classTask.xhtml#ab58c86df7691c4efc868fb4dc56d0fe0',1,'Task']]]
 ];

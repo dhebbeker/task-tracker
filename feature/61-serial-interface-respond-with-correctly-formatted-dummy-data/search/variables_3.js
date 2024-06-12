@@ -8,7 +8,7 @@ var searchData=
   ['d6_5',['d6',['../namespacenote.xhtml#a1edeaaa7e732e79aeb4d61fcb9159f77',1,'note']]],
   ['d7_6',['d7',['../namespacenote.xhtml#a3f70430f59a825a08bd42ee552378f5b',1,'note']]],
   ['d8_7',['d8',['../namespacenote.xhtml#a7698c4f1a6bd9fe81ce8c6a783987756',1,'note']]],
-  ['defaultjsonindent_8',['defaultJsonIndent',['../Protocol_8cpp.xhtml#a6623836d688a90789ef36d71208267ee',1,'defaultJsonIndent():&#160;Protocol.cpp'],['../JsonGenerator_8cpp.xhtml#a6623836d688a90789ef36d71208267ee',1,'defaultJsonIndent():&#160;JsonGenerator.cpp']]],
+  ['defaultjsonindent_8',['defaultJsonIndent',['../JsonGenerator_8cpp.xhtml#a6623836d688a90789ef36d71208267ee',1,'JsonGenerator.cpp']]],
   ['defaultvalue_9',['defaultValue',['../structcommand__line__interpreter_1_1Option.xhtml#a4a6cb7889b429ef7805043848b19cacc',1,'command_line_interpreter::Option']]],
   ['display_10',['display',['../classDisplay.xhtml#ad8b8ca65d118eb16461932c6630463a1',1,'Display']]],
   ['display_5fi2c_5faddress_11',['display_i2c_address',['../structDisplay_1_1Configuration.xhtml#a2d026da018071721f5ce143ca315e4fe',1,'Display::Configuration']]],
