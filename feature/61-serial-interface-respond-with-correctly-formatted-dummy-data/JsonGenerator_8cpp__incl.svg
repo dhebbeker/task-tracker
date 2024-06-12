@@ -36,7 +36,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="JsonGenerator_8hpp.xhtml" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="JsonGenerator_8hpp.xhtml" target="_top" xlink:title="Interface to JSON serializer.">
 <polygon fill="white" stroke="#666666" points="268.5,-74 101.5,-74 101.5,-55 268.5,-55 268.5,-74"/>
 <text text-anchor="middle" x="185" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">serial_interface/JsonGenerator.hpp</text>
 </a>

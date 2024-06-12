@@ -85,6 +85,9 @@ $(function() {
   <div class="headertitle"><div class="title">JsonGenerator.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Interface to JSON serializer.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;string&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for JsonGenerator.hpp:</div>
@@ -105,9 +108,12 @@ This graph shows which files directly or indirectly include this file:</div>
 Functions</h2></td></tr>
 <tr class="memitem:ab570bec10f003b4067e8d8974ba69126"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:ab570bec10f003b4067e8d8974ba69126"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="JsonGenerator_8hpp.xhtml#ab570bec10f003b4067e8d8974ba69126">toJsonString</a> (const T &amp;object)</td></tr>
+<tr class="memdesc:ab570bec10f003b4067e8d8974ba69126"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serializes an object to a JSON formatted string.  <a href="JsonGenerator_8hpp.xhtml#ab570bec10f003b4067e8d8974ba69126">More...</a><br /></td></tr>
 <tr class="separator:ab570bec10f003b4067e8d8974ba69126"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Interface to JSON serializer. </p>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="ab570bec10f003b4067e8d8974ba69126" name="ab570bec10f003b4067e8d8974ba69126"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab570bec10f003b4067e8d8974ba69126">&#9670;&#160;</a></span>toJsonString()</h2>
 
@@ -126,12 +132,27 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Serializes an object to a JSON formatted string. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>a serializable structure or container </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>data to be serialized </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>string JSON formatted </dd></dl>
+
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 1 2024 18:13:11 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Wed Jun 12 2024 05:48:27 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

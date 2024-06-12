@@ -5,7 +5,7 @@
 <area shape="rect" id="node11" title=" " alt="" coords="1078,269,1133,295"/>
 <area shape="rect" id="node15" href="$serial__port_8hpp.xhtml" title=" " alt="" coords="627,115,733,141"/>
 <area shape="rect" id="node16" title=" " alt="" coords="881,196,932,221"/>
-<area shape="rect" id="node19" href="$JsonGenerator_8hpp.xhtml" title=" " alt="" coords="992,115,1123,141"/>
+<area shape="rect" id="node19" href="$JsonGenerator_8hpp.xhtml" title="Interface to JSON serializer." alt="" coords="992,115,1123,141"/>
 <area shape="rect" id="node20" href="$ProtocolVersionObject_8hpp.xhtml" title=" " alt="" coords="809,108,967,148"/>
 <area shape="rect" id="node22" href="$TaskList_8hpp.xhtml" title=" " alt="" coords="1147,115,1333,141"/>
 <area shape="rect" id="node23" href="$TaskObject_8hpp.xhtml" title=" " alt="" coords="1397,196,1510,221"/>
