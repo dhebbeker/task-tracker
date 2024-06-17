@@ -58,6 +58,8 @@ typedef std::function<void(const String &)> StringHandler;
  */
 void setCallbackForLineReception(const StringHandler &callback);
 
+void readAndHandleInput();
+
 } // namespace serial_port
 
 /**

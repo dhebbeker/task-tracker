@@ -32,6 +32,8 @@ void loop()
     static Presenter presenter(singleMenu, board::getStatusIndicators());
     static ProcessHmiInputs processHmiInputs(presenter, board::getKeypad());
 
+    serial_port::readAndHandleInput();
+
     for (auto task : device::tasks)
     {
         serial_port::cout << task.second.getLabel() << " : " << std::boolalpha << task.second.isRunning()
