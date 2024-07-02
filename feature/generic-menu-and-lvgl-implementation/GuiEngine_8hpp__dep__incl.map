@@ -1,5 +1,5 @@
 <map id="lib/3rd_party_adapters/LVGL/GuiEngine.hpp" name="lib/3rd_party_adapters/LVGL/GuiEngine.hpp">
 <area shape="rect" id="node1" title=" " alt="" coords="104,5,272,47"/>
-<area shape="rect" id="node2" href="$GuiEngine_8cpp.xhtml" title=" " alt="" coords="5,102,173,143"/>
+<area shape="rect" id="node2" href="$GuiEngine_8cpp.xhtml" title="Connects LVGL callbacks to display driver and input device." alt="" coords="5,102,173,143"/>
 <area shape="rect" id="node3" href="$guiEngine__factory__interface_8cpp.xhtml" title=" " alt="" coords="197,95,376,151"/>
 </map>

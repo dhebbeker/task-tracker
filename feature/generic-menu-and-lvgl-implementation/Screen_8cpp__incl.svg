@@ -22,7 +22,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="Screen_8hpp.xhtml" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="Screen_8hpp.xhtml" target="_top" xlink:title="Converts menu items to LVGL.">
 <polygon fill="white" stroke="black" points="48.5,-112.5 48.5,-131.5 119.5,-131.5 119.5,-112.5 48.5,-112.5"/>
 <text text-anchor="middle" x="84" y="-119.5" font-family="Helvetica,sans-Serif" font-size="10.00">Screen.hpp</text>
 </a>

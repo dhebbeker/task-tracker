@@ -23,7 +23,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="GuiEngine_8cpp.xhtml" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="GuiEngine_8cpp.xhtml" target="_top" xlink:title="Connects LVGL callbacks to display driver and input device.">
 <polygon fill="white" stroke="black" points="0,-84 0,-114 126,-114 126,-84 0,-84"/>
 <text text-anchor="start" x="8" y="-102" font-family="Helvetica,sans-Serif" font-size="10.00">lib/3rd_party_adapters</text>
 <text text-anchor="middle" x="63" y="-91" font-family="Helvetica,sans-Serif" font-size="10.00">/LVGL/GuiEngine.cpp</text>
@@ -39,7 +39,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="Screen_8hpp.xhtml" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="Screen_8hpp.xhtml" target="_top" xlink:title="Converts menu items to LVGL.">
 <polygon fill="white" stroke="black" points="91,-240 91,-270 217,-270 217,-240 91,-240"/>
 <text text-anchor="start" x="99" y="-258" font-family="Helvetica,sans-Serif" font-size="10.00">lib/3rd_party_adapters</text>
 <text text-anchor="middle" x="154" y="-247" font-family="Helvetica,sans-Serif" font-size="10.00">/LVGL/Screen.hpp</text>

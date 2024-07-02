@@ -12,7 +12,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Connects LVGL callbacks to display driver and input device.">
 <polygon fill="#bfbfbf" stroke="black" points="374,-280.5 374,-310.5 500,-310.5 500,-280.5 374,-280.5"/>
 <text text-anchor="start" x="382" y="-298.5" font-family="Helvetica,sans-Serif" font-size="10.00">lib/3rd_party_adapters</text>
 <text text-anchor="middle" x="437" y="-287.5" font-family="Helvetica,sans-Serif" font-size="10.00">/LVGL/GuiEngine.cpp</text>
@@ -67,7 +67,7 @@
 <!-- Node15 -->
 <g id="node15" class="node">
 <title>Node15</title>
-<g id="a_node15"><a xlink:href="Screen_8hpp.xhtml" target="_top" xlink:title=" ">
+<g id="a_node15"><a xlink:href="Screen_8hpp.xhtml" target="_top" xlink:title="Converts menu items to LVGL.">
 <polygon fill="white" stroke="black" points="466.5,-224.5 466.5,-243.5 537.5,-243.5 537.5,-224.5 466.5,-224.5"/>
 <text text-anchor="middle" x="502" y="-231.5" font-family="Helvetica,sans-Serif" font-size="10.00">Screen.hpp</text>
 </a>

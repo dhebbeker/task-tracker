@@ -8,7 +8,7 @@
 <area shape="rect" id="node16" href="$Keypad_8hpp.xhtml" title=" " alt="" coords="1075,109,1250,165"/>
 <area shape="rect" id="node3" href="$GuiEngine_8hpp.xhtml" title=" " alt="" coords="80,221,248,262"/>
 <area shape="rect" id="node6" href="$guiEngine__factory__interface_8hpp.xhtml" title="Dependency injection for the guiEngine." alt="" coords="273,213,509,269"/>
-<area shape="rect" id="node4" href="$GuiEngine_8cpp.xhtml" title=" " alt="" coords="5,325,173,366"/>
+<area shape="rect" id="node4" href="$GuiEngine_8cpp.xhtml" title="Connects LVGL callbacks to display driver and input device." alt="" coords="5,325,173,366"/>
 <area shape="rect" id="node5" href="$guiEngine__factory__interface_8cpp.xhtml" title=" " alt="" coords="197,317,376,373"/>
 <area shape="rect" id="node7" href="$main_8cpp.xhtml" title=" " alt="" coords="735,436,841,463"/>
 <area shape="rect" id="node9" href="$Menu_8cpp.xhtml" title=" " alt="" coords="653,317,832,373"/>
