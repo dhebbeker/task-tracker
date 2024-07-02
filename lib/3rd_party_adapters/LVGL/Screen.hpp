@@ -1,3 +1,7 @@
+/**
+ * \file .
+ * Converts menu items to LVGL.
+ */
 #pragma once
 
 #include <lvgl.h>

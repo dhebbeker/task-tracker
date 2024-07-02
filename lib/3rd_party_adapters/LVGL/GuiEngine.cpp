@@ -1,3 +1,7 @@
+/**
+ * \file .
+ * Connects LVGL callbacks to display driver and input device.
+ */
 #include "GuiEngine.hpp"
 #include "Screen.hpp"
 #include <Adafruit_SSD1306.h>
@@ -28,12 +32,11 @@ static void flushSSD1306Adafruit(lv_disp_drv_t *disp_drv, const lv_area_t *area,
             color_p++;
         }
     }
-    //this->display.display();  //this has been removed from here due to performance, as multiple flushes are triggert, when mor areas on screen are refreshed
+    //this->display.display();  // this has been removed from here due to performance, as multiple flushes are triggered, when more areas on screen are refreshed
     lv_disp_flush_ready(disp_drv);
 }
 
 static IKeypad *myKeypad = nullptr;
-static lv_group_t *group = nullptr;
 
 /**
  * @brief Construct a new Gui Engine:: GuiEngine object
@@ -158,10 +161,10 @@ void GuiEngine::registerKeyPad(IKeypad *keypad)
     myKeypad = keypad;
 
     // create default group for button navigation and assign input device to it
-    group = lv_group_create();
+    static lv_group_t *const group = lv_group_create();
     lv_group_set_default(group);
 
-    // Register all buttons as individual indev, so they all have their seperate "old" state (lvgl has only one "old" state per indev)
+    // Register all buttons as individual indev, so they all have their separate "old" state (lvgl has only one "old" state per indev)
     static lv_indev_drv_t indev_drv_left;
     lv_indev_drv_init(&indev_drv_left);
     indev_drv_left.type = LV_INDEV_TYPE_KEYPAD;

@@ -14,7 +14,6 @@ MenuItemSubmenu::MenuItemSubmenu(std::string text, const MenuItemList *subMenuLi
 /**
  * @brief returns the text of this item
  * 
- * @return std::string 
  */
 std::string MenuItemSubmenu::getText() const
 {
@@ -24,7 +23,6 @@ std::string MenuItemSubmenu::getText() const
 /**
  * @brief returns a constant pointer to the constant SubMenuList
  * 
- * @return const MenuItemList* 
  */
 const MenuItemList *MenuItemSubmenu::getSubMenuList() const
 {
@@ -45,7 +43,6 @@ MenuItemSwitch::MenuItemSwitch(std::string text, bool *ptrBool)
 /**
  * @brief returns the text of this item
  * 
- * @return std::string 
  */
 std::string MenuItemSwitch::getText() const
 {
@@ -55,7 +52,6 @@ std::string MenuItemSwitch::getText() const
 /**
  * @brief returns a pointer to the modification variable
  * 
- * @return bool* 
  */
 bool *MenuItemSwitch::getPtrBool() const
 {
@@ -79,7 +75,6 @@ MenuItemValue::MenuItemValue(std::string text, double *ptrDouble, uint8_t decima
 /**
  * @brief returns the text of this item
  * 
- * @return std::string 
  */
 std::string MenuItemValue::getText() const
 {
@@ -89,7 +84,6 @@ std::string MenuItemValue::getText() const
 /**
  * @brief returns a pointer to the modification variable
  * 
- * @return double* 
  */
 double *MenuItemValue::getPtrDouble() const
 {
@@ -99,7 +93,6 @@ double *MenuItemValue::getPtrDouble() const
 /**
  * @brief returns the amount of decimal digits
  * 
- * @return uint8_t 
  */
 uint8_t MenuItemValue::getDecimals() const
 {
@@ -109,7 +102,6 @@ uint8_t MenuItemValue::getDecimals() const
 /**
  * @brief returns the minimum value
  * 
- * @return * returns 
  */
 double MenuItemValue::getMin() const
 {
@@ -119,7 +111,6 @@ double MenuItemValue::getMin() const
 /**
  * @brief returns the maximum value
  * 
- * @return * returns 
  */
 double MenuItemValue::getMax() const
 {

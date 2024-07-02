@@ -5,7 +5,7 @@
  * @brief Construct a new Menu:: Menu object
  * 
  * @param guiEngineToUse - GuiEngine to be used for display
- * @param keypad         - Keypad to get Menu controlls from
+ * @param keypad         - Keypad to get Menu controls from
  */
 Menu::Menu(IGuiEngine &guiEngineToUse, IKeypad &keypad)
     : guiEngine(guiEngineToUse)
