@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['license_1071',['LICENSE',['../md_LICENSE.xhtml',1,'']]]
+  ['hardware_20architecture_1074',['Hardware Architecture',['../hardware_architecture.xhtml',1,'']]]
 ];

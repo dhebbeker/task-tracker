@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['proxy_20header_1072',['Proxy header',['../proxy_header.xhtml',1,'']]]
+  ['license_1075',['LICENSE',['../md_LICENSE.xhtml',1,'']]]
 ];
