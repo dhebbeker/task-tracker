@@ -111,8 +111,23 @@ Simulate</h2>
 <h3><a class="anchor" id="autotoc_md60"></a>
 Using serial port with the simulator</h3>
 <p>Before version 2.1.0 the Wokwi extension provided an integrated serial monitor. Since version 2.1.0 it uses VS Code's built-in terminal instead. That terminal does not provide a prompt for entering, reviewing and modifying a message before sending it. See also <a href="https://github.com/wokwi/wokwi-features/issues/698">this issue report</a>.</p>
-<p>Serial port forwarding is enabled for the simulator. Thus a Telnet client can be used to connect to the serial port of the simulator.</p>
-<p>For example one can use the <a href="https://www.putty.org/">PuTTY</a> SSH Client in Telnet mode with <code>localhost</code> as host and <code>4000</code> as port.</p>
+<p>The simulator also <a href="https://docs.wokwi.com/vscode/project-config#serial-port-forwarding">provides a RFC2217 TCP server</a> as an alternative. Serial port forwarding is enabled for the simulator per configuration. This can be used to connect via a Telnet client to the serial port of the simulated device.</p>
+<p>For example one may use a <a href="https://www.putty.org/">PuTTY</a> SSH Client with the following settings:</p>
+<ul>
+<li>Host Name: <code>localhost</code></li>
+<li>Port: <code>4000</code></li>
+<li>Connection type: Telnet</li>
+</ul>
+<p>For testing with the <a class="el" href="classTask.xhtml" title="Manages a task.">Task</a> Tracker App (or any other programm which supports a serial interface), one can forward the RFC2217 TCP connection to a pseudo terminal. For example using <a href="http://www.dest-unreach.org/socat/">socat</a>: </p><pre class="fragment">socat -d -d pty,raw,echo=0,link=/tmp/tcp_tty tcp:localhost:4000
+</pre><p> Now you can connect to the serial terminal using these settings:</p>
+<ul>
+<li>path to serial line: <code>/tmp/tcp_tty</code></li>
+<li>speed: <code>115200</code> baud</li>
+<li>data bits: <code>8</code></li>
+<li>stop bits: <code>1</code></li>
+<li>parity: none</li>
+<li>flow control: none</li>
+</ul>
 <h2><a class="anchor" id="autotoc_md61"></a>
 Debugging</h2>
 <p>For debugging you need to use the <code>debug</code> <a href="https://docs.platformio.org/en/latest/projectconf/build_configurations.html#build-configurations">configuration</a> for building. One can achieve this via:</p>
@@ -137,7 +152,7 @@ Contribute</h1>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 3 2024 18:35:36 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue Sep 3 2024 18:36:14 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
