@@ -26,7 +26,7 @@ class IScreen
  * it receives a list of menu items for it's topology
  * 
  */
-class ScreenMenu final : public IScreen, std::enable_shared_from_this<ScreenMenu>
+class ScreenMenu final : public IScreen
 {
   public:
     ScreenMenu(MenuItemList itemList);
@@ -42,7 +42,7 @@ class ScreenMenu final : public IScreen, std::enable_shared_from_this<ScreenMenu
  * @brief Screen for value modification
  * 
  */
-class ScreenValueModifier final : public IScreen, std::enable_shared_from_this<ScreenValueModifier>
+class ScreenValueModifier final : public IScreen
 {
   public:
     ScreenValueModifier(const MenuItemValue *const menuItem);
@@ -53,3 +53,5 @@ class ScreenValueModifier final : public IScreen, std::enable_shared_from_this<S
     const MenuItemValue *const _menuItem;
     lv_obj_t *_spinbox;
 };
+
+extern std::shared_ptr<IScreen> CurrentScreen;

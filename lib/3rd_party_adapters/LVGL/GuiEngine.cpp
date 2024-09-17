@@ -5,6 +5,7 @@
 #include "GuiEngine.hpp"
 #include "Screen.hpp"
 #include <Adafruit_SSD1306.h>
+#include <memory>
 #include <user_interaction/MenuItem.hpp>
 
 /* lvgl log functionality via serial interface */
@@ -212,6 +213,6 @@ void GuiEngine::refresh()
  */
 void GuiEngine::drawMenu(const MenuItemList *menuList)
 {
-    auto ptrMenuScreen = new ScreenMenu{*menuList};
-    ptrMenuScreen->draw();
+    CurrentScreen = std::make_shared<ScreenMenu>(*menuList);
+    CurrentScreen->draw();
 }

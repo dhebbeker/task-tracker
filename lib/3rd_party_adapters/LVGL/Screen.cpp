@@ -2,26 +2,25 @@
 #include <math.h>
 #include <stack>
 
+std::shared_ptr<IScreen> CurrentScreen;
 static std::stack<std::shared_ptr<IScreen>> screenHistory;
 
 static inline void IScreen_leave()
 {
     //only leave if we have something to go back to
-    if (screenHistory.size() > 1)
+    if (screenHistory.size() > 0)
     {
         //clear the current screen of lvgl
         lv_obj_clean(lv_scr_act());
 
-        //remove current screen
-        screenHistory.pop();
         //draw previous screen
         screenHistory.top()->draw();
-        //remove it once again as the draw function has added it again
+        //remove current screen
         screenHistory.pop();
     }
     else
     {
-        LV_LOG_INFO("I won't leave the first screen!");
+        LV_LOG_INFO("No previous screen!");
     }
 }
 
@@ -40,10 +39,12 @@ static void ScreenMenu_submenu_cb(lv_event_t *e)
 
     if ((code == LV_EVENT_SHORT_CLICKED) && (item != nullptr))
     {
+        //save current screen in history
+        screenHistory.push(CurrentScreen);
         //if we were clicked shortly, draw the next menu screen
         lv_obj_clean(lv_scr_act());
-        auto ptrSubMenuScreen = new ScreenMenu{*item->getSubMenuList()};
-        ptrSubMenuScreen->draw();
+        CurrentScreen = std::make_shared<ScreenMenu>(*item->getSubMenuList());
+        CurrentScreen->draw();
     }
     else if (code == LV_EVENT_KEY)
     {
@@ -104,9 +105,11 @@ static void ScreenMenu_value_cb(lv_event_t *e)
 
     if ((code == LV_EVENT_SHORT_CLICKED) && (item != nullptr))
     {
+        //save current screen in history
+        screenHistory.push(CurrentScreen);
         //if we were clicked shortly, draw the value modification screen
-        auto ValModifyScreen = new ScreenValueModifier{item};
-        ValModifyScreen->draw();
+        CurrentScreen = std::make_shared<ScreenValueModifier>(item);
+        CurrentScreen->draw();
     }
     else if (code == LV_EVENT_KEY)
     {
@@ -253,9 +256,6 @@ void ScreenMenu::draw()
 
     /* actually draw the screen with lvgl */
     lv_scr_load(screen);
-
-    /* add the screen to the screens history list */
-    screenHistory.push(shared_from_this());
 }
 
 /**
@@ -464,7 +464,4 @@ void ScreenValueModifier::draw()
 
     /* actually draw the screen with lvgl */
     lv_scr_load(screen);
-
-    /* add the screen to the screens history list */
-    screenHistory.push(shared_from_this());
 }
