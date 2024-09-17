@@ -13,10 +13,13 @@ static inline void IScreen_leave()
         //clear the current screen of lvgl
         lv_obj_clean(lv_scr_act());
 
-        //draw previous screen
-        screenHistory.top()->draw();
-        //remove current screen
+        //get previous screen
+        CurrentScreen = screenHistory.top();
+        //remove the previous screen from list
         screenHistory.pop();
+
+        //draw the previous screen
+        CurrentScreen->draw();
     }
     else
     {
