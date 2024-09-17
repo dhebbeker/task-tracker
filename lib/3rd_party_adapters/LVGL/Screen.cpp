@@ -133,9 +133,7 @@ ScreenMenu::ScreenMenu(MenuItemList itemList)
 }
 
 /**
- * @brief Draw function of the ScreenMenu object
- *  
- *   This function translates the list of item types into actual lvgl draw directives.
+ * @brief Translates the list of item types into actual lvgl draw directives.
  */
 void ScreenMenu::draw()
 {
@@ -385,9 +383,7 @@ ScreenValueModifier::ScreenValueModifier(const MenuItemValue *const menuItem)
 }
 
 /**
- * @brief Draw function of the ScreenValueModifier object
- *  
- *   This function creates a new screen, with a spinbox and 3 buttons for incrementation, decrementation and step modification.
+ * @brief Draws a new screen, with a spinbox and 3 buttons for incrementation, decrementation and step modification.
  */
 void ScreenValueModifier::draw()
 {
