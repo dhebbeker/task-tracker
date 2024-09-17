@@ -5,6 +5,7 @@
 #pragma once
 
 #include <lvgl.h>
+#include <memory>
 #include <user_interaction/MenuItem.hpp>
 
 /**
@@ -25,7 +26,7 @@ class IScreen
  * it receives a list of menu items for it's topology
  * 
  */
-class ScreenMenu final : public IScreen
+class ScreenMenu final : public IScreen, std::enable_shared_from_this<ScreenMenu>
 {
   public:
     ScreenMenu(MenuItemList itemList);
@@ -41,7 +42,7 @@ class ScreenMenu final : public IScreen
  * @brief Screen for value modification
  * 
  */
-class ScreenValueModifier final : public IScreen
+class ScreenValueModifier final : public IScreen, std::enable_shared_from_this<ScreenValueModifier>
 {
   public:
     ScreenValueModifier(const MenuItemValue *const menuItem);

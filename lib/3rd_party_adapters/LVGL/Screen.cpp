@@ -2,7 +2,7 @@
 #include <math.h>
 #include <stack>
 
-static std::stack<IScreen *> screenHistory;
+static std::stack<std::shared_ptr<IScreen>> screenHistory;
 
 static inline void IScreen_leave()
 {
@@ -12,8 +12,6 @@ static inline void IScreen_leave()
         //clear the current screen of lvgl
         lv_obj_clean(lv_scr_act());
 
-        //free up the memory of current screen
-        delete screenHistory.top();
         //remove current screen
         screenHistory.pop();
         //draw previous screen
@@ -257,7 +255,7 @@ void ScreenMenu::draw()
     lv_scr_load(screen);
 
     /* add the screen to the screens history list */
-    screenHistory.push(this);
+    screenHistory.push(shared_from_this());
 }
 
 /**
@@ -468,5 +466,5 @@ void ScreenValueModifier::draw()
     lv_scr_load(screen);
 
     /* add the screen to the screens history list */
-    screenHistory.push(this);
+    screenHistory.push(shared_from_this());
 }
