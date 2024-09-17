@@ -1,4 +1,5 @@
 <map id="ScreenMenu" name="ScreenMenu">
-<area shape="rect" id="node1" title="Screen for menu navigation it receives a list of menu items for it&#39;s topology." alt="" coords="5,160,144,267"/>
-<area shape="rect" id="node2" href="$classIScreen.xhtml" title="Interface class for Screen objects." alt="" coords="21,5,128,112"/>
+<area shape="rect" id="node1" title="Screen for menu navigation it receives a list of menu items for it&#39;s topology." alt="" coords="79,160,217,267"/>
+<area shape="rect" id="node2" href="$classIScreen.xhtml" title="Interface class for Screen objects." alt="" coords="5,5,112,112"/>
+<area shape="rect" id="node3" title=" " alt="" coords="137,13,338,105"/>
 </map>

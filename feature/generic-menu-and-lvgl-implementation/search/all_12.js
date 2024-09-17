@@ -6,7 +6,7 @@ var searchData=
   ['screen_2ehpp_480',['Screen.hpp',['../Screen_8hpp.xhtml',1,'']]],
   ['screen_5fheight_481',['screen_height',['../structGuiEngine_1_1Configuration.xhtml#aebfd2a9d01587a70e05468f64069fc67',1,'GuiEngine::Configuration']]],
   ['screen_5fwidth_482',['screen_width',['../structGuiEngine_1_1Configuration.xhtml#aa9da53632bc654f6e6a0d33b83a6296c',1,'GuiEngine::Configuration']]],
-  ['screenhistory_483',['screenHistory',['../Screen_8cpp.xhtml#aad06021ced50a8982d382259456add96',1,'Screen.cpp']]],
+  ['screenhistory_483',['screenHistory',['../Screen_8cpp.xhtml#a15ddcf1f934b6d09f68c6aa820465d8a',1,'Screen.cpp']]],
   ['screenmenu_484',['ScreenMenu',['../classScreenMenu.xhtml',1,'ScreenMenu'],['../classScreenMenu.xhtml#a1027e7ecce7768762acce25a9d1bddaf',1,'ScreenMenu::ScreenMenu()']]],
   ['screenmenu_5fsubmenu_5fcb_485',['ScreenMenu_submenu_cb',['../Screen_8cpp.xhtml#ac17515d9b813d613cc8e408d2f546806',1,'Screen.cpp']]],
   ['screenmenu_5fswitch_5fcb_486',['ScreenMenu_switch_cb',['../Screen_8cpp.xhtml#a91c4588f737997366b3cb7655e54fc78',1,'Screen.cpp']]],
