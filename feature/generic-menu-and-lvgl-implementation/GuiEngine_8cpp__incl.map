@@ -1,12 +1,12 @@
 <map id="lib/3rd_party_adapters/LVGL/GuiEngine.cpp" name="lib/3rd_party_adapters/LVGL/GuiEngine.cpp">
-<area shape="rect" id="node1" title="Connects LVGL callbacks to display driver and input device." alt="" coords="424,5,592,47"/>
-<area shape="rect" id="node2" href="$GuiEngine_8hpp.xhtml" title=" " alt="" coords="366,95,482,121"/>
+<area shape="rect" id="node1" title="Connects LVGL callbacks to display driver and input device." alt="" coords="496,5,664,47"/>
+<area shape="rect" id="node2" href="$GuiEngine_8hpp.xhtml" title=" " alt="" coords="387,95,503,121"/>
 <area shape="rect" id="node3" title=" " alt="" coords="65,169,215,196"/>
+<area shape="rect" id="node6" title=" " alt="" coords="627,169,704,196"/>
 <area shape="rect" id="node8" href="$MenuItem_8hpp.xhtml" title=" " alt="" coords="398,244,514,271"/>
-<area shape="rect" id="node15" href="$Screen_8hpp.xhtml" title="Converts menu items to LVGL." alt="" coords="571,95,666,121"/>
+<area shape="rect" id="node15" href="$Screen_8hpp.xhtml" title="Converts menu items to LVGL." alt="" coords="618,95,713,121"/>
 <area shape="rect" id="node4" title=" " alt="" coords="295,319,361,345"/>
 <area shape="rect" id="node5" title=" " alt="" coords="544,169,603,196"/>
-<area shape="rect" id="node6" title=" " alt="" coords="627,169,704,196"/>
 <area shape="rect" id="node7" href="$IGuiEngine_8hpp.xhtml" title=" " alt="" coords="291,169,520,196"/>
 <area shape="rect" id="node11" href="$IKeypad_8hpp.xhtml" title=" " alt="" coords="5,244,216,271"/>
 <area shape="rect" id="node9" title=" " alt="" coords="499,319,557,345"/>

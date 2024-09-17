@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['foodata_589',['FooData',['../structFooData.xhtml',1,'']]]
+  ['foodata_590',['FooData',['../structFooData.xhtml',1,'']]]
 ];

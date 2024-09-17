@@ -23,7 +23,7 @@ var searchData=
   ['contributing_2emd_75',['CONTRIBUTING.md',['../CONTRIBUTING_8md.xhtml',1,'']]],
   ['contributor_20covenant_20code_20of_20conduct_76',['Contributor Covenant Code of Conduct',['../md_CODE_OF_CONDUCT.xhtml',1,'']]],
   ['cout_77',['cout',['../namespaceserial__port.xhtml#a93c3f7f8728a750d9fa97277cb10378f',1,'serial_port']]],
-  ['createdebouncer_78',['createDebouncer',['../debouncedIsr_8cpp.xhtml#a4521b1e001e880be751259451c4b210f',1,'createDebouncer(const std::function&lt; void(void)&gt; handler, const std::chrono::milliseconds debounceTime, const int priority):&#160;debouncedIsr.cpp'],['../debouncedIsr_8hpp.xhtml#aaef548358e7d712af0decb7ba101aa4a',1,'createDebouncer(std::function&lt; void(void)&gt; handler, std::chrono::milliseconds debounceTime, int priority=debouncer::defaultPriorityToInt()):&#160;debouncedIsr.cpp'],['../test__dummies_8cpp.xhtml#ad98175331ffb50cfbde0c4fdf647ea2c',1,'createDebouncer(const std::function&lt; void(void)&gt; handler, std::chrono::milliseconds, int):&#160;test_dummies.cpp']]],
+  ['createdebouncer_78',['createDebouncer',['../test__dummies_8cpp.xhtml#ad98175331ffb50cfbde0c4fdf647ea2c',1,'createDebouncer(const std::function&lt; void(void)&gt; handler, std::chrono::milliseconds, int):&#160;test_dummies.cpp'],['../debouncedIsr_8hpp.xhtml#aaef548358e7d712af0decb7ba101aa4a',1,'createDebouncer(std::function&lt; void(void)&gt; handler, std::chrono::milliseconds debounceTime, int priority=debouncer::defaultPriorityToInt()):&#160;debouncedIsr.cpp'],['../debouncedIsr_8cpp.xhtml#a4521b1e001e880be751259451c4b210f',1,'createDebouncer(const std::function&lt; void(void)&gt; handler, const std::chrono::milliseconds debounceTime, const int priority):&#160;debouncedIsr.cpp']]],
   ['cs1_79',['cs1',['../namespacenote.xhtml#a5515fa1f2eb391b9ce0296b8c09253c8',1,'note']]],
   ['cs2_80',['cs2',['../namespacenote.xhtml#a2ea8dbd4c9f39581d65a33c2e0d12f61',1,'note']]],
   ['cs3_81',['cs3',['../namespacenote.xhtml#a13cc786c824e3229a09556fb9f829de7',1,'note']]],
@@ -31,5 +31,6 @@ var searchData=
   ['cs5_83',['cs5',['../namespacenote.xhtml#a7b3291a54748aca5c517bf63c5eb6302',1,'note']]],
   ['cs6_84',['cs6',['../namespacenote.xhtml#a5226b9e500b6dae07f573f59f43eb5b9',1,'note']]],
   ['cs7_85',['cs7',['../namespacenote.xhtml#a7d0416ebe38533c259224c236bc62e16',1,'note']]],
-  ['cs8_86',['cs8',['../namespacenote.xhtml#abb62c92268d6fa5a5dd765165a342157',1,'note']]]
+  ['cs8_86',['cs8',['../namespacenote.xhtml#abb62c92268d6fa5a5dd765165a342157',1,'note']]],
+  ['currentscreen_87',['CurrentScreen',['../Screen_8cpp.xhtml#a73df4fc89689e70c9c528d325f57e8eb',1,'CurrentScreen():&#160;Screen.cpp'],['../Screen_8hpp.xhtml#a73df4fc89689e70c9c528d325f57e8eb',1,'CurrentScreen():&#160;Screen.cpp']]]
 ];
