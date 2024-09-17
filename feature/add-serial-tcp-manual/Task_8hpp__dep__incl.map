@@ -1,8 +1,0 @@
-<map id="lib/application_business_rules/tasks/Task.hpp" name="lib/application_business_rules/tasks/Task.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="375,5,553,47"/>
-<area shape="rect" id="node2" href="$Task_8cpp.xhtml" title=" " alt="" coords="5,102,184,143"/>
-<area shape="rect" id="node3" href="$ProcessHmiInputs_8cpp.xhtml" title=" " alt="" coords="208,95,387,151"/>
-<area shape="rect" id="node4" href="$main_8cpp.xhtml" title=" " alt="" coords="411,109,517,136"/>
-<area shape="rect" id="node5" href="$test__hmi_8cpp.xhtml" title=" " alt="" coords="541,102,707,143"/>
-<area shape="rect" id="node6" href="$task_8cpp.xhtml" title=" " alt="" coords="731,109,909,136"/>
-</map>

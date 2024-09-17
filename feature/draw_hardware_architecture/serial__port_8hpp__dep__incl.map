@@ -1,8 +1,0 @@
-<map id="lib/application_business_rules/serial_interface/serial_port.hpp" name="lib/application_business_rules/serial_interface/serial_port.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="408,5,587,61"/>
-<area shape="rect" id="node2" href="$serial__port_8cpp.xhtml" title=" " alt="" coords="5,117,181,158"/>
-<area shape="rect" id="node3" href="$Protocol_8cpp.xhtml" title=" " alt="" coords="205,109,384,165"/>
-<area shape="rect" id="node4" href="$ProcessHmiInputs_8cpp.xhtml" title=" " alt="" coords="408,109,587,165"/>
-<area shape="rect" id="node5" href="$main_8cpp.xhtml" title=" " alt="" coords="611,124,717,151"/>
-<area shape="rect" id="node6" href="$test__hmi_8cpp.xhtml" title=" " alt="" coords="741,117,907,158"/>
-</map>
