@@ -14,7 +14,7 @@ std::basic_ostream<CharType> &cout = std::cout;
 
 void initialize()
 {
-    Serial.begin(115200);
+    Serial.begin(BAUD_RATE);
     delay(100);
     Serial.flush();
     delay(100);
