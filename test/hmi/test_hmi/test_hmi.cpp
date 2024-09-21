@@ -12,26 +12,21 @@
 #include <thread>
 #include <unity.h>
 #include <user_interaction/IKeypad.hpp>
-#include <user_interaction/Menu.hpp>
-#include <user_interaction/Presenter.hpp>
+#include <user_interaction/IPresenter.hpp>
 #include <user_interaction/ProcessHmiInputs.hpp>
-#include <user_interaction/display_factory_interface.hpp>
 #include <user_interaction/keypad_factory_interface.hpp>
-#include <user_interaction/statusindicators_factory_interface.hpp>
 
 using namespace std::chrono_literals;
 using namespace fakeit;
 
 // mocks
 
-namespace board
+IPresenter &getFakePresenter()
 {
-IDisplay &getDisplay()
-{
-    Mock<IDisplay> fakeDisplay;
-    return fakeDisplay.get();
+    static Mock<IPresenter> fakePresenter;
+    When(Method(fakePresenter, setTaskStatusIndicator)).AlwaysReturn();
+    return fakePresenter.get();
 }
-} // namespace board
 
 namespace serial_port
 {
@@ -55,9 +50,7 @@ void test_Controller()
     Fake(Method(ArduinoFake(), tone));
 
     // get collaborator objects
-    Menu singleMenu(board::getDisplay());
-    Presenter presenter(singleMenu, board::getStatusIndicators());
-    ProcessHmiInputs processor(presenter, board::getKeypad());
+    ProcessHmiInputs processor(getFakePresenter(), board::getKeypad());
     auto &task1 = std::begin(device::tasks)->second; // we are going to test for task 1
 
     When(Method(ArduinoFake(), digitalRead).Using(board::button::pin::task1)).Return(LOW); // set task 1 button to low
