@@ -201,9 +201,9 @@ void GuiEngine::registerKeyPad(IKeypad *keypad)
 void GuiEngine::refresh()
 {
     lv_timer_handler();
-    LV_LOG_USER("Adafruit display() start");
+    LV_LOG_TRACE("Adafruit display() start");
     this->display.display();
-    LV_LOG_USER("Adafruit display() end");
+    LV_LOG_TRACE("Adafruit display() end");
 }
 
 /**

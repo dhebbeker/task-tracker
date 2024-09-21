@@ -47,4 +47,14 @@ Task::Duration Task::getRecordedDuration()
     return std::chrono::round<Duration>(recordedDuration);
 }
 
-std::map<TaskId, Task> device::tasks;
+device::TaskCollection device::tasks;
+
+void Task::setRecordedDuration(Duration newDuration)
+{
+    recordedDuration = newDuration;
+}
+
+Task::Duration Task::getLastRecordedDuration() const
+{
+    return std::chrono::round<Duration>(recordedDuration);
+}
