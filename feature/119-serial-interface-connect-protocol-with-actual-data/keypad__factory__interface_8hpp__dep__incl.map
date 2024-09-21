@@ -1,6 +1,0 @@
-<map id="lib/application_business_rules/user_interaction/keypad_factory_interface.hpp" name="lib/application_business_rules/user_interaction/keypad_factory_interface.hpp">
-<area shape="rect" id="node1" title="Dependency injection for the keypad." alt="" coords="175,5,369,60"/>
-<area shape="rect" id="node2" href="$keypad__factory__interface_8cpp.xhtml" title=" " alt="" coords="5,108,200,163"/>
-<area shape="rect" id="node3" href="$main_8cpp.xhtml" title=" " alt="" coords="224,123,320,148"/>
-<area shape="rect" id="node4" href="$test__hmi_8cpp.xhtml" title=" " alt="" coords="345,115,469,155"/>
-</map>
