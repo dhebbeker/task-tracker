@@ -29,6 +29,10 @@ To get in touch with us you may contact a [contributor](https://github.com/Task-
 
 Before submitting to this repository, please: 
 
+* Familiarize yourself with the 
+  [software architecture documentation](<\ref software_architecture> "software architecture documentation")
+  and the
+  [design decisions](<\ref doc/decisions> "design decisions").
 * Test your contribution.
 * Make sure your code does not introduce warnings or errors.
 * Your proposition may be reviewed based on state of the art coding standards (for example [C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/) or [C++ Super FAQ](https://isocpp.org/faq)).

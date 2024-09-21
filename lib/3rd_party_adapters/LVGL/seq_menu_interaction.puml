@@ -1,0 +1,26 @@
+@startuml
+autoactivate on
+mainframe **seq** user interaction
+
+actor User
+User -> ScreenMenu : ""ScreenMenu_submenu_cb()""
+alt enter submenu
+  ScreenMenu -> ScreenMenu : ""ScreenMenu()""
+  note over ScreenMenu
+    create submenu from
+    menu sub-items
+  end note
+  return
+  ScreenMenu -> ScreenMenu : ""draw()""
+  return
+else leave menu
+  ScreenMenu -> ScreenMenu : ""IScreen_leave()""
+  note over ScreenMenu
+    remove and delete top of stack
+  end note
+  ScreenMenu -> ScreenMenu : ""draw()""
+  return
+  return
+end
+return
+@enduml

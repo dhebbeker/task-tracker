@@ -1,7 +1,7 @@
 #pragma once
 #include "KeyIds.hpp"
 
-class Presenter;
+class IPresenter;
 class IKeypad;
 
 /**
@@ -15,9 +15,9 @@ class IKeypad;
 class ProcessHmiInputs
 {
   public:
-    ProcessHmiInputs(Presenter &stateVisualizer, IKeypad &keypad);
+    ProcessHmiInputs(IPresenter &stateVisualizer, IKeypad &keypad);
 
   private:
-    Presenter &stateVisualizer;
+    IPresenter &stateVisualizer;
     void handleHmiSelection(const KeyId selection);
 };

@@ -1,4 +1,4 @@
-Software Architecture
+Software Architecture {#software_architecture}
 =====================
 
 [TOC]
@@ -12,7 +12,7 @@ The objectives of the software architecture are:
  - A use case driven approach: The architecture shall be centered on use cases and not depend on implementation details.
  - Flexible structure: The software shall not be hard to adjust to changing hardware, development frameworks or external/third party libraries.
 
-Achieving a Flexible Structure
+Achieving a Flexible Structure {#flexible_structure}
 ------------------------------
 
 \note The description will use the term '*level*' or '*policy* level'.
@@ -30,8 +30,8 @@ For maintaining flexibility the software architecture shall adhere to:
 For this software the implementation details (lower level) are:
 
  - The board (hardware) including the processor.
- - The software development kit (SDK) or [framework][PIO_FRAMEWORK].
  - Other external/3rd party libraries.
+   Exceptions defined below.
 
 The application (higher level policies) shall not depend on those implementation details.
 
@@ -39,8 +39,7 @@ In contrast the software will commit to the following dependencies:
 
  - The code may depend on a compiler which is capable to compile C++17 as defined in ISO/IEC 14882:2017.
  - The code may depend on an implementation of the C++ Standard Library as defined in ISO/IEC 14882:2017.
-
-[PIO_FRAMEWORK]: https://github.com/platformio/platformio-docs/blob/5ae4fa7e895f5d3a04514314b1af31b37469d274/frameworks/index.rst "List of frameworks written by PlatformIO."
+ - The *hardware related* code may depend on an implementation of the [ArduinoCore-API](https://github.com/arduino/ArduinoCore-API).
 
 Implementing a Plug-in Architecture {#plugin_architecture}
 -----------------------------------

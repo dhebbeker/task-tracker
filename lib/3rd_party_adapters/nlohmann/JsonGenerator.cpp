@@ -6,7 +6,10 @@
 #include <serial_protocol/TaskObject.hpp>
 #include <tasks/Task.hpp>
 
-constexpr int defaultJsonIndent = 4;
+/**
+ * Indentation used by default for formating JSON.
+ */
+static constexpr int defaultJsonIndent = 4;
 
 template <>
 std::string toJsonString<task_tracker_systems::ProtocolVersionObject>(const task_tracker_systems::ProtocolVersionObject &object)
@@ -20,7 +23,7 @@ std::string toJsonString<task_tracker_systems::ProtocolVersionObject>(const task
 
 namespace task_tracker_systems
 {
-void to_json(nlohmann::json &jsonObject, const task_tracker_systems::TaskObject &object)
+static void to_json(nlohmann::json &jsonObject, const task_tracker_systems::TaskObject &object)
 {
     jsonObject["id"] = object.id;
     jsonObject["label"] = object.label;

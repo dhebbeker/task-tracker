@@ -14,5 +14,6 @@ class IKeypad
 {
   public:
     virtual void setCallback(const HmiHandler callbackFunction) = 0;
+    virtual bool isKeyPressed(KeyId keyInquiry) = 0;
     virtual ~IKeypad(){};
 };

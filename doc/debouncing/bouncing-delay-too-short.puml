@@ -1,0 +1,26 @@
+@startuml
+title debouncing based on delay: too short
+caption too short pulse will be completely ignored
+hide time-axis
+scale 1 as 250 pixels
+binary "digital input" as D
+binary "debouncer waiting" as W
+binary "debounced signal" as B
+
+@0
+D is low
+note top of B : debounced
+B is low
+@+1
+D is {low,high}
+W is high
+D@+0 <-> @+0.9 : bouncing
+@+0.9
+D is low
+W@+0 <-> @+0.1 : delay
+@+0.1
+W -> D : read state
+W is low
+note top of B : state has not been adopted
+
+@enduml
