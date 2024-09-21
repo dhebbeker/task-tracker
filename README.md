@@ -120,6 +120,12 @@ In case the serial interface input is not read by PlatformIO serial monitor one 
 
 This is especially useful when simulating the microcontroller or device.
 
+### Unit testing
+
+The project is setup for running unit tests:
+
+    platformio test --verbose --environment native
+
 ## Contribute
 
 Please refer to [`CONTRIBUTING.md`](CONTRIBUTING.md).
