@@ -64,6 +64,22 @@ A style configuration file is given: [`.clang-format`](.clang-format)
 
 Although the standalone tool `clang-format` may be used, we recommend to integrate the formatting using a [plugin](https://firefox-source-docs.mozilla.org/code-quality/coding-style/format_cpp_code_with_clang-format.html#editor-plugins) for the editor of your choice.
 
+#### Naming convention
+
+For naming symbols in C or C++ we use the following rules to increase uniformity in our code:
+
+- Types: `UpperCamelCase`
+- Variables: `lowerCamelCase`
+- C preprocessor macros: `MACRO_CASE`
+- namespaces: `snail_case`
+- Template parameters: `MACRO_CASE`
+- Enumerators: `MACRO_CASE`
+- Prefix interface classes with a capital `I`
+- Do not use Hungarian notation.
+- If your file defines mainly one class, consider to name the file after the class.
+
+This shall be a nonbinding guideline and *does not need* to be enforced neither technically nor in manual code reviews.
+
 ### Doxygen configuration
 
 If you change [`Doxyfile`](Doxyfile), please do a ['cleanup'](https://stackoverflow.com/questions/71157463/what-part-of-the-doxygen-configuration-doxyfile-is-recommended-for-version-con#comment125783393_71157463) by using the output of `doxygen -x`.
