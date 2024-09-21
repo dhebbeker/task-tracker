@@ -1,6 +1,0 @@
-<map id="MenuItemSubmenu" name="MenuItemSubmenu">
-<area shape="rect" id="node1" title="menu item to call a submenu" alt="" coords="146,189,331,325"/>
-<area shape="rect" id="node2" href="$classIMenuItem.xhtml" title="interface for all menu items" alt="" coords="5,5,133,127"/>
-<area shape="rect" id="node3" title=" " alt="" coords="158,27,319,105"/>
-<area shape="rect" id="node4" title=" " alt="" coords="345,27,404,105"/>
-</map>

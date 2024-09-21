@@ -1,4 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classIGuiEngine.xhtml" title="Interface to a guiEngine capable of displaying various information to a human." alt="" coords="5,5,97,32"/>
-<area shape="rect" id="node2" href="$classGuiEngine.xhtml" title="lvgl version of a GuiEngine" alt="" coords="145,5,233,32"/>
-</map>

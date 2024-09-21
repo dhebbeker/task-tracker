@@ -1,6 +1,0 @@
-<map id="MenuItemSwitch" name="MenuItemSwitch">
-<area shape="rect" id="node1" title="menu item to show and change boolean variables" alt="" coords="99,189,266,325"/>
-<area shape="rect" id="node2" href="$classIMenuItem.xhtml" title="interface for all menu items" alt="" coords="5,5,133,127"/>
-<area shape="rect" id="node3" title=" " alt="" coords="157,27,208,105"/>
-<area shape="rect" id="node4" title=" " alt="" coords="253,27,312,105"/>
-</map>
