@@ -1,9 +1,9 @@
 name: generate and deploy documentation
 
 on:
-  push:
-    branches-ignore:
-      - 'gh-pages'
+  workflow_run:
+    workflows: [Cleanup GitHub Pages Branch Workflow]
+    types: [completed]
 
 permissions:
   contents: write
