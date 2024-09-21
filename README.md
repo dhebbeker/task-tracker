@@ -71,10 +71,30 @@ Since version 2.1.0 it uses VS Code's built-in terminal instead.
 That terminal does not provide a prompt for entering, reviewing and modifying a message before sending it.
 See also [this issue report](https://github.com/wokwi/wokwi-features/issues/698).
 
-Serial port forwarding is enabled for the simulator.
-Thus a Telnet client can be used to connect to the serial port of the simulator.
+The simulator also [provides a RFC2217 TCP server](https://docs.wokwi.com/vscode/project-config#serial-port-forwarding) as an alternative.
+Serial port forwarding is enabled for the simulator per configuration.
+This can be used to connect via a Telnet client to the serial port of the simulated device.
 
-For example one can use the [PuTTY](https://www.putty.org/) SSH Client in Telnet mode with `localhost` as host and `4000` as port.
+For example one may use a [PuTTY](https://www.putty.org/) SSH Client with the following settings:
+
+- Host Name: `localhost`
+- Port: `4000`
+- Connection type: Telnet
+
+For testing with the Task Tracker App (or any other programm which supports a serial interface),
+one can forward the RFC2217 TCP connection to a pseudo terminal.
+For example using [socat](http://www.dest-unreach.org/socat/):
+
+    socat -d -d pty,raw,echo=0,link=/tmp/tcp_tty tcp:localhost:4000
+
+Now you can connect to the serial terminal using these settings:
+
+- path to serial line: `/tmp/tcp_tty`
+- speed: `115200` baud
+- data bits: `8`
+- stop bits: `1`
+- parity: none
+- flow control: none
 
 ### Debugging
 

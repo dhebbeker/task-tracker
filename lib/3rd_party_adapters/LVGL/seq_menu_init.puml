@@ -1,0 +1,41 @@
+@startuml
+autoactivate on
+mainframe **seq** initialization
+
+main -> Menu : ""Menu()""
+Menu ->  GuiEngine : ""registerKeyPad()""
+note over GuiEngine
+  registers callback
+  functions for keys
+  to engine
+end note
+return
+Menu -> MenuItem : create menu items
+return
+note over Menu
+  structure menu items
+end note
+Menu -> GuiEngine : ""drawMenu()""
+GuiEngine -> ScreenMenu : ""draw()""
+note over ScreenMenu
+  create and configure screen
+end note
+loop for each item
+  note over ScreenMenu
+    depending on the type,
+    draw the menu item
+  end note
+end
+ScreenMenu -> LVGL : draw screen
+return
+note over ScreenMenu
+  add screen to stack
+end note
+return
+return
+return
+
+main -> Presenter : ""Presenter()""
+return
+
+@enduml

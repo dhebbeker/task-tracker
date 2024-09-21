@@ -16,8 +16,4 @@ External code may be incorporated as source code or (pre-)compiled code.
 That is, any changes to external code shall only impact the 3rd party adapters.
 That includes for example if one library is exchanged by another library which servers the same purpose.
 
-The software development kits (or frameworks) should not be directly used by the own code (for example the Arduino environment).
-Third party (external) code may depend on the SDKs.
-In case the own code needs to use a SDK, using a 3rd party adapter should be aimed at.
-The reason for this is that this simplifies moving the own code to a different SDK.
-
+Which 3rd party code may be directly used without adapter is appointed by \ref flexible_structure.

@@ -1,6 +1,6 @@
 #include "ProcessHmiInputs.hpp"
 #include "IKeypad.hpp"
-#include "Presenter.hpp"
+#include "IPresenter.hpp"
 #include "board_interface.hpp"
 #include <functional>
 #include <serial_interface/serial_port.hpp>
@@ -92,7 +92,7 @@ static void initializeTasks(CONTAINER &tasks)
     device::tasks.emplace(34, "Task 4");
 }
 
-ProcessHmiInputs::ProcessHmiInputs(Presenter &stateVisualizer, IKeypad &keypad)
+ProcessHmiInputs::ProcessHmiInputs(IPresenter &stateVisualizer, IKeypad &keypad)
     : stateVisualizer(stateVisualizer)
 {
     using namespace std::placeholders;
