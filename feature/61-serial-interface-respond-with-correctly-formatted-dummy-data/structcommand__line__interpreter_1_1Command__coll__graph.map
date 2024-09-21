@@ -1,7 +1,0 @@
-<map id="command_line_interpreter::Command&lt; CharType, ReturnType, ArgTypes &gt;" name="command_line_interpreter::Command&lt; CharType, ReturnType, ArgTypes &gt;">
-<area shape="rect" id="node1" title="Combines a command with a function." alt="" coords="194,284,425,412"/>
-<area shape="rect" id="node2" href="$structcommand__line__interpreter_1_1BaseCommand.xhtml" title="Interface for all Command." alt="" coords="5,108,200,221"/>
-<area shape="rect" id="node3" title=" " alt="" coords="51,5,155,45"/>
-<area shape="rect" id="node4" title=" " alt="" coords="225,130,394,199"/>
-<area shape="rect" id="node5" title=" " alt="" coords="419,137,568,192"/>
-</map>
