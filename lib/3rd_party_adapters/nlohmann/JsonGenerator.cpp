@@ -4,6 +4,7 @@
 #include <serial_protocol/ProtocolVersionObject.hpp>
 #include <serial_protocol/TaskList.hpp>
 #include <serial_protocol/TaskObject.hpp>
+#include <tasks/Task.hpp>
 
 /**
  * Indentation used by default for formating JSON.
@@ -38,10 +39,17 @@ std::string toJsonString<task_tracker_systems::TaskObject>(const task_tracker_sy
     return jsonObject.dump(defaultJsonIndent);
 }
 
-template <>
-std::string toJsonString<task_tracker_systems::TaskList>(const task_tracker_systems::TaskList &object)
+void to_json(nlohmann::json &jsonObject, const device::TaskCollection::value_type &object)
 {
-    nlohmann::json jsonObject(object);
+    jsonObject["id"] = object.first;
+    jsonObject["label"] = object.second.getLabel();
+    jsonObject["duration"] = object.second.getLastRecordedDuration().count();
+}
+
+template <>
+std::string toJsonString<device::TaskCollection>(const device::TaskCollection &container)
+{
+    nlohmann::json jsonObject(container);
     return jsonObject.dump(defaultJsonIndent);
 }
 

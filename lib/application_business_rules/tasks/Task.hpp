@@ -65,6 +65,16 @@ class Task
      * \returns the accumulated duration
      */
     Duration getRecordedDuration();
+
+    Duration getLastRecordedDuration() const;
+
+    /**
+     * Sets the recorded duration.
+     *
+     * Useful for example if the task has been recorded outside the device.
+     * @param newDuration new duration to apply
+     */
+    void setRecordedDuration(Duration newDuration);
     bool isRunning() const;
 
   private:
@@ -87,8 +97,10 @@ class Task
 
 namespace device
 {
+typedef std::map<TaskId, Task> TaskCollection;
+
 /**
  * *The* collection of tasks to be used by the device application.
  */
-extern std::map<TaskId, Task> tasks;
+extern TaskCollection tasks;
 } // namespace device
