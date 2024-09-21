@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['taskindicatorstate_861',['TaskIndicatorState',['../Presenter_8hpp.xhtml#aeacea60d6729d1dbf3009c9d65448201',1,'Presenter.hpp']]]
+  ['statusindicatorid_975',['StatusIndicatorId',['../namespaceboard.xhtml#a7139efa9eaf6f44f1e5d74e46aa31f34',1,'board']]]
 ];

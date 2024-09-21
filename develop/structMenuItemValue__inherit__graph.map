@@ -1,0 +1,4 @@
+<map id="MenuItemValue" name="MenuItemValue">
+<area shape="rect" id="node1" title="menu item to show double variables and call a modification screen" alt="" coords="5,175,165,413"/>
+<area shape="rect" id="node2" href="$classIMenuItem.xhtml" title="interface for all menu items" alt="" coords="21,5,149,127"/>
+</map>

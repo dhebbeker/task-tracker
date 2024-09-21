@@ -1,0 +1,4 @@
+<map id="ScreenValueModifier" name="ScreenValueModifier">
+<area shape="rect" id="node1" title="Screen for value modification." alt="" coords="5,160,196,281"/>
+<area shape="rect" id="node2" href="$classIScreen.xhtml" title="Interface class for Screen objects." alt="" coords="47,5,154,112"/>
+</map>

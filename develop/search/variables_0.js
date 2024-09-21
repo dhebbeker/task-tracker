@@ -1,17 +1,12 @@
 var searchData=
 [
-  ['a1_715',['a1',['../namespacenote.xhtml#a43e16c04e45557b89f9ee09c12165c54',1,'note']]],
-  ['a2_716',['a2',['../namespacenote.xhtml#aaf39d6dbf1a0c06013b6e2ddae2c7e6c',1,'note']]],
-  ['a3_717',['a3',['../namespacenote.xhtml#a140934289cf82df1eeebe22817582f49',1,'note']]],
-  ['a4_718',['a4',['../namespacenote.xhtml#a70de6e39edf31bfe0660a38025554fac',1,'note']]],
-  ['a5_719',['a5',['../namespacenote.xhtml#a856a7cabd7700a855966d307a328d396',1,'note']]],
-  ['a6_720',['a6',['../namespacenote.xhtml#a7908e15aee357f4c333934adbad799b4',1,'note']]],
-  ['a7_721',['a7',['../namespacenote.xhtml#a589257150b2dec4774a514f2a55cb00a',1,'note']]],
-  ['as1_722',['as1',['../namespacenote.xhtml#a4270dbc8083790d4920c3230f12d0878',1,'note']]],
-  ['as2_723',['as2',['../namespacenote.xhtml#a98d7e8ce52208bc463bff371308a8299',1,'note']]],
-  ['as3_724',['as3',['../namespacenote.xhtml#ae1060e02f67b2249bb17b957ec5415ce',1,'note']]],
-  ['as4_725',['as4',['../namespacenote.xhtml#acde4c1b2d3a57ef54420164115f386b1',1,'note']]],
-  ['as5_726',['as5',['../namespacenote.xhtml#a10652fef50867e9bafc7e18b86eb9e52',1,'note']]],
-  ['as6_727',['as6',['../namespacenote.xhtml#a531ef10428436cb75ab3ae671f17c40b',1,'note']]],
-  ['as7_728',['as7',['../namespacenote.xhtml#a7516d494fbc136e65ce1dae977ad9c3b',1,'note']]]
+  ['_5fdecimals_816',['_decimals',['../structMenuItemValue.xhtml#a12b7e0f70203eca2b40311b2b7124330',1,'MenuItemValue']]],
+  ['_5fmax_817',['_max',['../structMenuItemValue.xhtml#a445042c65b39b091b9f461adba71f4d5',1,'MenuItemValue']]],
+  ['_5fmenuitem_818',['_menuItem',['../classScreenValueModifier.xhtml#af04dac10827889bf1956d34c58e61168',1,'ScreenValueModifier']]],
+  ['_5fmin_819',['_min',['../structMenuItemValue.xhtml#a6c395ad12fdfbd77a896e920d335eb4d',1,'MenuItemValue']]],
+  ['_5fptrbool_820',['_ptrBool',['../structMenuItemSwitch.xhtml#a6d5a95413f8e0415ee9e49608bbe4dab',1,'MenuItemSwitch']]],
+  ['_5fptrdouble_821',['_ptrDouble',['../structMenuItemValue.xhtml#ad3b2bcf2d04c894ceacd8c05cd8b9c4a',1,'MenuItemValue']]],
+  ['_5fspinbox_822',['_spinbox',['../classScreenValueModifier.xhtml#ab05a05a8d8a96528d36b1c046e6f514d',1,'ScreenValueModifier']]],
+  ['_5fsubmenulist_823',['_subMenuList',['../classMenuItemSubmenu.xhtml#a32147630e276bdf17e9caf035c376eb7',1,'MenuItemSubmenu']]],
+  ['_5ftext_824',['_text',['../classMenuItemSubmenu.xhtml#a21ffe1fe1d8d81a2d4034d5e293ec1fb',1,'MenuItemSubmenu::_text()'],['../structMenuItemSwitch.xhtml#a308ebc48fa569010121b3da2176e0cdb',1,'MenuItemSwitch::_text()'],['../structMenuItemValue.xhtml#ae9b9c1c019ef795bb5c8381527e2eb7b',1,'MenuItemValue::_text()']]]
 ];

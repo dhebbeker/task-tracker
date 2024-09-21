@@ -1,0 +1,5 @@
+<map id="IScreen" name="IScreen">
+<area shape="rect" id="node1" title="Interface class for Screen objects." alt="" coords="116,5,223,112"/>
+<area shape="rect" id="node2" href="$classScreenMenu.xhtml" title="Screen for menu navigation it receives a list of menu items for it&#39;s topology." alt="" coords="5,167,144,274"/>
+<area shape="rect" id="node3" href="$classScreenValueModifier.xhtml" title="Screen for value modification." alt="" coords="169,160,359,281"/>
+</map>

@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classPresenter.xhtml" title="Responsible for advertising information and alerts to a human user." alt="" coords="5,5,89,32"/>
+<area shape="rect" id="node1" href="$classIScreen.xhtml" title="Interface class for Screen objects." alt="" coords="5,31,76,57"/>
+<area shape="rect" id="node2" href="$classScreenMenu.xhtml" title="Screen for menu navigation it receives a list of menu items for it&#39;s topology." alt="" coords="150,5,253,32"/>
+<area shape="rect" id="node3" href="$classScreenValueModifier.xhtml" title="Screen for value modification." alt="" coords="124,56,279,83"/>
 </map>

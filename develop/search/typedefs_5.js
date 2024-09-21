@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['string_855',['String',['../classTask.xhtml#a0ffb7bfbd3ea9bb396e4fb03c1eeb9f6',1,'Task::String()'],['../namespaceserial__port.xhtml#a572553df2c28c025df5775458684cb92',1,'serial_port::String()']]],
-  ['stringhandler_856',['StringHandler',['../namespaceserial__port.xhtml#a105fbf17cff58df0ed4281de8ae0926a',1,'serial_port']]]
+  ['pintype_968',['PinType',['../namespaceboard.xhtml#af091862f70321f1b4fd67a4f4751ef0c',1,'board']]]
 ];

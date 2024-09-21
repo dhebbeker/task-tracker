@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['option_550',['Option',['../structcommand__line__interpreter_1_1Option.xhtml',1,'command_line_interpreter']]]
+  ['menu_602',['Menu',['../classMenu.xhtml',1,'']]],
+  ['menuitemsubmenu_603',['MenuItemSubmenu',['../classMenuItemSubmenu.xhtml',1,'']]],
+  ['menuitemswitch_604',['MenuItemSwitch',['../structMenuItemSwitch.xhtml',1,'']]],
+  ['menuitemvalue_605',['MenuItemValue',['../structMenuItemValue.xhtml',1,'']]]
 ];

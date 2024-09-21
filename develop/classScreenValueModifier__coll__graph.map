@@ -1,0 +1,11 @@
+<map id="ScreenValueModifier" name="ScreenValueModifier">
+<area shape="rect" id="node1" title="Screen for value modification." alt="" coords="83,447,274,553"/>
+<area shape="rect" id="node2" href="$classIScreen.xhtml" title="Interface class for Screen objects." alt="" coords="5,241,112,347"/>
+<area shape="rect" id="node3" title=" " alt="" coords="137,255,221,333"/>
+<area shape="rect" id="node4" href="$structMenuItemValue.xhtml" title="menu item to show double variables and call a modification screen" alt="" coords="245,204,405,384"/>
+<area shape="rect" id="node5" href="$classIMenuItem.xhtml" title="interface for all menu items" alt="" coords="51,5,179,127"/>
+<area shape="rect" id="node6" title=" " alt="" coords="203,27,269,105"/>
+<area shape="rect" id="node7" title=" " alt="" coords="293,27,371,105"/>
+<area shape="rect" id="node8" title=" " alt="" coords="409,27,476,105"/>
+<area shape="rect" id="node9" title=" " alt="" coords="525,27,584,105"/>
+</map>

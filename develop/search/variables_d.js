@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['res_833',['res',['../namespaceboard_1_1i2c__1_1_1pin.xhtml#a3ec143fc928f14279667dbe678bae9ca',1,'board::i2c_1::pin']]]
+  ['n_942',['n',['../structBarData.xhtml#aff05aeed9281987002c6b1287c04baa0',1,'BarData::n()'],['../test__cli_8cpp.xhtml#a76f11d9a0a47b94f72c2d0e77fb32240',1,'n():&#160;test_cli.cpp']]]
 ];

@@ -1,11 +1,17 @@
 var searchData=
 [
-  ['reactonpinchange_443',['reactOnPinChange',['../Keypad_8cpp.xhtml#a1d4dc7dc9338136509998d89199e1e48',1,'Keypad.cpp']]],
-  ['readandhandleinput_444',['readAndHandleInput',['../namespaceserial__port.xhtml#a8708fde53a29ab868445214d79072f72',1,'serial_port']]],
-  ['readline_445',['readLine',['../namespaceserial__port.xhtml#af21848272232e3474b209f5cffe5f142',1,'serial_port']]],
-  ['readme_446',['README',['../md_doc_decisions_README.xhtml',1,'(Global Namespace)'],['../md_hardware_README.xhtml',1,'(Global Namespace)'],['../md_lib_3rd_party_adapters_README.xhtml',1,'(Global Namespace)'],['../md_lib_application_business_rules_README.xhtml',1,'(Global Namespace)'],['../md_lib_board_adapters_README.xhtml',1,'(Global Namespace)'],['../md_lib_enterprise_business_rules_README.xhtml',1,'(Global Namespace)'],['../md_lib_utilities_README.xhtml',1,'(Global Namespace)']]],
-  ['readme_2emd_447',['README.md',['../README_8md.xhtml',1,'(Global Namespace)'],['../lib_2utilities_2README_8md.xhtml',1,'(Global Namespace)'],['../lib_2enterprise__business__rules_2README_8md.xhtml',1,'(Global Namespace)'],['../lib_2board__adapters_2README_8md.xhtml',1,'(Global Namespace)'],['../lib_2application__business__rules_2README_8md.xhtml',1,'(Global Namespace)'],['../lib_23rd__party__adapters_2README_8md.xhtml',1,'(Global Namespace)'],['../hardware_2README_8md.xhtml',1,'(Global Namespace)'],['../doc_2decisions_2README_8md.xhtml',1,'(Global Namespace)']]],
-  ['refresh_448',['refresh',['../classIDisplay.xhtml#a8cc9f8accacc848a86305c6909097a75',1,'IDisplay::refresh()'],['../classDisplay.xhtml#a963a8272e76d836e10b5e8a048105526',1,'Display::refresh()']]],
-  ['res_449',['res',['../namespaceboard_1_1i2c__1_1_1pin.xhtml#a3ec143fc928f14279667dbe678bae9ca',1,'board::i2c_1::pin']]],
-  ['right_450',['RIGHT',['../KeyIds_8hpp.xhtml#a251d5d8935f1af4cb86e18f962d9d33da21507b40c80068eda19865706fdc2403',1,'KeyIds.hpp']]]
+  ['pintype_457',['PinType',['../namespaceboard.xhtml#af091862f70321f1b4fd67a4f4751ef0c',1,'board']]],
+  ['pitches_2ehpp_458',['pitches.hpp',['../pitches_8hpp.xhtml',1,'']]],
+  ['playtone_459',['playTone',['../namespaceboard.xhtml#af761c14d2fbd04a7d86a6cad113d6702',1,'board']]],
+  ['presenter_460',['Presenter',['../classPresenter.xhtml',1,'Presenter'],['../classPresenter.xhtml#ae6f27b258228dc16383dc6d1a434f90c',1,'Presenter::Presenter()']]],
+  ['presenter_2ecpp_461',['Presenter.cpp',['../Presenter_8cpp.xhtml',1,'']]],
+  ['presenter_2ehpp_462',['Presenter.hpp',['../Presenter_8hpp.xhtml',1,'']]],
+  ['processhmiinputs_463',['ProcessHmiInputs',['../classProcessHmiInputs.xhtml',1,'ProcessHmiInputs'],['../classProcessHmiInputs.xhtml#a70f76a68682037d5ed4d5c861b126604',1,'ProcessHmiInputs::ProcessHmiInputs()']]],
+  ['processhmiinputs_2ecpp_464',['ProcessHmiInputs.cpp',['../ProcessHmiInputs_8cpp.xhtml',1,'']]],
+  ['processhmiinputs_2ehpp_465',['ProcessHmiInputs.hpp',['../ProcessHmiInputs_8hpp.xhtml',1,'']]],
+  ['protocol_2ecpp_466',['Protocol.cpp',['../Protocol_8cpp.xhtml',1,'']]],
+  ['protocol_2ehpp_467',['Protocol.hpp',['../Protocol_8hpp.xhtml',1,'']]],
+  ['protocolhandler_468',['ProtocolHandler',['../classProtocolHandler.xhtml',1,'']]],
+  ['proxy_20header_469',['Proxy header',['../proxy_header.xhtml',1,'']]],
+  ['proxy_5fheader_2emd_470',['proxy_header.md',['../proxy__header_8md.xhtml',1,'']]]
 ];
