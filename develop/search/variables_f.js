@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['res_945',['res',['../namespaceboard_1_1i2c__1_1_1pin.xhtml#a3ec143fc928f14279667dbe678bae9ca',1,'board::i2c_1::pin']]],
-  ['right_946',['right',['../namespaceboard_1_1button_1_1pin.xhtml#a0bf8c85e3b207be63acc293d38acba53',1,'board::button::pin']]]
+  ['patch_991',['patch',['../structtask__tracker__systems_1_1ProtocolVersionObject.xhtml#ad5973f442945fd4423824518ea21794e',1,'task_tracker_systems::ProtocolVersionObject']]]
 ];
