@@ -1,5 +1,5 @@
 """
-generate_vcs_identifier.py
+Definition of CPP macro with version control system (VCS) identifier
 
 This script adds a CPP definition of a version identifier using version control
 system information. It retrieves the VCS identifier from the 'vcs_utils' module
@@ -10,7 +10,7 @@ This script should be loaded by PlatformIO during the project build and is not
 designed to be run independently.
 """
 
-from vcs_utils import get_vcs_id
+from get_vcs_identifier import get_vcs_id
 Import("env")
 
 # Get the VCS ID and conditionally append it to the environment definitions
