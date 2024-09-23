@@ -20,7 +20,7 @@ Import("env")
 source_dir = env.subst("$PROJECT_DIR")
 
 # Path to the output file within
-output_file = os.path.join(source_dir, 'lib', 'utilities', 'vcs_identifier_gen.hpp')
+output_file = os.path.join(source_dir, 'lib', 'utilities', 'vcs_identifier_gen.h')
 
 vcs_id = get_vcs_id()
 
