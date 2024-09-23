@@ -7,3 +7,5 @@
 doc/html/
 doc/latex/
 .vscode/settings.json
+__pycache__
+/lib/utilities/vcs_identifier_gen.hpp

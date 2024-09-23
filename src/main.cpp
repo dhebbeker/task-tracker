@@ -19,22 +19,9 @@ void setup()
 {
     serial_port::initialize();
     serial_port::cout << "\x1b[20h"; // Tell the terminal to use CR/LF for newlines instead of just CR.
-
-    constexpr const auto programIdentificationString = []() {
-        constexpr const auto versionString = getVersionString();
-        if constexpr (versionString)
-        {
-            return versionString.value();
-        }
-        else
-        {
-            return " compiled at " __DATE__ " " __TIME__;
-        }
-    }();
-
     serial_port::cout
         << std::endl
-        << " begin program '" << __FILE__ << programIdentificationString << std::endl;
+        << " begin program version '" << vcsId.value_or("unknown") << "'" << std::endl;
     serial_port::setCallbackForLineReception([](const serial_port::String &commandLine) {
         ProtocolHandler::execute(commandLine.c_str());
     });
