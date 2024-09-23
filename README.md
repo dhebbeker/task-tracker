@@ -41,8 +41,7 @@ PlatformIO may be used via a GUI (PlatformIO IDE) or command line interface (Pla
 
 System requirements:
 
-- [PlatformIO](https://platformio.org/)
-- [Python](https://www.python.org/) interpreter
+- [PlatformIO Core](https://docs.platformio.org/en/stable/core/index.html#piocore)
 - optional: [git](https://git-scm.com/) client is used to generate version identifier if project files are in a git clone
 
 In order to use the software (some call it "firmware"), the following steps are required:
