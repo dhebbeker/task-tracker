@@ -116,3 +116,17 @@ double MenuItemValue::getMax() const
 {
     return this->_max;
 }
+
+MenuItemTask::MenuItemTask()
+{
+}
+
+MenuItemType MenuItemTask::getType() const
+{
+    return MenuItemType::TASK;
+}
+
+std::string MenuItemTask::getText() const
+{
+    return {};
+}

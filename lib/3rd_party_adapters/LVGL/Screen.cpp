@@ -1,6 +1,7 @@
 #include "Screen.hpp"
 #include <math.h>
 #include <stack>
+#include <string>
 
 std::shared_ptr<IScreen> CurrentScreen;
 static std::stack<std::shared_ptr<IScreen>> screenHistory;
@@ -135,6 +136,27 @@ ScreenMenu::ScreenMenu(MenuItemList itemList)
 {
 }
 
+static lv_style_t style_small_padding;
+
+static void drawTaskList(lv_obj_t &screen)
+{
+    lv_obj_t *table = lv_table_create(&screen);
+
+    uint16_t row = 0;
+    for (auto task_item : device::tasks)
+    {
+        lv_table_set_cell_value(table, row, 0, task_item.second.getLabel().c_str());
+        const auto time_label = std::to_string(task_item.second.getRecordedDuration().count()) + "s";
+        lv_table_set_cell_value(table, row, 1, time_label.c_str());
+        row++;
+    }
+
+    lv_table_set_col_width(table, 0, 86);
+    lv_table_set_col_width(table, 1, 42);
+
+    lv_obj_add_style(table, &style_small_padding, 0);
+}
+
 /**
  * @brief Translates the list of item types into actual lvgl draw directives.
  */
@@ -147,7 +169,7 @@ void ScreenMenu::draw()
     static bool initialized = false;
     if (!initialized)
     {
-    lv_style_init(&style_small_padding);
+        lv_style_init(&style_small_padding);
         initialized = true;
     }
     lv_style_set_pad_left(&style_small_padding, 1);
@@ -256,6 +278,8 @@ void ScreenMenu::draw()
             }
             break;
         }
+        case MenuItemType::TASK:
+            drawTaskList(*screen);
         }
     }
 
