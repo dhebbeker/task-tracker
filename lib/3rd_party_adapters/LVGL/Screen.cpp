@@ -144,15 +144,19 @@ void ScreenMenu::draw()
     lv_obj_clean(lv_scr_act());
 
     /* adjust the style so everything has a 1 px padding in all directions */
-    static lv_style_t style_small_padding;
+    static bool initialized = false;
+    if (!initialized)
+    {
     lv_style_init(&style_small_padding);
+        initialized = true;
+    }
     lv_style_set_pad_left(&style_small_padding, 1);
     lv_style_set_pad_top(&style_small_padding, 1);
     lv_style_set_pad_bottom(&style_small_padding, 1);
     lv_style_set_pad_right(&style_small_padding, 1);
 
     /* create the lvgl screen object and configure it's properties */
-    lv_obj_t *screen = lv_obj_create(NULL);
+    static lv_obj_t *screen = lv_obj_create(NULL);
     lv_obj_add_style(screen, &style_small_padding, 0);
     lv_obj_set_flex_flow(screen, LV_FLEX_FLOW_COLUMN);
     lv_obj_set_style_pad_row(screen, 2, 0);
