@@ -1,4 +1,4 @@
-#include "USB.h" // Arduino USB header
+#include "tusb.h" // TinyUSB header
 #include <Arduino.h>
 #include <SPIFFS.h>
 
@@ -8,15 +8,13 @@ fs::FS &flashFS = SPIFFS;
 // Buffer for reading and writing
 uint8_t msc_buf[512];
 
-// USB MSC instance
-USBMSC usb_msc;
-
 // Variables for USB MSC
 #define MSC_BLOCK_SIZE 512     // Block size in bytes
 #define MSC_BLOCK_COUNT (2048) // Total number of blocks (for 1MB file)
 
 // Callback for reading data from the drive
-int32_t on_read(uint32_t lba, void *buffer, uint32_t bufsize) {
+int32_t tud_msc_read10_cb(uint8_t lun, uint32_t lba, void *buffer,
+                          uint32_t bufsize) {
   File file = flashFS.open("/storage.bin", FILE_READ);
   if (!file) {
     Serial.println("Failed to open file for reading");
@@ -30,7 +28,8 @@ int32_t on_read(uint32_t lba, void *buffer, uint32_t bufsize) {
 }
 
 // Callback for writing data to the drive
-int32_t on_write(uint32_t lba, uint8_t *buffer, uint32_t bufsize) {
+int32_t tud_msc_write10_cb(uint8_t lun, uint32_t lba, uint8_t *buffer,
+                           uint32_t bufsize) {
   File file = flashFS.open("/storage.bin", FILE_WRITE);
   if (!file) {
     Serial.println("Failed to open file for writing");
@@ -43,7 +42,19 @@ int32_t on_write(uint32_t lba, uint8_t *buffer, uint32_t bufsize) {
   return writtenBytes;
 }
 
-// Setup function
+// Callback invoked when the host requests to know the capacity of the MSC
+// device
+void tud_msc_capacity_cb(uint8_t lun, uint32_t *block_count,
+                         uint16_t *block_size) {
+  *block_size = MSC_BLOCK_SIZE;   // Block size of 512 bytes
+  *block_count = MSC_BLOCK_COUNT; // 2048 blocks for 1MB file
+}
+
+// Callback to determine if the drive is writable
+bool tud_msc_is_writable_cb(uint8_t lun) {
+  return true; // Allow writing to the device
+}
+
 void setup() {
   // Initialize serial for debugging
   Serial.begin(115200);
@@ -69,16 +80,11 @@ void setup() {
     file.close();
   }
 
-  // Setup USB MSC with block count and block size
-  usb_msc.setCapacity(MSC_BLOCK_COUNT, MSC_BLOCK_SIZE);
-
-  // Set read/write callbacks
-  usb_msc.setReadWriteCallback(on_read, on_write);
-
-  // Start USB MSC
-  usb_msc.begin();
+  // Start TinyUSB
+  tusb_init();
 }
 
 void loop() {
-  // No special loop needed for USB MSC
+  // TinyUSB task to handle USB events
+  tud_task();
 }
