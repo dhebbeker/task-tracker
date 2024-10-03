@@ -8,8 +8,17 @@ fs::FS &flashFS = SPIFFS;
 // Buffer for reading and writing
 uint8_t msc_buf[512];
 
-// Callback when the host reads from the USB mass storage
-int32_t on_read(uint32_t lba, void *buffer, uint32_t bufsize) {
+// Callback for getting the disk capacity
+bool tud_msc_capacity_cb(uint8_t lun, uint32_t *block_count,
+                         uint16_t *block_size) {
+  *block_size = 512; // Each block is 512 bytes
+  *block_count = flashFS.open("/storage.bin", FILE_READ).size() / 512;
+  return true;
+}
+
+// Callback for reading data from the drive
+int32_t tud_msc_read10_cb(uint8_t lun, uint32_t lba, void *buffer,
+                          uint32_t bufsize) {
   File file = flashFS.open("/storage.bin", FILE_READ);
   if (!file) {
     Serial.println("Failed to open file for reading");
@@ -22,8 +31,9 @@ int32_t on_read(uint32_t lba, void *buffer, uint32_t bufsize) {
   return readBytes;
 }
 
-// Callback when the host writes to the USB mass storage
-int32_t on_write(uint32_t lba, uint8_t *buffer, uint32_t bufsize) {
+// Callback for writing data to the drive
+int32_t tud_msc_write10_cb(uint8_t lun, uint32_t lba, uint8_t *buffer,
+                           uint32_t bufsize) {
   File file = flashFS.open("/storage.bin", FILE_WRITE);
   if (!file) {
     Serial.println("Failed to open file for writing");
@@ -36,10 +46,9 @@ int32_t on_write(uint32_t lba, uint8_t *buffer, uint32_t bufsize) {
   return writtenBytes;
 }
 
-// Callback when the host wants to know the capacity of the USB mass storage
-void on_get_capacity(uint32_t *block_count, uint32_t *block_size) {
-  *block_count = flashFS.open("/storage.bin", FILE_READ).size() / 512;
-  *block_size = 512;
+// Callback to check if the drive is writable
+bool tud_msc_is_writable_cb(uint8_t lun) {
+  return true; // Allow write operations
 }
 
 void setup() {
@@ -69,11 +78,6 @@ void setup() {
 
   // Start TinyUSB
   tusb_init();
-
-  // Callbacks for MSC
-  tud_msc_set_read_callback(on_read);
-  tud_msc_set_write_callback(on_write);
-  tud_msc_set_capacity_callback(on_get_capacity);
 }
 
 void loop() {
