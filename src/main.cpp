@@ -1,6 +1,6 @@
+#include "tusb.h" // TinyUSB header
 #include <Arduino.h>
 #include <SPIFFS.h>
-#include <usb/usb_msc.h> // Native USB MSC support
 
 // File system
 fs::FS &flashFS = SPIFFS;
@@ -67,13 +67,16 @@ void setup() {
     file.close();
   }
 
-  // Start USB mass storage
-  usb_msc_init(); // Initialize the USB MSC
-  usb_msc_set_callbacks(on_get_capacity, on_read, on_write); // Set callbacks
-  usb_msc_start();                                           // Start MSC device
+  // Start TinyUSB
+  tusb_init();
+
+  // Callbacks for MSC
+  tud_msc_set_read_callback(on_read);
+  tud_msc_set_write_callback(on_write);
+  tud_msc_set_capacity_callback(on_get_capacity);
 }
 
 void loop() {
-  // Let USB handle events
-  delay(10);
+  // TinyUSB task to handle USB events
+  tud_task();
 }
