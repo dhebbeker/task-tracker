@@ -1,7 +1,0 @@
-<map id="lib/board_adapters/board_pins.hpp" name="lib/board_adapters/board_pins.hpp">
-<area shape="rect" id="node1" title="Provides named objects for the pins provided by the board." alt="" coords="267,5,395,45"/>
-<area shape="rect" id="node2" href="$framework__adapter_8cpp.xhtml" title=" " alt="" coords="5,93,167,133"/>
-<area shape="rect" id="node3" href="$board_8cpp.xhtml" title=" " alt="" coords="191,93,319,133"/>
-<area shape="rect" id="node4" href="$display_8cpp.xhtml" title=" " alt="" coords="343,93,471,133"/>
-<area shape="rect" id="node5" href="$main_8cpp.xhtml" title=" " alt="" coords="495,101,591,126"/>
-</map>
