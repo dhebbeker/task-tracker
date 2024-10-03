@@ -33,7 +33,6 @@ def get_vcs_id():
             stdout=subprocess.PIPE, text=True, check=True
         )
         vcs_string = vcs_output.stdout.strip()
-        print("vcs string: " + vcs_string)
         return vcs_string
     except (subprocess.CalledProcessError, FileNotFoundError) as e:
         # Print the warning to stderr
