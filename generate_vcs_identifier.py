@@ -5,9 +5,6 @@ This script generates a source file containing a version control system (VCS)
 identifier string. It retrieves the VCS identifier from the 'vcs_utils' module
 and writes it to a specified source file.
 
-The script will overwrite the file if it already exists, and any write failures 
-are handled gracefully.
-
 This script should be loaded by PlatformIO during the project build and is not
 designed to be run independently.
 """
