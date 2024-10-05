@@ -79,134 +79,6 @@ WebServer server(80);
 File32 fsUploadFile;
 
 //--------------------------------------------------------------------+
-// Setup
-//--------------------------------------------------------------------+
-
-void setupMassStorage(void) {
-  flash.begin();
-
-  // Set disk vendor id, product id and revision with string up to 8, 16, 4
-  // characters respectively
-  usb_msc.setID("Adafruit", "External Flash", "1.0");
-
-  // Set callback
-  usb_msc.setReadWriteCallback(msc_read_cb, msc_write_cb, msc_flush_cb);
-
-  // Set disk size, block size should be 512 regardless of spi flash page size
-  usb_msc.setCapacity(flash.size() / 512, 512);
-
-  // MSC is ready for read/write
-  fs_changed = false;
-  usb_msc.setReadyCallback(0, msc_ready_callback);
-  usb_msc.begin();
-
-  // If already enumerated, additional class driverr begin() e.g msc, hid, midi
-  // won't take effect until re-enumeration
-  if (TinyUSBDevice.mounted()) {
-    TinyUSBDevice.detach();
-    delay(10);
-    TinyUSBDevice.attach();
-  }
-
-  // Init file system on the flash
-  fs_formatted = fatfs.begin(&flash);
-
-  if (!fs_formatted) {
-    DBG_SERIAL.println(
-        "Failed to init files system, flash may not be formatted");
-  }
-}
-
-void refreshMassStorage(void) { fs_changed = true; }
-
-void setupServer(void) {
-  // WIFI INIT
-  DBG_SERIAL.printf("Connecting to %s\n", SECRET_SSID);
-  if (String(WiFi.SSID()) != String(SECRET_SSID)) {
-    WiFi.mode(WIFI_STA);
-    WiFi.begin(SECRET_SSID, SECRET_PASSWORD);
-  }
-
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    DBG_SERIAL.print(".");
-  }
-  DBG_SERIAL.println("");
-  DBG_SERIAL.print("Connected! IP address: ");
-  DBG_SERIAL.println(WiFi.localIP());
-
-  MDNS.begin(host);
-  DBG_SERIAL.print("Open http://");
-  DBG_SERIAL.print(host);
-  DBG_SERIAL.println(".local/edit to access the file browser");
-
-  // SERVER INIT
-
-  // list directory
-  server.on("/list", HTTP_GET, handleFileList);
-
-  // load editor
-  server.on("/edit", HTTP_GET, []() {
-    if (!handleFileRead("/edit.htm")) {
-      server.send(404, "text/plain", "FileNotFound");
-    }
-  });
-
-  // create file
-  server.on("/edit", HTTP_PUT, handleFileCreate);
-
-  // delete file
-  server.on("/edit", HTTP_DELETE, handleFileDelete);
-
-  // first callback is called after the request has ended with all parsed
-  // arguments second callback handles file uploads at that location
-  server.on(
-      "/edit", HTTP_POST, []() { server.send(200, "text/plain", ""); },
-      handleFileUpload);
-
-  // called when the url is not defined here
-  // use it to load content from fatfs
-  server.onNotFound([]() {
-    if (!handleFileRead(server.uri())) {
-      server.send(404, "text/plain", "FileNotFound");
-    }
-  });
-
-  // get heap status, analog input value and all GPIO statuses in one json call
-  server.on("/all", HTTP_GET, []() {
-    String json = "{";
-    json += "\"heap\":" + String(ESP.getFreeHeap());
-    json += ", \"analog\":" + String(analogRead(A0));
-    json += ", \"gpio\":" + String((uint32_t)(0));
-    json += "}";
-    server.send(200, "text/json", json);
-    json = String();
-  });
-  server.begin();
-  DBG_SERIAL.println("HTTP server started");
-}
-
-void setup() {
-#ifdef LED_BUILTIN
-  pinMode(LED_BUILTIN, OUTPUT);
-#endif
-
-  DBG_SERIAL.begin(115200);
-
-  setupMassStorage();
-
-  //  while ( !DBG_SERIAL ) delay(10);   // wait for native usb
-  DBG_SERIAL.println("TinyUSB Mass Storage with ESP32 File Browser example");
-  DBG_SERIAL.print("JEDEC ID: 0x");
-  DBG_SERIAL.println(flash.getJEDECID(), HEX);
-  DBG_SERIAL.print("Flash size: ");
-  DBG_SERIAL.print(flash.size() / 1024);
-  DBG_SERIAL.println(" KB");
-
-  setupServer();
-}
-
-//--------------------------------------------------------------------+
 // Handle requests
 //--------------------------------------------------------------------+
 
@@ -253,6 +125,8 @@ String getContentType(String filename) {
   }
   return "text/plain";
 }
+
+static void refreshMassStorage(void) { fs_changed = true; }
 
 bool exists(String path) {
   bool yes = false;
@@ -389,15 +263,6 @@ void handleFileList() {
   server.send(200, "text/json", output);
 }
 
-//--------------------------------------------------------------------+
-// Loop
-//--------------------------------------------------------------------+
-
-void loop() {
-  server.handleClient();
-  delay(2); // allow the cpu to switch to other tasks
-}
-
 // Callback invoked when received READ10 command.
 // Copy disk's data to buffer (up to bufsize) and
 // return number of copied bytes (must be multiple of block size)
@@ -444,4 +309,139 @@ bool msc_ready_callback(void) {
   bool ret = !fs_changed;
   fs_changed = false;
   return ret;
+}
+
+//--------------------------------------------------------------------+
+// Setup
+//--------------------------------------------------------------------+
+
+static void setupMassStorage(void) {
+  flash.begin();
+
+  // Set disk vendor id, product id and revision with string up to 8, 16, 4
+  // characters respectively
+  usb_msc.setID("Adafruit", "External Flash", "1.0");
+
+  // Set callback
+  usb_msc.setReadWriteCallback(msc_read_cb, msc_write_cb, msc_flush_cb);
+
+  // Set disk size, block size should be 512 regardless of spi flash page size
+  usb_msc.setCapacity(flash.size() / 512, 512);
+
+  // MSC is ready for read/write
+  fs_changed = false;
+  usb_msc.setReadyCallback(0, msc_ready_callback);
+  usb_msc.begin();
+
+  // If already enumerated, additional class driverr begin() e.g msc, hid, midi
+  // won't take effect until re-enumeration
+  if (TinyUSBDevice.mounted()) {
+    TinyUSBDevice.detach();
+    delay(10);
+    TinyUSBDevice.attach();
+  }
+
+  // Init file system on the flash
+  fs_formatted = fatfs.begin(&flash);
+
+  if (!fs_formatted) {
+    DBG_SERIAL.println(
+        "Failed to init files system, flash may not be formatted");
+  }
+}
+
+static void setupServer(void) {
+  // WIFI INIT
+  DBG_SERIAL.printf("Connecting to %s\n", SECRET_SSID);
+  if (String(WiFi.SSID()) != String(SECRET_SSID)) {
+    WiFi.mode(WIFI_STA);
+    WiFi.begin(SECRET_SSID, SECRET_PASSWORD);
+  }
+
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    DBG_SERIAL.print(".");
+  }
+  DBG_SERIAL.println("");
+  DBG_SERIAL.print("Connected! IP address: ");
+  DBG_SERIAL.println(WiFi.localIP());
+
+  MDNS.begin(host);
+  DBG_SERIAL.print("Open http://");
+  DBG_SERIAL.print(host);
+  DBG_SERIAL.println(".local/edit to access the file browser");
+
+  // SERVER INIT
+
+  // list directory
+  server.on("/list", HTTP_GET, handleFileList);
+
+  // load editor
+  server.on("/edit", HTTP_GET, []() {
+    if (!handleFileRead("/edit.htm")) {
+      server.send(404, "text/plain", "FileNotFound");
+    }
+  });
+
+  // create file
+  server.on("/edit", HTTP_PUT, handleFileCreate);
+
+  // delete file
+  server.on("/edit", HTTP_DELETE, handleFileDelete);
+
+  // first callback is called after the request has ended with all parsed
+  // arguments second callback handles file uploads at that location
+  server.on(
+      "/edit", HTTP_POST, []() { server.send(200, "text/plain", ""); },
+      handleFileUpload);
+
+  // called when the url is not defined here
+  // use it to load content from fatfs
+  server.onNotFound([]() {
+    if (!handleFileRead(server.uri())) {
+      server.send(404, "text/plain", "FileNotFound");
+    }
+  });
+
+  // get heap status, analog input value and all GPIO statuses in one json call
+  server.on("/all", HTTP_GET, []() {
+    String json = "{";
+    json += "\"heap\":" + String(ESP.getFreeHeap());
+    json += ", \"analog\":" + String(analogRead(A0));
+    json += ", \"gpio\":" + String((uint32_t)(0));
+    json += "}";
+    server.send(200, "text/json", json);
+    json = String();
+  });
+  server.begin();
+  DBG_SERIAL.println("HTTP server started");
+}
+
+void setup() {
+#ifdef LED_BUILTIN
+  pinMode(LED_BUILTIN, OUTPUT);
+#endif
+
+  DBG_SERIAL.begin(115200);
+
+  setupMassStorage();
+
+  //  while ( !DBG_SERIAL ) delay(10);   // wait for native usb
+  DBG_SERIAL.println("TinyUSB Mass Storage with ESP32 File Browser example");
+  DBG_SERIAL.print("JEDEC ID: 0x");
+  DBG_SERIAL.println(flash.getJEDECID(), HEX);
+  DBG_SERIAL.print("Flash size: ");
+  DBG_SERIAL.print(flash.size() / 1024);
+  DBG_SERIAL.println(" KB");
+
+  setupServer();
+}
+
+//--------------------------------------------------------------------+
+// Loop
+//--------------------------------------------------------------------+
+
+void loop() {
+  server.handleClient();
+  delay(2); // allow the cpu to switch to other tasks
 }
