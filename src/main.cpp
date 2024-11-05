@@ -34,13 +34,6 @@ void loop()
 
     serial_port::readAndHandleInput();
 
-    for (auto task : device::tasks)
-    {
-        serial_port::cout << task.second.getLabel() << " : " << std::boolalpha << task.second.isRunning()
-                          << std::noboolalpha << "   with " << task.second.getRecordedDuration().count() << " s" << std::endl;
-    }
-    serial_port::cout << "_\r" << std::endl;
-
     std::this_thread::yield();
     using namespace std::chrono_literals;
     std::this_thread::sleep_for(100ms);
