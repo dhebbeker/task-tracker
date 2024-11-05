@@ -73,7 +73,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_doc_decisions_dr_002"></a></p>
-<h1><a class="anchor" id="autotoc_md28"></a>
+<h1><a class="anchor" id="autotoc_md29"></a>
 Context</h1>
 <p>I am not sure in which directory to put the packages: <code>src</code> or <code>lib</code>.</p>
 <ul>
@@ -88,7 +88,7 @@ Context</h1>
 The packages in question are not planed to be used in other projects. The packages may have dependencies through well defined interfaces.</li>
 </ul>
 <p>What are the consequences of this decision anyway? I am open for comments!</p>
-<h1><a class="anchor" id="autotoc_md29"></a>
+<h1><a class="anchor" id="autotoc_md30"></a>
 Decision</h1>
 <p>I think I found an <a href="https://community.platformio.org/t/why-separate-src-and-lib/30509">answer</a> to the <a href="https://github.com/dhebbeker/task-tracker/pull/31#pullrequestreview-1435060978">question</a> about whether to put packages (modules) into <code>src</code> or <code>lib</code> directory.</p>
 <p>The PlatformIO documentation <a href="https://docs.platformio.org/en/stable/advanced/unit-testing/structure/shared-code.html#shared-code">explains</a>:</p>
@@ -102,14 +102,14 @@ Decision</h1>
 <li>in case unit tests are envisioned for the modules, the recommended way is to put them into the <code>lib</code> directory</li>
 <li>the <code>src/</code> directory is designated to perform dependency injection for the productive software (in contrast to the test software); compare to "Main Component" for dependency injection (<a href="https://blog.cleancoder.com/uncle-bob/2021/03/06/ifElseSwitch.html">here</a> or in <a class="el" href="citelist.xhtml#CITEREF_CleanArchitecture">[2]</a>).</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md30"></a>
+<h1><a class="anchor" id="autotoc_md31"></a>
 Summary</h1>
 <p>Our modules (or packages) shall reside in the projects <code>lib_dir</code>: <code>lib/</code> </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 3 2024 19:14:36 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue Nov 5 2024 18:27:27 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

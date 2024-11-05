@@ -101,10 +101,10 @@ $(function() {
 <p>Also interrupt based sampling is not flawless. The specific disadvantages depend on the chosen approach and the concrete implementation.</p>
 <p>In any case it must be considered that detecting a steady state change of a button should probably be executed with a higher priority than the execution of the processing of that event. For example periodically sampling or reacting on an digital input should interrupt time-insensitive processing. But the actual processing of a finally adopted state change may take longer and should take place with lower priority. Thus some kind of synchronization mechanism (or interrupt masking) will usually be necessary.</p>
 <p>Hereafter two different approaches based on hardware interrupts will be discussed.</p>
-<h1><a class="anchor" id="autotoc_md22"></a>
+<h1><a class="anchor" id="autotoc_md23"></a>
 Interrupt based Debouncing</h1>
 <p>Interrupts called by the processor as a reaction on a change of a digital input may be used to detect state changes of switches and buttons. In contrast to debouncing approaches which sample with fixed periods, interrupt based debouncing usually uses the time relative the the last state change to detect steady states. Either by discarding changes which occur shortly after a previously adopted state change. Or by waiting for the last change to prevail long enough.</p>
-<h2><a class="anchor" id="autotoc_md23"></a>
+<h2><a class="anchor" id="autotoc_md24"></a>
 Post-change delay</h2>
 <p>Approaches which ignore changes which occur in a short period after a previously accepted change are easy to implement. One simply has to compare the timestamp of the last accepted change with the current time. If that difference is below a threshold, the state change will be ignored.</p>
 <p><div class="plantumlgraph">
@@ -119,7 +119,7 @@ Post-change delay</h2>
  </p>
 <p>A problem arises in case the button press (the pulse) is too short. The first state change will be detected. But if bouncing finishes within the window for ignoring changes, the final state (released) will not be detected. The debounced state will remain "active" until further state changes.</p>
 <p>As the time a button bounces may differ on each actuation, defining a threshold value totally avoiding this problem may not be possible.</p>
-<h2><a class="anchor" id="autotoc_md24"></a>
+<h2><a class="anchor" id="autotoc_md25"></a>
 Pre-change delay</h2>
 <p>A different interrupt based approach waits for the input signal to be stable before adopting its change. This can be achieved with a delay which will be restarted each time a state change occurs. If the delay elapses without further changes the state is considered as stable. The current state is then read to check for a state change.</p>
 <p>The duration of the delay can be much shorter than the window in which state changes will be ignored from the previous approach. In contrast to defining the expected time after which a signal will be stable it defines the minimum time a signal may not change to be accepted as stable. Thus the duration is more a requirement then a heuristic.</p>
@@ -139,7 +139,7 @@ Pre-change delay</h2>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 3 2024 19:14:36 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue Nov 5 2024 18:27:27 for Task Tracker by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
