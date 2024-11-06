@@ -1,5 +1,5 @@
-<map id="lib/application_business_rules/user_interaction/guiEngine_factory_interface.hpp" name="lib/application_business_rules/user_interaction/guiEngine_factory_interface.hpp">
-<area shape="rect" id="node1" title="Dependency injection for the guiEngine." alt="" coords="59,5,295,61"/>
-<area shape="rect" id="node2" href="$guiEngine__factory__interface_8cpp.xhtml" title=" " alt="" coords="5,109,184,165"/>
-<area shape="rect" id="node3" href="$main_8cpp.xhtml" title=" " alt="" coords="209,124,314,151"/>
+<map id="Task&#45;Tracker&#45;Device/lib/application_business_rules/user_interaction/guiEngine_factory_interface.hpp" name="Task&#45;Tracker&#45;Device/lib/application_business_rules/user_interaction/guiEngine_factory_interface.hpp">
+<area shape="rect" id="node1" title="Dependency injection for the guiEngine." alt="" coords="71,5,307,76"/>
+<area shape="rect" id="node2" href="$guiEngine__factory__interface_8cpp.xhtml" title=" " alt="" coords="5,124,184,195"/>
+<area shape="rect" id="node3" href="$main_8cpp.xhtml" title=" " alt="" coords="209,139,359,180"/>
 </map>

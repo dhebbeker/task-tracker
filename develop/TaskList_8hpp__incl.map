@@ -1,7 +1,7 @@
-<map id="lib/enterprise_business_rules/serial_protocol/TaskList.hpp" name="lib/enterprise_business_rules/serial_protocol/TaskList.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="53,5,225,61"/>
-<area shape="rect" id="node2" href="$TaskObject_8hpp.xhtml" title=" " alt="" coords="21,109,142,136"/>
-<area shape="rect" id="node5" title=" " alt="" coords="166,109,229,136"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,184,72,211"/>
-<area shape="rect" id="node4" title=" " alt="" coords="96,184,155,211"/>
+<map id="Task&#45;Tracker&#45;Device/lib/enterprise_business_rules/serial_protocol/TaskList.hpp" name="Task&#45;Tracker&#45;Device/lib/enterprise_business_rules/serial_protocol/TaskList.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="51,5,227,76"/>
+<area shape="rect" id="node2" href="$TaskObject_8hpp.xhtml" title=" " alt="" coords="21,124,142,151"/>
+<area shape="rect" id="node5" title=" " alt="" coords="166,124,229,151"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,199,72,225"/>
+<area shape="rect" id="node4" title=" " alt="" coords="96,199,155,225"/>
 </map>

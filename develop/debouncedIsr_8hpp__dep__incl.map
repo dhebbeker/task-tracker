@@ -1,7 +1,7 @@
-<map id="lib/board_adapters/input_device_interface/debouncedIsr.hpp" name="lib/board_adapters/input_device_interface/debouncedIsr.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="341,5,515,61"/>
-<area shape="rect" id="node2" href="$debouncedIsr_8cpp.xhtml" title=" " alt="" coords="5,117,211,158"/>
-<area shape="rect" id="node3" href="$Keypad_8cpp.xhtml" title=" " alt="" coords="235,109,410,165"/>
-<area shape="rect" id="node4" href="$test__dummies_8cpp.xhtml" title=" " alt="" coords="435,124,635,151"/>
-<area shape="rect" id="node5" href="$test__hmi_8cpp.xhtml" title=" " alt="" coords="658,117,825,158"/>
+<map id="Task&#45;Tracker&#45;Device/lib/board_adapters/input_device_interface/debouncedIsr.hpp" name="Task&#45;Tracker&#45;Device/lib/board_adapters/input_device_interface/debouncedIsr.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="342,5,517,76"/>
+<area shape="rect" id="node2" href="$debouncedIsr_8cpp.xhtml" title=" " alt="" coords="5,131,211,187"/>
+<area shape="rect" id="node3" href="$Keypad_8cpp.xhtml" title=" " alt="" coords="235,124,410,195"/>
+<area shape="rect" id="node4" href="$test__dummies_8cpp.xhtml" title=" " alt="" coords="434,139,638,180"/>
+<area shape="rect" id="node5" href="$test__hmi_8cpp.xhtml" title=" " alt="" coords="663,131,833,187"/>
 </map>

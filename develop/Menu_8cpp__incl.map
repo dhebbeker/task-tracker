@@ -1,13 +1,13 @@
-<map id="lib/application_business_rules/user_interaction/Menu.cpp" name="lib/application_business_rules/user_interaction/Menu.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="219,5,397,61"/>
-<area shape="rect" id="node2" href="$Menu_8hpp.xhtml" title=" " alt="" coords="217,109,303,136"/>
-<area shape="rect" id="node4" href="$MenuItem_8hpp.xhtml" title=" " alt="" coords="298,259,414,285"/>
-<area shape="rect" id="node3" href="$IGuiEngine_8hpp.xhtml" title=" " alt="" coords="200,184,320,211"/>
-<area shape="rect" id="node8" href="$IKeypad_8hpp.xhtml" title=" " alt="" coords="60,259,271,285"/>
-<area shape="rect" id="node5" title=" " alt="" coords="323,333,389,360"/>
-<area shape="rect" id="node6" title=" " alt="" coords="413,333,472,360"/>
-<area shape="rect" id="node7" title=" " alt="" coords="235,333,298,360"/>
-<area shape="rect" id="node9" href="$KeyIds_8hpp.xhtml" title=" " alt="" coords="5,333,99,360"/>
-<area shape="rect" id="node11" title=" " alt="" coords="123,333,210,360"/>
-<area shape="rect" id="node10" title=" " alt="" coords="14,408,90,435"/>
+<map id="Task&#45;Tracker&#45;Device/lib/application_business_rules/user_interaction/Menu.cpp" name="Task&#45;Tracker&#45;Device/lib/application_business_rules/user_interaction/Menu.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="217,5,399,76"/>
+<area shape="rect" id="node2" href="$Menu_8hpp.xhtml" title=" " alt="" coords="217,124,303,151"/>
+<area shape="rect" id="node4" href="$MenuItem_8hpp.xhtml" title=" " alt="" coords="298,273,414,300"/>
+<area shape="rect" id="node3" href="$IGuiEngine_8hpp.xhtml" title=" " alt="" coords="200,199,320,225"/>
+<area shape="rect" id="node8" href="$IKeypad_8hpp.xhtml" title=" " alt="" coords="60,273,271,300"/>
+<area shape="rect" id="node5" title=" " alt="" coords="323,348,389,375"/>
+<area shape="rect" id="node6" title=" " alt="" coords="413,348,472,375"/>
+<area shape="rect" id="node7" title=" " alt="" coords="235,348,298,375"/>
+<area shape="rect" id="node9" href="$KeyIds_8hpp.xhtml" title=" " alt="" coords="5,348,99,375"/>
+<area shape="rect" id="node11" title=" " alt="" coords="123,348,210,375"/>
+<area shape="rect" id="node10" title=" " alt="" coords="14,423,90,449"/>
 </map>

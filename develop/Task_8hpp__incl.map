@@ -1,6 +1,6 @@
-<map id="lib/application_business_rules/tasks/Task.hpp" name="lib/application_business_rules/tasks/Task.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="32,5,211,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,95,72,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="96,95,147,121"/>
-<area shape="rect" id="node4" title=" " alt="" coords="171,95,229,121"/>
+<map id="Task&#45;Tracker&#45;Device/lib/application_business_rules/tasks/Task.hpp" name="Task&#45;Tracker&#45;Device/lib/application_business_rules/tasks/Task.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="30,5,213,61"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,109,72,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="96,109,147,136"/>
+<area shape="rect" id="node4" title=" " alt="" coords="171,109,229,136"/>
 </map>

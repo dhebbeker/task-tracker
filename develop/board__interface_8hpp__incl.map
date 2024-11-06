@@ -1,7 +1,7 @@
-<map id="lib/application_business_rules/user_interaction/board_interface.hpp" name="lib/application_business_rules/user_interaction/board_interface.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="67,5,245,61"/>
-<area shape="rect" id="node2" href="$KeyIds_8hpp.xhtml" title=" " alt="" coords="5,109,99,136"/>
-<area shape="rect" id="node4" title=" " alt="" coords="123,109,189,136"/>
-<area shape="rect" id="node5" title=" " alt="" coords="214,109,301,136"/>
-<area shape="rect" id="node3" title=" " alt="" coords="14,184,90,211"/>
+<map id="Task&#45;Tracker&#45;Device/lib/application_business_rules/user_interaction/board_interface.hpp" name="Task&#45;Tracker&#45;Device/lib/application_business_rules/user_interaction/board_interface.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="65,5,247,76"/>
+<area shape="rect" id="node2" href="$KeyIds_8hpp.xhtml" title=" " alt="" coords="5,124,99,151"/>
+<area shape="rect" id="node4" title=" " alt="" coords="123,124,189,151"/>
+<area shape="rect" id="node5" title=" " alt="" coords="214,124,301,151"/>
+<area shape="rect" id="node3" title=" " alt="" coords="14,199,90,225"/>
 </map>

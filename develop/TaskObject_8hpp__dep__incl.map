@@ -1,6 +1,6 @@
-<map id="lib/enterprise_business_rules/serial_protocol/TaskObject.hpp" name="lib/enterprise_business_rules/serial_protocol/TaskObject.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="137,5,309,61"/>
-<area shape="rect" id="node2" href="$JsonGenerator_8cpp.xhtml" title=" " alt="" coords="5,221,219,262"/>
-<area shape="rect" id="node3" href="$Protocol_8cpp.xhtml" title=" " alt="" coords="249,213,428,269"/>
-<area shape="rect" id="node4" href="$TaskList_8hpp.xhtml" title=" " alt="" coords="137,109,309,165"/>
+<map id="Task&#45;Tracker&#45;Device/lib/enterprise_business_rules/serial_protocol/TaskObject.hpp" name="Task&#45;Tracker&#45;Device/lib/enterprise_business_rules/serial_protocol/TaskObject.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="136,5,312,76"/>
+<area shape="rect" id="node2" href="$JsonGenerator_8cpp.xhtml" title=" " alt="" coords="5,250,219,306"/>
+<area shape="rect" id="node3" href="$Protocol_8cpp.xhtml" title=" " alt="" coords="250,243,433,313"/>
+<area shape="rect" id="node4" href="$TaskList_8hpp.xhtml" title=" " alt="" coords="136,124,312,195"/>
 </map>

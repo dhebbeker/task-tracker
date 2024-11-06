@@ -1,22 +1,22 @@
-<map id="lib/application_business_rules/user_interaction/Presenter.cpp" name="lib/application_business_rules/user_interaction/Presenter.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="506,5,685,61"/>
-<area shape="rect" id="node2" href="$Presenter_8hpp.xhtml" title=" " alt="" coords="223,109,334,136"/>
-<area shape="rect" id="node16" href="$board__interface_8hpp.xhtml" title=" " alt="" coords="464,109,616,136"/>
-<area shape="rect" id="node17" title=" " alt="" coords="624,184,690,211"/>
-<area shape="rect" id="node18" title=" " alt="" coords="690,109,760,136"/>
-<area shape="rect" id="node19" title=" " alt="" coords="784,109,855,136"/>
-<area shape="rect" id="node20" href="$pitches_8hpp.xhtml" title=" " alt="" coords="203,259,300,285"/>
-<area shape="rect" id="node3" href="$IPresenter_8hpp.xhtml" title=" " alt="" coords="221,184,336,211"/>
-<area shape="rect" id="node5" href="$IStatusIndicator_8hpp.xhtml" title=" " alt="" coords="46,184,196,211"/>
-<area shape="rect" id="node6" href="$Menu_8hpp.xhtml" title=" " alt="" coords="411,184,498,211"/>
-<area shape="rect" id="node11" title=" " alt="" coords="7,408,70,435"/>
-<area shape="rect" id="node4" title=" " alt="" coords="108,259,179,285"/>
-<area shape="rect" id="node7" href="$IGuiEngine_8hpp.xhtml" title=" " alt="" coords="325,259,445,285"/>
-<area shape="rect" id="node12" href="$IKeypad_8hpp.xhtml" title=" " alt="" coords="288,333,498,360"/>
-<area shape="rect" id="node8" href="$MenuItem_8hpp.xhtml" title=" " alt="" coords="96,333,212,360"/>
-<area shape="rect" id="node9" title=" " alt="" coords="213,408,280,435"/>
-<area shape="rect" id="node10" title=" " alt="" coords="125,408,184,435"/>
-<area shape="rect" id="node13" href="$KeyIds_8hpp.xhtml" title=" " alt="" coords="366,408,460,435"/>
-<area shape="rect" id="node15" title=" " alt="" coords="523,408,610,435"/>
-<area shape="rect" id="node14" title=" " alt="" coords="375,483,451,509"/>
+<map id="Task&#45;Tracker&#45;Device/lib/application_business_rules/user_interaction/Presenter.cpp" name="Task&#45;Tracker&#45;Device/lib/application_business_rules/user_interaction/Presenter.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="504,5,687,76"/>
+<area shape="rect" id="node2" href="$Presenter_8hpp.xhtml" title=" " alt="" coords="223,124,334,151"/>
+<area shape="rect" id="node16" href="$board__interface_8hpp.xhtml" title=" " alt="" coords="464,124,616,151"/>
+<area shape="rect" id="node17" title=" " alt="" coords="624,199,690,225"/>
+<area shape="rect" id="node18" title=" " alt="" coords="690,124,760,151"/>
+<area shape="rect" id="node19" title=" " alt="" coords="784,124,855,151"/>
+<area shape="rect" id="node20" href="$pitches_8hpp.xhtml" title=" " alt="" coords="203,273,300,300"/>
+<area shape="rect" id="node3" href="$IPresenter_8hpp.xhtml" title=" " alt="" coords="221,199,336,225"/>
+<area shape="rect" id="node5" href="$IStatusIndicator_8hpp.xhtml" title=" " alt="" coords="46,199,196,225"/>
+<area shape="rect" id="node6" href="$Menu_8hpp.xhtml" title=" " alt="" coords="411,199,498,225"/>
+<area shape="rect" id="node11" title=" " alt="" coords="7,423,70,449"/>
+<area shape="rect" id="node4" title=" " alt="" coords="108,273,179,300"/>
+<area shape="rect" id="node7" href="$IGuiEngine_8hpp.xhtml" title=" " alt="" coords="325,273,445,300"/>
+<area shape="rect" id="node12" href="$IKeypad_8hpp.xhtml" title=" " alt="" coords="288,348,498,375"/>
+<area shape="rect" id="node8" href="$MenuItem_8hpp.xhtml" title=" " alt="" coords="96,348,212,375"/>
+<area shape="rect" id="node9" title=" " alt="" coords="213,423,280,449"/>
+<area shape="rect" id="node10" title=" " alt="" coords="125,423,184,449"/>
+<area shape="rect" id="node13" href="$KeyIds_8hpp.xhtml" title=" " alt="" coords="366,423,460,449"/>
+<area shape="rect" id="node15" title=" " alt="" coords="523,423,610,449"/>
+<area shape="rect" id="node14" title=" " alt="" coords="375,497,451,524"/>
 </map>

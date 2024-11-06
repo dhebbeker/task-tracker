@@ -1,6 +1,6 @@
-<map id="lib/board_adapters/status_indicators/status_indicators.hpp" name="lib/board_adapters/status_indicators/status_indicators.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="68,5,249,61"/>
-<area shape="rect" id="node2" href="$board__types_8hpp.xhtml" title=" " alt="" coords="5,117,136,143"/>
-<area shape="rect" id="node4" href="$IStatusIndicator_8hpp.xhtml" title=" " alt="" coords="160,109,336,151"/>
-<area shape="rect" id="node3" title=" " alt="" coords="37,199,104,225"/>
+<map id="Task&#45;Tracker&#45;Device/lib/board_adapters/status_indicators/status_indicators.hpp" name="Task&#45;Tracker&#45;Device/lib/board_adapters/status_indicators/status_indicators.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="68,5,249,76"/>
+<area shape="rect" id="node2" href="$board__types_8hpp.xhtml" title=" " alt="" coords="5,131,136,158"/>
+<area shape="rect" id="node4" href="$IStatusIndicator_8hpp.xhtml" title=" " alt="" coords="160,124,336,165"/>
+<area shape="rect" id="node3" title=" " alt="" coords="37,213,104,240"/>
 </map>

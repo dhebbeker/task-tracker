@@ -1,10 +1,10 @@
-<map id="lib/application_business_rules/user_interaction/IStatusIndicator.hpp" name="lib/application_business_rules/user_interaction/IStatusIndicator.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="291,5,469,61"/>
-<area shape="rect" id="node2" href="$Presenter_8hpp.xhtml" title=" " alt="" coords="85,117,264,173"/>
-<area shape="rect" id="node5" href="$statusindicators__factory__interface_8hpp.xhtml" title="Dependency injection for the keypad." alt="" coords="289,109,471,180"/>
-<area shape="rect" id="node7" href="$status__indicators_8hpp.xhtml" title=" " alt="" coords="496,117,677,173"/>
-<area shape="rect" id="node3" href="$Presenter_8cpp.xhtml" title=" " alt="" coords="5,228,184,284"/>
-<area shape="rect" id="node4" href="$main_8cpp.xhtml" title=" " alt="" coords="209,243,314,269"/>
-<area shape="rect" id="node6" href="$statusindicators__factory__interface_8cpp.xhtml" title=" " alt="" coords="339,228,584,284"/>
-<area shape="rect" id="node8" href="$status__indicators_8cpp.xhtml" title=" " alt="" coords="608,228,789,284"/>
+<map id="Task&#45;Tracker&#45;Device/lib/application_business_rules/user_interaction/IStatusIndicator.hpp" name="Task&#45;Tracker&#45;Device/lib/application_business_rules/user_interaction/IStatusIndicator.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="307,5,489,76"/>
+<area shape="rect" id="node2" href="$Presenter_8hpp.xhtml" title=" " alt="" coords="100,131,283,202"/>
+<area shape="rect" id="node5" href="$statusindicators__factory__interface_8hpp.xhtml" title="Dependency injection for the keypad." alt="" coords="307,124,489,209"/>
+<area shape="rect" id="node7" href="$status__indicators_8hpp.xhtml" title=" " alt="" coords="514,131,695,202"/>
+<area shape="rect" id="node3" href="$Presenter_8cpp.xhtml" title=" " alt="" coords="5,257,188,328"/>
+<area shape="rect" id="node4" href="$main_8cpp.xhtml" title=" " alt="" coords="212,272,363,313"/>
+<area shape="rect" id="node6" href="$statusindicators__factory__interface_8cpp.xhtml" title=" " alt="" coords="387,257,633,328"/>
+<area shape="rect" id="node8" href="$status__indicators_8cpp.xhtml" title=" " alt="" coords="657,257,838,328"/>
 </map>

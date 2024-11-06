@@ -36,7 +36,7 @@ var searchData=
   ['dr001_20represent_20software_20architecture_20in_20directory_20structure_123',['DR001 Represent Software Architecture in Directory Structure',['../dr_001.xhtml',1,'']]],
   ['dr002_20root_20directory_20for_20the_20package_27s_20source_20files_124',['DR002 Root Directory for the Package&apos;s source files',['../dr_002.xhtml',1,'']]],
   ['dr003_20test_20granularity_20and_20stubbing_20challenges_125',['DR003 Test Granularity and Stubbing Challenges',['../dr_003.xhtml',1,'']]],
-  ['dr004_20direct_20usage_20of_20hardware_20abstraction_20layer_126',['DR004 Direct Usage of Hardware Abstraction Layer',['../md_doc_decisions_dr_004.xhtml',1,'']]],
+  ['dr004_20direct_20usage_20of_20hardware_20abstraction_20layer_126',['DR004 Direct Usage of Hardware Abstraction Layer',['../md_Task_Tracker_Device_doc_decisions_dr_004.xhtml',1,'']]],
   ['draw_127',['draw',['../classScreenMenu.xhtml#a95aa5ceb0ae117611ecc15264039f6a3',1,'ScreenMenu::draw()'],['../classIScreen.xhtml#a152f06a924d18200aeea737898838238',1,'IScreen::draw()'],['../classScreenValueModifier.xhtml#a9496f8dac910e12f5a46bb47e49d362c',1,'ScreenValueModifier::draw()']]],
   ['drawmenu_128',['drawMenu',['../classGuiEngine.xhtml#aa1f27544bf6a0f393a57b4fa1138fc7f',1,'GuiEngine::drawMenu()'],['../classIGuiEngine.xhtml#a719b19ffc6c7a13027c4db1579c8fd5f',1,'IGuiEngine::drawMenu()']]],
   ['ds1_129',['ds1',['../namespacenote.xhtml#a8aad924f1ca4d46b938a7a7c41f4d0ed',1,'note']]],

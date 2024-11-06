@@ -1,0 +1,16 @@
+<map id="Task&#45;Tracker&#45;Device/lib" name="Task&#45;Tracker&#45;Device/lib">
+<area shape="rect" id="node2" href="dir_60c2c4d274c08a1458706f202c2ac02e.xhtml" title="3rd_party_adapters" alt="" coords="81,63,229,111"/>
+<area shape="rect" id="node3" href="dir_cc4eb8107cf563e196ee7789b7c073d2.xhtml" title="application_business_rules" alt="" coords="75,255,272,303"/>
+<area shape="rect" id="edge6-headlabel" href="dir_000005_000006.xhtml" title="7" alt="" coords="179,229,188,244"/>
+<area shape="rect" id="node4" href="dir_49a5f6ab04696b445f2adbc130c9ef44.xhtml" title="board_adapters" alt="" coords="37,159,160,207"/>
+<area shape="rect" id="edge5-headlabel" href="dir_000005_000007.xhtml" title="3" alt="" coords="124,140,134,155"/>
+<area shape="rect" id="node5" href="dir_e70fd5d37674c687c1056755f18dec05.xhtml" title="enterprise_business_rules" alt="" coords="134,351,325,399"/>
+<area shape="rect" id="edge7-headlabel" href="dir_000005_000008.xhtml" title="4" alt="" coords="267,335,276,349"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000006_000008.xhtml" title="4" alt="" coords="209,323,218,338"/>
+<area shape="rect" id="node6" href="dir_77250fbdc01bb7367d479e08fa573657.xhtml" title="utilities" alt="" coords="37,351,109,399"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000006_000009.xhtml" title="3" alt="" coords="112,337,121,352"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000007_000006.xhtml" title="6" alt="" coords="146,228,155,242"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000007_000009.xhtml" title="2" alt="" coords="67,323,76,338"/>
+<area shape="rect" id="clust2" href="dir_bb6849ea4d307d3e6f07c34bd3d0693d.xhtml" alt="" coords="27,52,336,409"/>
+<area shape="rect" id="clust1" href="dir_7a0d9093671d12905beda7b1ed8f0dec.xhtml" title="Task&#45;Tracker&#45;Device" alt="" coords="16,16,347,420"/>
+</map>

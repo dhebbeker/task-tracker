@@ -5,7 +5,7 @@ var searchData=
   ['ledstatusindicator_257',['LedStatusIndicator',['../classLedStatusIndicator.xhtml',1,'LedStatusIndicator'],['../classLedStatusIndicator.xhtml#a5fe6a24b3ad0ea6a5cb5d5de5a469afc',1,'LedStatusIndicator::LedStatusIndicator()']]],
   ['left_258',['LEFT',['../KeyIds_8hpp.xhtml#a251d5d8935f1af4cb86e18f962d9d33da684d325a7303f52e64011467ff5c5758',1,'KeyIds.hpp']]],
   ['left_259',['left',['../namespaceboard_1_1button_1_1pin.xhtml#adc1898829b3a36d12191ee4fe1cdb841',1,'board::button::pin']]],
-  ['license_260',['LICENSE',['../md_LICENSE.xhtml',1,'']]],
+  ['license_260',['LICENSE',['../md_Task_Tracker_Device_LICENSE.xhtml',1,'']]],
   ['license_2emd_261',['LICENSE.md',['../LICENSE_8md.xhtml',1,'']]],
   ['list_262',['list',['../Protocol_8cpp.xhtml#a2bf6dea54b124ec11c84992bdf95539a',1,'Protocol.cpp']]],
   ['listcmd_263',['listCmd',['../Protocol_8cpp.xhtml#ac637a1d9e3afd1ca839afe51140a4bbc',1,'Protocol.cpp']]],
