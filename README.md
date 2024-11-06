@@ -39,6 +39,11 @@ Alternatively the software may be executed in a simulation environment.
 This project uses [PlatformIO](https://platformio.org/) as build system and package manager.
 PlatformIO may be used via a GUI (PlatformIO IDE) or command line interface (PlatformIO Core). The project configuration ([`platformio.ini`](platformio.ini)) is part of this repository.
 
+System requirements:
+
+- [PlatformIO Core](https://docs.platformio.org/en/stable/core/index.html#piocore)
+- optional: [git](https://git-scm.com/) client is used to generate version identifier if project files are in a git clone
+
 In order to use the software (some call it "firmware"), the following steps are required:
 
 1. Build (the default configuration of) the project.
