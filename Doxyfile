@@ -1,7 +1,9 @@
-# Difference with default Doxyfile 1.9.6 (4586b5cfaa3d46d51f6a51882951d15644c49edf)
-PROJECT_NAME           = "Task Tracker"
+# Difference with default Doxyfile 1.12.0 (c73f5d30f9e8b1df5ba15a1d064ff2067cbb8267)
+PROJECT_NAME           = "Task Tracker Device"
 OUTPUT_DIRECTORY       = doc
+STRIP_FROM_PATH        = ..
 JAVADOC_AUTOBRIEF      = YES
+TIMESTAMP              = YES
 EXTRACT_ALL            = YES
 EXTRACT_STATIC         = YES
 CITE_BIB_FILES         = doc/bibliography
@@ -11,7 +13,6 @@ EXAMPLE_PATH           = doc/debouncing/
 IMAGE_PATH             = doc/
 USE_MDFILE_AS_MAINPAGE = ./README.md
 HTML_FILE_EXTENSION    = .xhtml
-HTML_TIMESTAMP         = YES
 USE_MATHJAX            = YES
 HIDE_UNDOC_RELATIONS   = NO
 HAVE_DOT               = YES
