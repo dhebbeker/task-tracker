@@ -1,3 +1,4 @@
+#include <Arduino.h>
 #if ARDUINO_USB_MODE
 #warning This sketch should be used when USB is in OTG mode
 void setup() {}
@@ -62,8 +63,8 @@ static uint8_t msc_disk[DISK_SECTOR_COUNT][DISK_SECTOR_SIZE] = {
      FAT_U32(0), // total_sectors_32
      0x00, // physical_drive_number;0x00 for (first) removable media, 0x80 for
            // (first) fixed disk
-     0x00,            // reserved
-     0x29,            // extended_boot_signature;//should be 0x29
+     0x00, // reserved
+     0x29, // extended_boot_signature;//should be 0x29
      FAT_U32(0x1234), // serial_number: 0x1234 => 1234
      'T', 'i', 'n', 'y', 'U', 'S', 'B', ' ', 'M', 'S',
      'C', // volume_label padded with spaces (0x20)
