@@ -1,13 +1,18 @@
-#include <Arduino.h>
-#ifndef ARDUINO_USB_MODE
-#error This ESP32 SoC has no Native USB interface
-#elif ARDUINO_USB_MODE == 1
+#if ARDUINO_USB_MODE
 #warning This sketch should be used when USB is in OTG mode
 void setup() {}
 void loop() {}
 #else
 #include "USB.h"
 #include "USBMSC.h"
+
+#if ARDUINO_USB_CDC_ON_BOOT
+#define HWSerial Serial0
+#define USBSerial Serial
+#else
+#define HWSerial Serial
+USBCDC USBSerial;
+#endif
 
 USBMSC MSC;
 
@@ -57,8 +62,8 @@ static uint8_t msc_disk[DISK_SECTOR_COUNT][DISK_SECTOR_SIZE] = {
      FAT_U32(0), // total_sectors_32
      0x00, // physical_drive_number;0x00 for (first) removable media, 0x80 for
            // (first) fixed disk
-     0x00, // reserved
-     0x29, // extended_boot_signature;//should be 0x29
+     0x00,            // reserved
+     0x29,            // extended_boot_signature;//should be 0x29
      FAT_U32(0x1234), // serial_number: 0x1234 => 1234
      'T', 'i', 'n', 'y', 'U', 'S', 'B', ' ', 'M', 'S',
      'C', // volume_label padded with spaces (0x20)
@@ -152,23 +157,23 @@ static uint8_t msc_disk[DISK_SECTOR_COUNT][DISK_SECTOR_SIZE] = {
 
 static int32_t onWrite(uint32_t lba, uint32_t offset, uint8_t *buffer,
                        uint32_t bufsize) {
-  Serial.printf("MSC WRITE: lba: %lu, offset: %lu, bufsize: %lu\n", lba, offset,
-                bufsize);
+  HWSerial.printf("MSC WRITE: lba: %u, offset: %u, bufsize: %u\n", lba, offset,
+                  bufsize);
   memcpy(msc_disk[lba] + offset, buffer, bufsize);
   return bufsize;
 }
 
 static int32_t onRead(uint32_t lba, uint32_t offset, void *buffer,
                       uint32_t bufsize) {
-  Serial.printf("MSC READ: lba: %lu, offset: %lu, bufsize: %lu\n", lba, offset,
-                bufsize);
+  HWSerial.printf("MSC READ: lba: %u, offset: %u, bufsize: %u\n", lba, offset,
+                  bufsize);
   memcpy(buffer, msc_disk[lba] + offset, bufsize);
   return bufsize;
 }
 
 static bool onStartStop(uint8_t power_condition, bool start, bool load_eject) {
-  Serial.printf("MSC START/STOP: power: %u, start: %u, eject: %u\n",
-                power_condition, start, load_eject);
+  HWSerial.printf("MSC START/STOP: power: %u, start: %u, eject: %u\n",
+                  power_condition, start, load_eject);
   return true;
 }
 
@@ -178,17 +183,17 @@ static void usbEventCallback(void *arg, esp_event_base_t event_base,
     arduino_usb_event_data_t *data = (arduino_usb_event_data_t *)event_data;
     switch (event_id) {
     case ARDUINO_USB_STARTED_EVENT:
-      Serial.println("USB PLUGGED");
+      HWSerial.println("USB PLUGGED");
       break;
     case ARDUINO_USB_STOPPED_EVENT:
-      Serial.println("USB UNPLUGGED");
+      HWSerial.println("USB UNPLUGGED");
       break;
     case ARDUINO_USB_SUSPEND_EVENT:
-      Serial.printf("USB SUSPENDED: remote_wakeup_en: %u\n",
-                    data->suspend.remote_wakeup_en);
+      HWSerial.printf("USB SUSPENDED: remote_wakeup_en: %u\n",
+                      data->suspend.remote_wakeup_en);
       break;
     case ARDUINO_USB_RESUME_EVENT:
-      Serial.println("USB RESUMED");
+      HWSerial.println("USB RESUMED");
       break;
 
     default:
@@ -198,8 +203,8 @@ static void usbEventCallback(void *arg, esp_event_base_t event_base,
 }
 
 void setup() {
-  Serial.begin(115200);
-  Serial.setDebugOutput(true);
+  HWSerial.begin(115200);
+  HWSerial.setDebugOutput(true);
 
   USB.onEvent(usbEventCallback);
   MSC.vendorID("ESP32");      // max 8 chars
@@ -208,11 +213,9 @@ void setup() {
   MSC.onStartStop(onStartStop);
   MSC.onRead(onRead);
   MSC.onWrite(onWrite);
-
   MSC.mediaPresent(true);
-  MSC.isWritable(true); // true if writable, false if read-only
-
   MSC.begin(DISK_SECTOR_COUNT, DISK_SECTOR_SIZE);
+  USBSerial.begin();
   USB.begin();
 }
 
