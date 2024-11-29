@@ -200,6 +200,7 @@ void GuiEngine::registerKeyPad(IKeypad *keypad)
  */
 void GuiEngine::refresh()
 {
+    CurrentScreen->draw();
     lv_timer_handler();
     LV_LOG_TRACE("Adafruit display() start");
     this->display.display();

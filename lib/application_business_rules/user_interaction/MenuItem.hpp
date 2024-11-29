@@ -1,6 +1,7 @@
 #pragma once
 #include <cstdint>
 #include <string>
+#include <tasks/Task.hpp>
 #include <vector>
 
 /**
@@ -12,6 +13,7 @@ enum class MenuItemType
     SUBMENU,
     SWITCH,
     VALUE,
+    TASK,
 };
 
 /**
@@ -108,4 +110,12 @@ struct MenuItemValue final : public IMenuItem
     std::uint8_t _decimals;
     double _min;
     double _max;
+};
+
+class MenuItemTask : public IMenuItem
+{
+  public:
+    MenuItemTask();
+    MenuItemType getType() const override;
+    std::string getText() const override;
 };
